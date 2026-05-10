@@ -1,0 +1,49 @@
+{
+  "by_robot_type": {
+    "arm": [
+      {"severity": "critical", "note": "Pinch and crush hazards: all robot arms can generate enough force to injure fingers. Never reach into the workspace while a policy is running. Use an e-stop within arm's reach."},
+      {"severity": "warning", "note": "Servo overheating on low-cost arms (SO-100, Koch v1.1): Feetech STS3215 and Dynamixel XL430 servos can overheat after 20-30 minutes of continuous operation. Monitor temperatures and enforce cooldown periods."},
+      {"severity": "warning", "note": "Gripper force calibration: default gripper force on ALOHA 2 and Franka can crush soft objects. Tune max gripper force for your task. Start at 20% and increase."},
+      {"severity": "info", "note": "Tabletop mounting: bolt the arm base to a rigid surface. Clamp mounting leads to vibration at higher speeds, degrading policy performance. Use M5/M6 bolts on aluminum extrusion."},
+      {"severity": "info", "note": "Camera calibration drift: wrist cameras on SO-100 and Koch can shift after collisions. Re-run extrinsic calibration weekly or after any hard contact event."},
+      {"severity": "warning", "note": "CE marking status: Franka Panda is CE marked for collaborative operation with proper safety configuration. Low-cost arms (SO-100, Koch) have no safety certification — treat as lab-only equipment."},
+      {"severity": "info", "note": "USB latency: SO-100 and Koch communicate via USB serial. A powered USB hub reduces latency spikes. Avoid running on USB ports shared with cameras."},
+      {"severity": "critical", "note": "Joint limits: policies trained in sim may command positions outside the physical joint range. Always configure software joint limits and enable the robot's built-in limit stops before running any new policy."}
+    ],
+    "quadruped": [
+      {"severity": "critical", "note": "Fall risk: quadrupeds can fall and damage themselves or surroundings. First real-world tests should be done with the robot suspended in a gantry or over soft padding. Unitree Go2 legs can break from a 1m fall."},
+      {"severity": "warning", "note": "Battery management: Go2 Li-Po battery can puff or catch fire if over-discharged or punctured. Never run below 20% charge. Store at 60% for long-term storage. Keep a fire-safe bag nearby."},
+      {"severity": "warning", "note": "Sim-to-real gap on terrain: policies trained on Isaac Gym flat terrain often fail on real floors due to tile gaps, carpet edges, and slope differences. Start with controlled indoor surfaces."},
+      {"severity": "info", "note": "Motor heating under load: Go2 motors heat up during aggressive gaits (bounding, pronking). Built-in thermal protection shuts down at 80C. Monitor via the Unitree app during early tests."},
+      {"severity": "critical", "note": "Outdoor operation: requires clear sightlines, flat ground, and an operator within 5m for e-stop. No autonomous outdoor operation without CE marking and risk assessment. Go2 is CE marked but operator must be present."},
+      {"severity": "warning", "note": "Foot slippage: real-world friction varies dramatically from simulation defaults. Rubber foot covers improve traction on tile and concrete. Stock plastic feet slip on smooth surfaces."},
+      {"severity": "info", "note": "Recovery behavior: when a quadruped falls, do not manually pick it up while the policy is running. Send a stop command first, then manually reset. Some policies have no self-recovery and will thrash on the ground."}
+    ],
+    "humanoid": [
+      {"severity": "critical", "note": "Tip-over hazard: humanoid robots are inherently unstable. The Unitree G1 weighs 35kg and can cause serious injury if it falls on a person. Maintain a 2m exclusion zone during operation."},
+      {"severity": "critical", "note": "No safety certification exists for humanoid robots in shared spaces as of 2025. ISO 10218 and ISO/TS 15066 do not cover bipedal platforms. Treat all humanoid deployment as experimental and lab-only."},
+      {"severity": "warning", "note": "Ankle actuator failures: humanoid ankles bear the full robot weight and are the most common point of failure. Inspect ankle joints before every session. Budget for replacement actuators."},
+      {"severity": "warning", "note": "Policy transfer is extremely difficult: sim-to-real gap for humanoid whole-body control is much larger than for quadrupeds or arms. Expect 3-6 months of tuning for reliable walking."},
+      {"severity": "info", "note": "Power consumption: G1 draws 300-800W depending on gait. Battery lasts 1-2 hours. Have spare batteries and a charging station ready for iterative testing."},
+      {"severity": "info", "note": "Whole-body control policies require precise mass/inertia calibration. Measure your specific robot's link masses — manufacturing tolerances cause 5-15% variation from spec."},
+      {"severity": "critical", "note": "Emergency stop: always have a wireless e-stop and a second operator watching. Humanoid falls are sudden and directionally unpredictable. The e-stop operator should not be the same person commanding the robot."}
+    ],
+    "drone": [
+      {"severity": "critical", "note": "Propeller injuries: even micro drones like the Tello can cut skin. Always use propeller guards. Never fly near faces. Keep hands below the prop plane."},
+      {"severity": "critical", "note": "Regulatory compliance: all autonomous drone flight in the US requires FAA Part 107 or Part 44809 exemption. Indoor flight in a netted cage is exempt. Outdoor autonomous flight requires a Remote Pilot Certificate."},
+      {"severity": "warning", "note": "GPS-denied flight: DJI Tello has no GPS. All autonomous flight is relative to takeoff position using IMU/vision. Drift accumulates — flights over 2 minutes need visual anchoring (ArUco markers, VIO)."},
+      {"severity": "warning", "note": "Battery swelling: Tello Li-Po batteries swell after 200-300 cycles. Swollen batteries are a fire risk. Dispose properly and replace when any puffing is visible."},
+      {"severity": "info", "note": "Indoor flight cages: minimum recommended size is 3m x 3m x 2.5m with fine-mesh netting. Ensure adequate ventilation — prop wash in enclosed spaces causes turbulence that degrades position control."},
+      {"severity": "info", "note": "WiFi latency: Tello uses WiFi for control, adding 50-100ms latency. Policies must account for this delay. Direct SDK commands have lower latency than video-stream-based control."},
+      {"severity": "warning", "note": "Insurance: most general liability policies exclude drone operation. Verify your coverage or obtain separate drone liability insurance before any indoor or outdoor flight testing."}
+    ],
+    "rover": [
+      {"severity": "warning", "note": "Mobile manipulators (Stretch RE1) can tip over if the arm is extended while the base is moving. Keep the arm retracted during navigation. Deploy manipulation and navigation as separate phases."},
+      {"severity": "info", "note": "Wheel encoders on the Stretch drift on carpet. Use the onboard RealSense and LIDAR for localization instead of dead reckoning. Recalibrate odometry for each surface type."},
+      {"severity": "warning", "note": "Home environment hazards: stairs, pets, children, glass doors, and loose rugs are all common failure modes for mobile robots in home deployments. Map and exclude hazard zones."},
+      {"severity": "info", "note": "Charging station docking: Stretch RE1 does not auto-dock. Manual intervention needed for recharging. Battery lasts approximately 4-6 hours of mixed navigation/manipulation."},
+      {"severity": "info", "note": "Door thresholds and transitions between flooring types (carpet to tile) cause the most navigation failures. Test these transitions explicitly before deploying any navigation policy."},
+      {"severity": "warning", "note": "Privacy considerations: mobile robots with cameras operating in homes raise significant privacy concerns. Implement data minimization — process images on-device and do not store raw video unless explicitly consented."}
+    ]
+  }
+}

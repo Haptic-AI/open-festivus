@@ -1,0 +1,282 @@
+[
+  {
+    "id": "dn-arm-1",
+    "slug": "deploy-arm-1",
+    "name": "arm safety note: Pinch and crush hazards: all robot arms can generate enough ",
+    "robot_type": "arm",
+    "severity": "critical",
+    "description": "Pinch and crush hazards: all robot arms can generate enough force to injure fingers. Never reach into the workspace while a policy is running. Use an e-stop within arm's reach."
+  },
+  {
+    "id": "dn-arm-2",
+    "slug": "deploy-arm-2",
+    "name": "arm safety note: Servo overheating on low-cost arms (SO-100, Koch v1.1): Feet",
+    "robot_type": "arm",
+    "severity": "warning",
+    "description": "Servo overheating on low-cost arms (SO-100, Koch v1.1): Feetech STS3215 and Dynamixel XL430 servos can overheat after 20-30 minutes of continuous operation. Monitor temperatures and enforce cooldown periods."
+  },
+  {
+    "id": "dn-arm-3",
+    "slug": "deploy-arm-3",
+    "name": "arm safety note: Gripper force calibration: default gripper force on ALOHA 2 ",
+    "robot_type": "arm",
+    "severity": "warning",
+    "description": "Gripper force calibration: default gripper force on ALOHA 2 and Franka can crush soft objects. Tune max gripper force for your task. Start at 20% and increase."
+  },
+  {
+    "id": "dn-arm-4",
+    "slug": "deploy-arm-4",
+    "name": "arm safety note: Tabletop mounting: bolt the arm base to a rigid surface. Cla",
+    "robot_type": "arm",
+    "severity": "info",
+    "description": "Tabletop mounting: bolt the arm base to a rigid surface. Clamp mounting leads to vibration at higher speeds, degrading policy performance. Use M5/M6 bolts on aluminum extrusion."
+  },
+  {
+    "id": "dn-arm-5",
+    "slug": "deploy-arm-5",
+    "name": "arm safety note: Camera calibration drift: wrist cameras on SO-100 and Koch c",
+    "robot_type": "arm",
+    "severity": "info",
+    "description": "Camera calibration drift: wrist cameras on SO-100 and Koch can shift after collisions. Re-run extrinsic calibration weekly or after any hard contact event."
+  },
+  {
+    "id": "dn-arm-6",
+    "slug": "deploy-arm-6",
+    "name": "arm safety note: CE marking status: Franka Panda is CE marked for collaborati",
+    "robot_type": "arm",
+    "severity": "warning",
+    "description": "CE marking status: Franka Panda is CE marked for collaborative operation with proper safety configuration. Low-cost arms (SO-100, Koch) have no safety certification \u2014 treat as lab-only equipment."
+  },
+  {
+    "id": "dn-arm-7",
+    "slug": "deploy-arm-7",
+    "name": "arm safety note: USB latency: SO-100 and Koch communicate via USB serial. A p",
+    "robot_type": "arm",
+    "severity": "info",
+    "description": "USB latency: SO-100 and Koch communicate via USB serial. A powered USB hub reduces latency spikes. Avoid running on USB ports shared with cameras."
+  },
+  {
+    "id": "dn-arm-8",
+    "slug": "deploy-arm-8",
+    "name": "arm safety note: Joint limits: policies trained in sim may command positions ",
+    "robot_type": "arm",
+    "severity": "critical",
+    "description": "Joint limits: policies trained in sim may command positions outside the physical joint range. Always configure software joint limits and enable the robot's built-in limit stops before running any new policy."
+  },
+  {
+    "id": "dn-quadruped-1",
+    "slug": "deploy-quadruped-1",
+    "name": "quadruped safety note: Fall risk: quadrupeds can fall and damage themselves or surr",
+    "robot_type": "quadruped",
+    "severity": "critical",
+    "description": "Fall risk: quadrupeds can fall and damage themselves or surroundings. First real-world tests should be done with the robot suspended in a gantry or over soft padding. Unitree Go2 legs can break from a 1m fall."
+  },
+  {
+    "id": "dn-quadruped-2",
+    "slug": "deploy-quadruped-2",
+    "name": "quadruped safety note: Battery management: Go2 Li-Po battery can puff or catch fire",
+    "robot_type": "quadruped",
+    "severity": "warning",
+    "description": "Battery management: Go2 Li-Po battery can puff or catch fire if over-discharged or punctured. Never run below 20% charge. Store at 60% for long-term storage. Keep a fire-safe bag nearby."
+  },
+  {
+    "id": "dn-quadruped-3",
+    "slug": "deploy-quadruped-3",
+    "name": "quadruped safety note: Sim-to-real gap on terrain: policies trained on Isaac Gym fl",
+    "robot_type": "quadruped",
+    "severity": "warning",
+    "description": "Sim-to-real gap on terrain: policies trained on Isaac Gym flat terrain often fail on real floors due to tile gaps, carpet edges, and slope differences. Start with controlled indoor surfaces."
+  },
+  {
+    "id": "dn-quadruped-4",
+    "slug": "deploy-quadruped-4",
+    "name": "quadruped safety note: Motor heating under load: Go2 motors heat up during aggressi",
+    "robot_type": "quadruped",
+    "severity": "info",
+    "description": "Motor heating under load: Go2 motors heat up during aggressive gaits (bounding, pronking). Built-in thermal protection shuts down at 80C. Monitor via the Unitree app during early tests."
+  },
+  {
+    "id": "dn-quadruped-5",
+    "slug": "deploy-quadruped-5",
+    "name": "quadruped safety note: Outdoor operation: requires clear sightlines, flat ground, a",
+    "robot_type": "quadruped",
+    "severity": "critical",
+    "description": "Outdoor operation: requires clear sightlines, flat ground, and an operator within 5m for e-stop. No autonomous outdoor operation without CE marking and risk assessment. Go2 is CE marked but operator must be present."
+  },
+  {
+    "id": "dn-quadruped-6",
+    "slug": "deploy-quadruped-6",
+    "name": "quadruped safety note: Foot slippage: real-world friction varies dramatically from ",
+    "robot_type": "quadruped",
+    "severity": "warning",
+    "description": "Foot slippage: real-world friction varies dramatically from simulation defaults. Rubber foot covers improve traction on tile and concrete. Stock plastic feet slip on smooth surfaces."
+  },
+  {
+    "id": "dn-quadruped-7",
+    "slug": "deploy-quadruped-7",
+    "name": "quadruped safety note: Recovery behavior: when a quadruped falls, do not manually p",
+    "robot_type": "quadruped",
+    "severity": "info",
+    "description": "Recovery behavior: when a quadruped falls, do not manually pick it up while the policy is running. Send a stop command first, then manually reset. Some policies have no self-recovery and will thrash on the ground."
+  },
+  {
+    "id": "dn-humanoid-1",
+    "slug": "deploy-humanoid-1",
+    "name": "humanoid safety note: Tip-over hazard: humanoid robots are inherently unstable. Th",
+    "robot_type": "humanoid",
+    "severity": "critical",
+    "description": "Tip-over hazard: humanoid robots are inherently unstable. The Unitree G1 weighs 35kg and can cause serious injury if it falls on a person. Maintain a 2m exclusion zone during operation."
+  },
+  {
+    "id": "dn-humanoid-2",
+    "slug": "deploy-humanoid-2",
+    "name": "humanoid safety note: No safety certification exists for humanoid robots in shared",
+    "robot_type": "humanoid",
+    "severity": "critical",
+    "description": "No safety certification exists for humanoid robots in shared spaces as of 2025. ISO 10218 and ISO/TS 15066 do not cover bipedal platforms. Treat all humanoid deployment as experimental and lab-only."
+  },
+  {
+    "id": "dn-humanoid-3",
+    "slug": "deploy-humanoid-3",
+    "name": "humanoid safety note: Ankle actuator failures: humanoid ankles bear the full robot",
+    "robot_type": "humanoid",
+    "severity": "warning",
+    "description": "Ankle actuator failures: humanoid ankles bear the full robot weight and are the most common point of failure. Inspect ankle joints before every session. Budget for replacement actuators."
+  },
+  {
+    "id": "dn-humanoid-4",
+    "slug": "deploy-humanoid-4",
+    "name": "humanoid safety note: Policy transfer is extremely difficult: sim-to-real gap for ",
+    "robot_type": "humanoid",
+    "severity": "warning",
+    "description": "Policy transfer is extremely difficult: sim-to-real gap for humanoid whole-body control is much larger than for quadrupeds or arms. Expect 3-6 months of tuning for reliable walking."
+  },
+  {
+    "id": "dn-humanoid-5",
+    "slug": "deploy-humanoid-5",
+    "name": "humanoid safety note: Power consumption: G1 draws 300-800W depending on gait. Batt",
+    "robot_type": "humanoid",
+    "severity": "info",
+    "description": "Power consumption: G1 draws 300-800W depending on gait. Battery lasts 1-2 hours. Have spare batteries and a charging station ready for iterative testing."
+  },
+  {
+    "id": "dn-humanoid-6",
+    "slug": "deploy-humanoid-6",
+    "name": "humanoid safety note: Whole-body control policies require precise mass/inertia cal",
+    "robot_type": "humanoid",
+    "severity": "info",
+    "description": "Whole-body control policies require precise mass/inertia calibration. Measure your specific robot's link masses \u2014 manufacturing tolerances cause 5-15% variation from spec."
+  },
+  {
+    "id": "dn-humanoid-7",
+    "slug": "deploy-humanoid-7",
+    "name": "humanoid safety note: Emergency stop: always have a wireless e-stop and a second o",
+    "robot_type": "humanoid",
+    "severity": "critical",
+    "description": "Emergency stop: always have a wireless e-stop and a second operator watching. Humanoid falls are sudden and directionally unpredictable. The e-stop operator should not be the same person commanding the robot."
+  },
+  {
+    "id": "dn-drone-1",
+    "slug": "deploy-drone-1",
+    "name": "drone safety note: Propeller injuries: even micro drones like the Tello can cut",
+    "robot_type": "drone",
+    "severity": "critical",
+    "description": "Propeller injuries: even micro drones like the Tello can cut skin. Always use propeller guards. Never fly near faces. Keep hands below the prop plane."
+  },
+  {
+    "id": "dn-drone-2",
+    "slug": "deploy-drone-2",
+    "name": "drone safety note: Regulatory compliance: all autonomous drone flight in the US",
+    "robot_type": "drone",
+    "severity": "critical",
+    "description": "Regulatory compliance: all autonomous drone flight in the US requires FAA Part 107 or Part 44809 exemption. Indoor flight in a netted cage is exempt. Outdoor autonomous flight requires a Remote Pilot Certificate."
+  },
+  {
+    "id": "dn-drone-3",
+    "slug": "deploy-drone-3",
+    "name": "drone safety note: GPS-denied flight: DJI Tello has no GPS. All autonomous flig",
+    "robot_type": "drone",
+    "severity": "warning",
+    "description": "GPS-denied flight: DJI Tello has no GPS. All autonomous flight is relative to takeoff position using IMU/vision. Drift accumulates \u2014 flights over 2 minutes need visual anchoring (ArUco markers, VIO)."
+  },
+  {
+    "id": "dn-drone-4",
+    "slug": "deploy-drone-4",
+    "name": "drone safety note: Battery swelling: Tello Li-Po batteries swell after 200-300 ",
+    "robot_type": "drone",
+    "severity": "warning",
+    "description": "Battery swelling: Tello Li-Po batteries swell after 200-300 cycles. Swollen batteries are a fire risk. Dispose properly and replace when any puffing is visible."
+  },
+  {
+    "id": "dn-drone-5",
+    "slug": "deploy-drone-5",
+    "name": "drone safety note: Indoor flight cages: minimum recommended size is 3m x 3m x 2",
+    "robot_type": "drone",
+    "severity": "info",
+    "description": "Indoor flight cages: minimum recommended size is 3m x 3m x 2.5m with fine-mesh netting. Ensure adequate ventilation \u2014 prop wash in enclosed spaces causes turbulence that degrades position control."
+  },
+  {
+    "id": "dn-drone-6",
+    "slug": "deploy-drone-6",
+    "name": "drone safety note: WiFi latency: Tello uses WiFi for control, adding 50-100ms l",
+    "robot_type": "drone",
+    "severity": "info",
+    "description": "WiFi latency: Tello uses WiFi for control, adding 50-100ms latency. Policies must account for this delay. Direct SDK commands have lower latency than video-stream-based control."
+  },
+  {
+    "id": "dn-drone-7",
+    "slug": "deploy-drone-7",
+    "name": "drone safety note: Insurance: most general liability policies exclude drone ope",
+    "robot_type": "drone",
+    "severity": "warning",
+    "description": "Insurance: most general liability policies exclude drone operation. Verify your coverage or obtain separate drone liability insurance before any indoor or outdoor flight testing."
+  },
+  {
+    "id": "dn-rover-1",
+    "slug": "deploy-rover-1",
+    "name": "rover safety note: Mobile manipulators (Stretch RE1) can tip over if the arm is",
+    "robot_type": "rover",
+    "severity": "warning",
+    "description": "Mobile manipulators (Stretch RE1) can tip over if the arm is extended while the base is moving. Keep the arm retracted during navigation. Deploy manipulation and navigation as separate phases."
+  },
+  {
+    "id": "dn-rover-2",
+    "slug": "deploy-rover-2",
+    "name": "rover safety note: Wheel encoders on the Stretch drift on carpet. Use the onboa",
+    "robot_type": "rover",
+    "severity": "info",
+    "description": "Wheel encoders on the Stretch drift on carpet. Use the onboard RealSense and LIDAR for localization instead of dead reckoning. Recalibrate odometry for each surface type."
+  },
+  {
+    "id": "dn-rover-3",
+    "slug": "deploy-rover-3",
+    "name": "rover safety note: Home environment hazards: stairs, pets, children, glass door",
+    "robot_type": "rover",
+    "severity": "warning",
+    "description": "Home environment hazards: stairs, pets, children, glass doors, and loose rugs are all common failure modes for mobile robots in home deployments. Map and exclude hazard zones."
+  },
+  {
+    "id": "dn-rover-4",
+    "slug": "deploy-rover-4",
+    "name": "rover safety note: Charging station docking: Stretch RE1 does not auto-dock. Ma",
+    "robot_type": "rover",
+    "severity": "info",
+    "description": "Charging station docking: Stretch RE1 does not auto-dock. Manual intervention needed for recharging. Battery lasts approximately 4-6 hours of mixed navigation/manipulation."
+  },
+  {
+    "id": "dn-rover-5",
+    "slug": "deploy-rover-5",
+    "name": "rover safety note: Door thresholds and transitions between flooring types (carp",
+    "robot_type": "rover",
+    "severity": "info",
+    "description": "Door thresholds and transitions between flooring types (carpet to tile) cause the most navigation failures. Test these transitions explicitly before deploying any navigation policy."
+  },
+  {
+    "id": "dn-rover-6",
+    "slug": "deploy-rover-6",
+    "name": "rover safety note: Privacy considerations: mobile robots with cameras operating",
+    "robot_type": "rover",
+    "severity": "warning",
+    "description": "Privacy considerations: mobile robots with cameras operating in homes raise significant privacy concerns. Implement data minimization \u2014 process images on-device and do not store raw video unless explicitly consented."
+  }
+]

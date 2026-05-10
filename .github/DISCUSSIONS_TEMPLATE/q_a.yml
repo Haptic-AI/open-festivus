@@ -1,0 +1,26 @@
+title: "Q: "
+labels: ["q-and-a"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Q&A is for "how do I" and "is this supposed to" questions.
+        Concrete bug reports go in Issues. Open-ended ideas go in
+        Ideas. Show what you've built in Show and tell.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: What's your question?
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: What have you tried?
+      description: |
+        Helps us point you at the right answer faster. "I read X, I
+        tried Y, neither worked" beats "how do I do this."
+    validations:
+      required: false

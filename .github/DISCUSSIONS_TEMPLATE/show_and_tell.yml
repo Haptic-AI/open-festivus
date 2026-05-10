@@ -1,0 +1,33 @@
+title: "Show: "
+labels: ["show-and-tell"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Show off what you built with or on top of Festivus. Demos,
+        screenshots, videos, links to writeups, all welcome.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What did you build?
+    validations:
+      required: true
+
+  - type: textarea
+    id: links
+    attributes:
+      label: Links / media
+      description: GitHub repo, demo URL, video, blog post, screenshots.
+    validations:
+      required: false
+
+  - type: textarea
+    id: stack
+    attributes:
+      label: How does it use Festivus?
+      description: |
+        Did you fork the data? Hit the API? Build on top of the
+        workbench? Helps others find related work.
+    validations:
+      required: false

@@ -1,0 +1,39 @@
+{
+  "name": "festivus",
+  "private": true,
+  "scripts": {
+    "dev": "FESTIVUS_DEV_FROM_ROOT=1 concurrently -k -n web,api,check -c blue,magenta,green \"pnpm --filter @festivus/web dev\" \"pnpm --filter @festivus/api dev\" \"node scripts/dev-healthcheck.mjs\"",
+    "validate:seed": "npx tsx apps/web/src/data/seed/validate-types.ts",
+    "prebuild": "pnpm validate:seed",
+    "build": "pnpm --filter @festivus/web build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm --filter @festivus/web lint",
+    "check": "pnpm typecheck && pnpm lint",
+    "smoke": "pnpm --filter @festivus/api smoke",
+    "test": "pnpm --filter @festivus/web build:prompts && vitest run tests/seed-validation/ && vitest run --root api",
+    "test:smoke": "vitest run tests/persona-tests/agent-smoke.test.ts tests/persona-tests/agent-smoke-with-mock.test.ts tests/persona-tests/all-22-shapes.test.ts tests/persona-tests/agent-natural-phrasing.test.ts",
+    "test:personas": "npx tsx scripts/test-personas.ts",
+    "test:all": "vitest run && npx tsx scripts/test-personas.ts",
+    "test:types": "npx tsx apps/web/src/data/seed/validate-types.ts",
+    "test:dashboard": "npx tsx scripts/test-dashboard.ts",
+    "test:watch": "vitest",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "chokidar": "^5.0.0",
+    "concurrently": "^9.1.0",
+    "husky": "^9.1.7",
+    "tsx": "^4.19.0",
+    "vitest": "^4.1.2"
+  },
+  "dependencies": {
+    "nanoid": "^5.1.7"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/client",
+      "@prisma/engines",
+      "prisma"
+    ]
+  }
+}

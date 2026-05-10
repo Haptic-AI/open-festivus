@@ -1,0 +1,70 @@
+name: Bug report
+description: Something is broken or behaves incorrectly.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug. The more concrete
+        the repro, the faster we can fix it.
+
+        For data corrections (a robot's spec is wrong, a dataset
+        description is misleading, a policy link is dead), please use
+        the in-app `/contribute` flow instead. This template is for
+        code bugs.
+
+  - type: textarea
+    id: what_happened
+    attributes:
+      label: What happened?
+      description: A clear description of the bug.
+      placeholder: When I do X, Y happens. I expected Z.
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: A minimal sequence that triggers the bug.
+      placeholder: |
+        1. Run `pnpm dev`
+        2. Navigate to /workbench
+        3. Click "New project"
+        4. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: |
+        OS, Node version, pnpm version, browser if relevant.
+        `node --version && pnpm --version` is fine.
+      render: bash
+    validations:
+      required: true
+
+  - type: input
+    id: commit
+    attributes:
+      label: Commit SHA or version tag
+      description: Output of `git rev-parse --short HEAD` or the release tag (e.g. v0.1.0).
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs or error output
+      render: text

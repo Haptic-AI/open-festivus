@@ -1,0 +1,202 @@
+[
+  {
+    "id": "env1",
+    "slug": "tabletop-clean",
+    "name": "Clean Tabletop",
+    "simulator": "mujoco",
+    "scene": "tabletop_clean",
+    "description": "A bare wooden table surface under even overhead lighting. No clutter, no distractions. Standard starting environment for manipulation policy evaluation.",
+    "conditions": {
+      "location": "indoor lab",
+      "surface": "wood table (0.8m x 1.2m)",
+      "lighting": "uniform overhead, 500 lux",
+      "objects": "task-specific only (cubes, cylinders, target bins)",
+      "obstacles": "none",
+      "physics": "MuJoCo default (dt=0.002s, friction=1.0)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["so-100", "koch-v11", "so-arm101", "franka-panda"],
+    "deploy_command": "python -m lerobot.scripts.eval --env tabletop_clean --robot $ROBOT",
+    "preview_description": "Plain wooden table, overhead camera view. White walls, even fluorescent lighting. A single colored cube sits at table center."
+  },
+  {
+    "id": "env2",
+    "slug": "tabletop-cluttered",
+    "name": "Cluttered Tabletop",
+    "simulator": "mujoco",
+    "scene": "tabletop_cluttered",
+    "description": "Table surface with 5-15 distractor objects (mugs, pens, paper, small boxes). Tests policy robustness to visual clutter and accidental contact with irrelevant objects.",
+    "conditions": {
+      "location": "indoor lab",
+      "surface": "wood table (0.8m x 1.2m)",
+      "lighting": "variable (300-800 lux, randomized shadow direction)",
+      "objects": "target objects + 5-15 distractor household items",
+      "obstacles": "distractors may block direct grasp paths",
+      "physics": "MuJoCo default with randomized object masses (0.05-0.5kg)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["so-100", "koch-v11", "so-arm101", "franka-panda", "aloha-2"],
+    "deploy_command": "python -m lerobot.scripts.eval --env tabletop_cluttered --robot $ROBOT --num-distractors 10",
+    "preview_description": "Wooden table covered with mugs, pens, crumpled paper, and small boxes. Target cube partially obscured by a mug. Shadows from angled desk lamp."
+  },
+  {
+    "id": "env3",
+    "slug": "mujoco-aloha-bimanual",
+    "name": "ALOHA Bimanual Workspace",
+    "simulator": "mujoco",
+    "scene": "aloha_bimanual",
+    "description": "MuJoCo recreation of the ALOHA dual-arm tabletop from Zhao et al. Two ViperX 300 arms facing each other across a shared workspace. Used for ACT transfer cube and insertion tasks.",
+    "conditions": {
+      "location": "indoor lab",
+      "surface": "aluminum extrusion table (0.6m x 1.0m)",
+      "lighting": "uniform overhead, 600 lux",
+      "objects": "cubes, pegs, sockets (task-dependent)",
+      "obstacles": "none",
+      "physics": "MuJoCo 2.3.7 (dt=0.002s)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["aloha-2"],
+    "deploy_command": "python -m lerobot.scripts.eval --env aloha_bimanual --task transfer_cube",
+    "preview_description": "Two robot arms face each other across a narrow aluminum table. A red cube sits between them. Overhead camera captures the full workspace."
+  },
+  {
+    "id": "env4",
+    "slug": "aloha-kitchen",
+    "name": "ALOHA Kitchen",
+    "simulator": "mujoco",
+    "scene": "aloha_kitchen",
+    "description": "Kitchen countertop environment for Mobile ALOHA cooking tasks. Includes stove, pan, utensils, and food items. Long-horizon tasks in a realistic kitchen layout.",
+    "conditions": {
+      "location": "indoor kitchen",
+      "surface": "kitchen countertop (granite, 0.6m x 2.0m)",
+      "lighting": "kitchen overhead + under-cabinet LEDs (400-700 lux)",
+      "objects": "pan, spatula, plates, food items (shrimp, vegetables)",
+      "obstacles": "stove knobs, cabinet edges, hanging utensils",
+      "physics": "MuJoCo default with stove heat zone (visual only)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["aloha-2"],
+    "deploy_command": "python -m lerobot.scripts.eval --env aloha_kitchen --task saute_shrimp",
+    "preview_description": "Kitchen countertop with a gas stove, frying pan, and scattered ingredients. Mobile ALOHA base visible at counter edge. Warm kitchen lighting."
+  },
+  {
+    "id": "env5",
+    "slug": "flat-terrain",
+    "name": "Flat Terrain (Locomotion)",
+    "simulator": "isaac-sim",
+    "scene": "flat_terrain",
+    "description": "Infinite flat ground plane for basic locomotion evaluation. Domain randomization over friction (0.3-1.5), added mass (0-2kg), and motor strength (80-120%). Standard first test for any locomotion policy.",
+    "conditions": {
+      "location": "outdoor flat ground",
+      "surface": "concrete-like (friction 0.3-1.5, randomized)",
+      "lighting": "N/A (proprioception-only policies)",
+      "objects": "none",
+      "obstacles": "none",
+      "physics": "Isaac Sim (dt=0.005s, 4096 parallel envs, aggressive DR)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["unitree-go2", "unitree-g1"],
+    "deploy_command": "python train.py --task Go2-Flat --num_envs 4096 --headless",
+    "preview_description": "Vast flat grey ground plane stretching to the horizon. A single quadruped robot stands at center. No features, no obstacles — pure locomotion test."
+  },
+  {
+    "id": "env6",
+    "slug": "rough-terrain-outdoor",
+    "name": "Rough Terrain Outdoor",
+    "simulator": "isaac-sim",
+    "scene": "rough_terrain_v2",
+    "description": "Procedurally generated uneven terrain with rocks, slopes (up to 25 degrees), and small gaps (up to 30cm). Tests robustness of locomotion policies beyond flat ground.",
+    "conditions": {
+      "location": "outdoor rocky terrain",
+      "surface": "procedural heightfield (slopes 0-25deg, roughness 0-5cm)",
+      "lighting": "N/A (proprioception + depth policies)",
+      "objects": "rocks (5-20cm), scattered debris",
+      "obstacles": "gaps (10-30cm), steps (5-15cm)",
+      "physics": "Isaac Sim (dt=0.005s, terrain curriculum, DR on friction/mass)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["unitree-go2"],
+    "deploy_command": "python train.py --task Go2-Rough --num_envs 4096 --terrain rough_v2",
+    "preview_description": "Hilly terrain with scattered rocks and uneven ground. Quadruped navigating a 15-degree slope with loose gravel. Distant mountains in background."
+  },
+  {
+    "id": "env7",
+    "slug": "parkour-course",
+    "name": "Parkour Obstacle Course",
+    "simulator": "isaac-sim",
+    "scene": "parkour_curriculum",
+    "description": "Progressive parkour curriculum from Cheng et al. Includes stepping stones, gaps (20-60cm), ramps, and elevated platforms (up to 60cm). Teacher policy has privileged terrain info.",
+    "conditions": {
+      "location": "indoor/outdoor mixed",
+      "surface": "rigid platforms and ramps (friction 0.6-1.2)",
+      "lighting": "N/A (depth + proprioception)",
+      "objects": "none",
+      "obstacles": "gaps (20-60cm), steps (10-60cm), ramps (15-35deg)",
+      "physics": "Isaac Sim (dt=0.005s, curriculum progression, DR on friction/mass/motor strength)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["unitree-go2"],
+    "deploy_command": "python train.py --task Go2-Parkour --num_envs 4096 --curriculum progressive",
+    "preview_description": "Series of concrete platforms at varying heights with gaps between them. A quadruped mid-leap over a 40cm gap. Course progresses from easy to extreme."
+  },
+  {
+    "id": "env8",
+    "slug": "indoor-flat",
+    "name": "Indoor Flat (Humanoid)",
+    "simulator": "isaac-sim",
+    "scene": "indoor_flat",
+    "description": "Indoor room with flat floor for humanoid locomotion and basic manipulation. Includes simple furniture (table, chair) as context. Used for G1 whole-body control evaluation.",
+    "conditions": {
+      "location": "indoor room (5m x 5m)",
+      "surface": "tile floor (friction 0.8)",
+      "lighting": "uniform indoor (500 lux)",
+      "objects": "table, chair, small box on table",
+      "obstacles": "furniture legs, doorframe",
+      "physics": "Isaac Sim 4.0 (dt=0.005s, DR on friction/mass)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["unitree-g1"],
+    "deploy_command": "python train.py --task G1-Indoor --num_envs 2048",
+    "preview_description": "Sparse indoor room with tile floor, a simple table, and a chair. Humanoid robot stands in the center. Neutral lighting, white walls."
+  },
+  {
+    "id": "env9",
+    "slug": "indoor-flight-cage",
+    "name": "Indoor Flight Cage",
+    "simulator": "pybullet",
+    "scene": "flight_cage",
+    "description": "Netted indoor flight cage (3m x 3m x 2.5m) with ArUco landing pads and motion capture reference frame. Standard drone testing environment.",
+    "conditions": {
+      "location": "indoor flight cage (3m x 3m x 2.5m)",
+      "surface": "foam mat floor with ArUco landing pads",
+      "lighting": "even overhead LED (600 lux, no flickering)",
+      "objects": "ArUco markers (10cm and 20cm), landing pads",
+      "obstacles": "safety nets (walls), ceiling",
+      "physics": "PyBullet (dt=0.001s, quadrotor aerodynamics model)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["dji-tello"],
+    "deploy_command": "python drone_eval.py --env flight_cage --policy visual_landing --marker aruco_20cm",
+    "preview_description": "Small netted room with foam floor. Two ArUco markers on the ground. A tiny drone hovers at 1m altitude, camera angled downward."
+  },
+  {
+    "id": "env10",
+    "slug": "robomimic-can",
+    "name": "Robomimic PickPlaceCan",
+    "simulator": "mujoco",
+    "scene": "robomimic_can",
+    "description": "Standard Robomimic benchmark environment. Franka arm must pick a soda can from the table and place it in a target bin. From Mandlekar et al. (CoRL 2022).",
+    "conditions": {
+      "location": "indoor lab",
+      "surface": "metal table",
+      "lighting": "uniform",
+      "objects": "soda can, target bin",
+      "obstacles": "none",
+      "physics": "MuJoCo 2.3 (dt=0.002s, default friction)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["franka-panda"],
+    "deploy_command": "python robomimic/scripts/run_trained_agent.py --agent can_ph --env PickPlaceCan",
+    "preview_description": "Franka arm next to a metal table. A red soda can sits on the table, a grey bin to the right. Two camera views: agent-view and eye-in-hand."
+  }
+]

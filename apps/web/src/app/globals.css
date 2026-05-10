@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/* JetBrains Mono is loaded via next/font in app/layout.tsx (self-hosted,
+   inlined @font-face). The --font-jetbrains-mono CSS var is set on <html>. */
+@theme {
+  --color-blueprint-navy: #0B1C36;
+  --color-graphite-black: #111213;
+  --color-drafting-cream: #EFECE4;
+  --color-cold-gray: #6B7280;
+  --color-annotation-red: #C6351B;
+  --color-safety-yellow: #FFD326;
+  --color-machine-orange: #FF6B00;
+
+  --font-sans: var(--font-jetbrains-mono), ui-monospace, monospace;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
+/* Bump the site-wide baseline so body copy reads cleanly on dense data
+   pages. Browser default is 16px (12pt). 13pt ≈ 17.33px, ~8% larger.
+   Affects every rem-based Tailwind class (text-xs through text-3xl).
+   Hard-coded px values (e.g. style={{ fontSize: 11 }}) are NOT scaled. */
+html {
+  font-size: 13pt;
+}
+
+/* Blueprint grid overlays */
+.blueprint-grid {
+  background-image:
+    linear-gradient(to right, rgba(239, 236, 228, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(239, 236, 228, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Specialist pulse animation */
+@keyframes specialistPulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.1); }
+}
+
+/* Click-me pulse — fills the button with safety-yellow + a breathing
+   outward glow so eyes land on it instantly. ask_user first-option
+   chips and the Render button share this. Hover still wins at higher
+   specificity, so the dark-navy hover fill overrides the animation. */
+@keyframes highlightPulse {
+  0%, 100% {
+    background-color: #FFD326;
+    box-shadow: 0 0 0 2px rgba(255, 211, 38, 0.9), 0 0 14px 4px rgba(255, 211, 38, 0.55);
+  }
+  50% {
+    background-color: #FFDB4F;
+    box-shadow: 0 0 0 3px rgba(255, 211, 38, 1), 0 0 22px 8px rgba(255, 211, 38, 0.75);
+  }
+}
+
+.highlight-pulse {
+  animation: highlightPulse 1.4s ease-in-out infinite;
+  border-color: transparent;
+  color: #0B1C36;
+  font-weight: 700;
+}
+
+/* Variant against dark canvas (env card Render button). */
+@keyframes highlightPulseDark {
+  0%, 100% {
+    background-color: #FFD326;
+    box-shadow: 0 0 0 2px rgba(255, 211, 38, 1), 0 0 18px 6px rgba(255, 211, 38, 0.7);
+  }
+  50% {
+    background-color: #FFE366;
+    box-shadow: 0 0 0 3px rgba(255, 211, 38, 1), 0 0 28px 10px rgba(255, 211, 38, 0.9);
+  }
+}
+
+.highlight-pulse-dark {
+  animation: highlightPulseDark 1.4s ease-in-out infinite;
+  color: #0B1C36;
+  font-weight: 700;
+}
+
+/* ask_user chips: signal "options refreshed" when the user clicks a different
+   card. The chip container remounts via a key bump and fades in (4px slide),
+   while the question line gets a 200ms yellow flash so the eye registers
+   "this changed" even in peripheral vision. */
+@keyframes chipFadeIn {
+  0% { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.chip-fade-in {
+  animation: chipFadeIn 150ms ease-out;
+}
+
+@keyframes questionFlash {
+  0% { background-color: rgba(255, 211, 38, 0.55); }
+  100% { background-color: transparent; }
+}
+
+.question-flash {
+  animation: questionFlash 200ms ease-out;
+  border-radius: 3px;
+  padding: 1px 4px;
+  margin: -1px -4px;
+}
+
+/* Latency loader — shown by <GlobalLoader /> for nav/full-canvas waits and
+   inside <TrackedButton> for per-button waits past the 200ms threshold.
+   Spec: src/lib/latency/. Three nested dot pulses out of a solid center. */
+.loader,
+.loader-sm {
+  border-radius: 50%;
+  background: #0B1C36;
+  box-shadow: 0 0 0 0 rgba(11, 28, 54, 0.25);
+  animation: latencyLoader 1.5s infinite linear;
+  position: relative;
+}
+
+.loader {
+  width: 20px;
+  aspect-ratio: 1;
+  display: inline-block;
+}
+
+.loader-sm {
+  width: 10px;
+  aspect-ratio: 1;
+  display: inline-block;
+}
+
+.loader::before,
+.loader::after,
+.loader-sm::before,
+.loader-sm::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  box-shadow: 0 0 0 0 rgba(11, 28, 54, 0.25);
+  animation: inherit;
+  animation-delay: -0.5s;
+}
+
+.loader::after,
+.loader-sm::after {
+  animation-delay: -1s;
+}
+
+@keyframes latencyLoader {
+  100% {
+    box-shadow: 0 0 0 30px rgba(11, 28, 54, 0);
+  }
+}
+
+/* Canvas line grid — engineering graph paper on cream */
+.canvas-grid {
+  background-color: #EFECE4;
+  background-image:
+    linear-gradient(to right, rgba(11, 28, 54, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 28, 54, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

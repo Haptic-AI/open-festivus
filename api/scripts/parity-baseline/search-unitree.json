@@ -1,0 +1,2429 @@
+{
+  "count": 132,
+  "limit": 50,
+  "offset": 0,
+  "results": [
+    {
+      "data": {
+        "actuators": null,
+        "build_paths": [],
+        "category": "Humanoid",
+        "community_size": "medium",
+        "compatible_env_slugs": [],
+        "compatible_policy_slugs": [],
+        "deploy_readiness": "field_deployed",
+        "description": "Unitree's full-size bipedal humanoid. Commercially available, popular research platform.",
+        "dof": null,
+        "form_factor": "humanoid",
+        "id": "r4",
+        "image_source_url": null,
+        "image_url": "https://www.unitree.com/images/da1ecbd107434a03b068aa503311f43a_3840x7000.jpg",
+        "manufacturer": "Unitree Robotics",
+        "name": "H1",
+        "price_availability": "public",
+        "price_usd": null,
+        "product_page_url": "https://www.unitree.com/h1/",
+        "sensors": [],
+        "slug": "unitree-h1",
+        "type": "humanoid",
+        "weight_kg": null
+      },
+      "slug": "unitree-h1",
+      "table": "robots"
+    },
+    {
+      "data": {
+        "actuators": null,
+        "build_paths": [],
+        "category": "Humanoid",
+        "community_size": "large",
+        "compatible_env_slugs": [],
+        "compatible_policy_slugs": [],
+        "deploy_readiness": "field_deployed",
+        "description": "Unitree's compact humanoid, 127cm tall. Best price-to-capability ratio in the humanoid bucket and a growing sim-to-real community.",
+        "dof": null,
+        "form_factor": "humanoid",
+        "id": "r5",
+        "image_source_url": null,
+        "image_url": "https://www.unitree.com/images/52688de58de044358e4792a5b7c1593d_2740x1720.jpg",
+        "manufacturer": "Unitree Robotics",
+        "name": "G1",
+        "price_availability": "public",
+        "price_usd": null,
+        "product_page_url": "https://www.unitree.com/g1/",
+        "sensors": [],
+        "slug": "unitree-g1",
+        "type": "humanoid",
+        "weight_kg": null
+      },
+      "slug": "unitree-g1",
+      "table": "robots"
+    },
+    {
+      "data": {
+        "actuators": null,
+        "aliases": [
+          "Galaxy General G1"
+        ],
+        "build_paths": [],
+        "category": "Humanoid",
+        "community_size": "small",
+        "compatible_env_slugs": [],
+        "compatible_policy_slugs": [],
+        "deploy_readiness": "lab_only",
+        "description": "Mobile humanoid upper body from Galbot (Galaxy General), wheeled base plus dual arms. Distinct SKU from Unitree G1 per spec 017 decision 4.",
+        "dof": null,
+        "form_factor": "humanoid",
+        "id": "r17",
+        "image_source_url": "https://humanoid.guide/product/galbot-g1/",
+        "image_url": "https://humanoid.guide/wp-content/uploads/2024/11/Humanoidguide_galbot_wm.webp",
+        "manufacturer": "Galbot",
+        "name": "Galbot G1",
+        "price_availability": "unknown",
+        "price_usd": null,
+        "product_page_url": "https://www.galbot.com/g1",
+        "sensors": [],
+        "slug": "galbot-g1",
+        "type": "humanoid",
+        "weight_kg": null
+      },
+      "slug": "galbot-g1",
+      "table": "robots"
+    },
+    {
+      "data": {
+        "actuators": null,
+        "build_paths": [],
+        "category": "Quadruped / UGV",
+        "community_size": "large",
+        "compatible_env_slugs": [],
+        "compatible_policy_slugs": [],
+        "deploy_readiness": "field_deployed",
+        "description": "Unitree Go2, compact legged quadruped with 12 actuated joints. Best price-to-capability ratio for legged locomotion research.",
+        "dof": null,
+        "form_factor": "quadruped",
+        "id": "r24",
+        "image_source_url": null,
+        "image_url": "https://www.unitree.com/images/b5fffd3e4fc04e6f9fcafedb9516b341_3840x2146.jpg",
+        "manufacturer": "Unitree Robotics",
+        "name": "Go2",
+        "price_availability": "public",
+        "price_usd": null,
+        "product_page_url": "https://www.unitree.com/go2/",
+        "sensors": [],
+        "slug": "unitree-go2",
+        "type": "quadruped",
+        "weight_kg": null
+      },
+      "slug": "unitree-go2",
+      "table": "robots"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "lerobot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "reported",
+        "framework": "LeRobot",
+        "hf_repo_id": "lerobot/unitree-g1-mujoco",
+        "id": "p578",
+        "license": "unknown",
+        "name": "unitree-g1-mujoco",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "lerobot-unitree-g1-mujoco",
+        "task_description": "Policy model from lerobot. Tags: region:us.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "lerobot-unitree-g1-mujoco",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cagataydev",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "Stable-Baselines3",
+        "hf_repo_id": "cagataydev/sac-unitree-g1-mujoco",
+        "id": "p837",
+        "license": "unknown",
+        "name": "sac-unitree-g1-mujoco",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "cagataydev-sac-unitree-g1-mujoco",
+        "task_description": "Policy model from cagataydev. Tags: stable-baselines3, reinforcement-learning, robotics, mujoco, locomotion.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cagataydev-sac-unitree-g1-mujoco",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Unitree Robotics",
+        "benchmarks": [],
+        "compatible_env_slugs": [
+          "real-world",
+          "unitree-xr-teleoperate"
+        ],
+        "compatible_robot_slugs": [
+          "unitree-g1"
+        ],
+        "evidence_level": "validated",
+        "framework": "unifolm-vla",
+        "github_repo_url": "https://github.com/unitreerobotics/unifolm-vla",
+        "hf_repo_id": "unitreerobotics/UnifoLM-VLA-Base",
+        "hf_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Base",
+        "id": "p936",
+        "license": "cc-by-nc-sa-4.0",
+        "license_short": "non-commercial",
+        "name": "UnifoLM-VLA-Base",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "provenance_notes": "Verified via WebFetch of the HF model card and the GitHub repo README. Non-commercial license. This is the ONLY currently-published policy with real G1 fold training.",
+        "skill_type": "manipulation-foundation",
+        "slug": "unitreerobotics-unifolm-vla-base",
+        "task_description": "Unified Vision-Language-Action policy trained by Unitree Robotics on real Unitree G1 teleoperation data across 12 manipulation tasks: Fold Towel, Stack Block, Bag Insert, Erase Board, Clean Table, Pack PencilBox, Pour Medicine, Pack PingPong, Prepare Fruit, Organize Tools, Wipe Table, and dual-robot table clean. Released 2026-03-16. Single-policy model covering all 12 tasks.",
+        "taxonomy": {
+          "category": "vla",
+          "embodiment": "humanoid-bimanual",
+          "modality": "vision-language-action",
+          "subcategory": "manipulation-foundation"
+        },
+        "training_datasets": [
+          "unitreerobotics/G1_Dex1_Fold_Towel"
+        ],
+        "verified_at": "2026-04-17",
+        "verified_hardware": [
+          "unitree-g1"
+        ],
+        "verified_via_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Base"
+      },
+      "slug": "unitreerobotics-unifolm-vla-base",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Unitree Robotics",
+        "benchmarks": [],
+        "compatible_env_slugs": [
+          "libero"
+        ],
+        "compatible_robot_slugs": [
+          "unitree-g1"
+        ],
+        "evidence_level": "reported",
+        "framework": "unifolm-vla",
+        "github_repo_url": "https://github.com/unitreerobotics/unifolm-vla",
+        "hf_repo_id": "unitreerobotics/UnifoLM-VLA-Libero",
+        "hf_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Libero",
+        "id": "p997",
+        "license": "cc-by-nc-sa-4.0",
+        "license_short": "non-commercial",
+        "name": "UnifoLM-VLA-Libero",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "provenance_notes": "Verified via WebFetch. LIBERO-tuned variant of the same Unitree VLA family. Non-commercial license.",
+        "skill_type": "manipulation-foundation",
+        "slug": "unitreerobotics-unifolm-vla-libero",
+        "task_description": "UnifoLM-VLA variant tuned on the LIBERO manipulation benchmark (simulation). Same architecture as UnifoLM-VLA-Base; useful for evaluation and cross-benchmark comparison, not directly for G1 deployment.",
+        "taxonomy": {
+          "category": "vla",
+          "embodiment": "humanoid-bimanual",
+          "modality": "vision-language-action",
+          "subcategory": "manipulation-foundation"
+        },
+        "training_datasets": [],
+        "verified_at": "2026-04-17",
+        "verified_hardware": [
+          "unitree-g1"
+        ],
+        "verified_via_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Libero"
+      },
+      "slug": "unitreerobotics-unifolm-vla-libero",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cagataydev",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "Stable-Baselines3",
+        "hf_repo_id": "cagataydev/sac-unitree-go2-mujoco",
+        "id": "p1077",
+        "license": "unknown",
+        "name": "sac-unitree-go2-mujoco",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "cagataydev-sac-unitree-go2-mujoco",
+        "task_description": "Policy model from cagataydev. Tags: stable-baselines3, reinforcement-learning, robotics, mujoco, locomotion.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cagataydev-sac-unitree-go2-mujoco",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_rl_locomotion",
+        "id": "p2482",
+        "license": "unknown",
+        "name": "unitree_rl_locomotion",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "nepyope-unitree-rl-locomotion",
+        "task_description": "Policy model from nepyope. Tags: region:us.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-rl-locomotion",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "hardware-pathon-ai",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "clearpath-robotics-ladybug-5-ddm",
+          "clearpath-robotics-sick-lms111",
+          "clearpath-robotics-husky-robotic-platform",
+          "clearpath-robotics-jackal-ugv-platform",
+          "clearpath-robotics-all-accessories",
+          "clearpath-robotics-industrial",
+          "clearpath-robotics-clearpath-careers",
+          "clearpath-robotics-husky-a300-amp-thumbnail",
+          "clearpath-robotics-observer-shadow-194",
+          "clearpath-robotics-turtlebot-personal-robot",
+          "clearpath-robotics-autonomy-research-kit-image",
+          "clearpath-robotics-new-corporate-our-story",
+          "clearpath-robotics-clearpath-robotics",
+          "clearpath-robotics-otto-heavy-load-material-transporter",
+          "clearpath-robotics-boxerugv-menu",
+          "flybody",
+          "clearpath-robotics-warthog-menu",
+          "clearpath-robotics-3d-lidar-dropdown",
+          "clearpath-robotics-ddm-imu",
+          "clearpath-robotics-huskya300-menu-image"
+        ],
+        "evidence_level": "untested",
+        "framework": "IsaacLab",
+        "hf_repo_id": "hardware-pathon-ai/unitree-g1-phase1-locomotion",
+        "id": "p2483",
+        "license": "mit",
+        "name": "unitree-g1-phase1-locomotion",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "hardware-pathon-ai-unitree-g1-phase1-locomotion",
+        "task_description": "Policy model from hardware-pathon-ai. Tags: isaacgym, reinforcement-learning, robotics, unitree-g1, locomotion.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "waypoint_trajectory",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "hardware-pathon-ai-unitree-g1-phase1-locomotion",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "xiaopeng-wu",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "xiaopeng-wu/pi05_unitree_g1",
+        "id": "p4671",
+        "license": "unknown",
+        "name": "pi05_unitree_g1",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "xiaopeng-wu-pi05-unitree-g1",
+        "task_description": "Policy model pi05_unitree_g1 by xiaopeng-wu.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "xiaopeng-wu-pi05-unitree-g1",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_box_pick",
+        "id": "p4672",
+        "license": "unknown",
+        "name": "unitree_box_pick",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "nepyope-unitree-box-pick",
+        "task_description": "Policy model unitree_box_pick by nepyope.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-box-pick",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_blue_box_16_full",
+        "id": "p4673",
+        "license": "unknown",
+        "name": "unitree_blue_box_16_full",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "nepyope-unitree-blue-box-16-full",
+        "task_description": "Policy model unitree_blue_box_16_full by nepyope.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-blue-box-16-full",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_blue_box_13",
+        "id": "p4674",
+        "license": "unknown",
+        "name": "unitree_blue_box_13",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "nepyope-unitree-blue-box-13",
+        "task_description": "Policy model unitree_blue_box_13 by nepyope.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-blue-box-13",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "shivubind",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "shivubind/unitree_g1_sarm",
+        "id": "p4675",
+        "license": "unknown",
+        "name": "unitree_g1_sarm",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "shivubind-unitree-g1-sarm",
+        "task_description": "Policy model unitree_g1_sarm by shivubind.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "shivubind-unitree-g1-sarm",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_blue_box_15_full",
+        "id": "p4676",
+        "license": "unknown",
+        "name": "unitree_blue_box_15_full",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "nepyope-unitree-blue-box-15-full",
+        "task_description": "Policy model unitree_blue_box_15_full by nepyope.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-blue-box-15-full",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "HexPlex0xFF",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "HexPlex0xFF/Maniskill-Unitree-GO2",
+        "id": "p4678",
+        "license": "unknown",
+        "name": "Maniskill-Unitree-GO2",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "hexplex0xff-maniskill-unitree-go2",
+        "task_description": "Policy model Maniskill-Unitree-GO2 by HexPlex0xFF.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "hexplex0xff-maniskill-unitree-go2",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "qlOoOlp",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "qlOoOlp/unitree_H12_can_act",
+        "id": "p4682",
+        "license": "unknown",
+        "name": "unitree_H12_can_act",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "qlooolp-unitree-h12-can-act",
+        "task_description": "Policy model unitree_H12_can_act by qlOoOlp.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "qlooolp-unitree-h12-can-act",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Breno-de-Angelo",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "Breno-de-Angelo/unitree-g1-pick-cattle",
+        "id": "p4683",
+        "license": "unknown",
+        "name": "unitree-g1-pick-cattle",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "breno-de-angelo-unitree-g1-pick-cattle",
+        "task_description": "Policy model unitree-g1-pick-cattle by Breno-de-Angelo.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "breno-de-angelo-unitree-g1-pick-cattle",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "u539285g",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "u539285g/unitree_gr00t_pickplacecroissant",
+        "id": "p4684",
+        "license": "unknown",
+        "name": "unitree_gr00t_pickplacecroissant",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "u539285g-unitree-gr00t-pickplacecroissant",
+        "task_description": "Policy model unitree_gr00t_pickplacecroissant by u539285g.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "u539285g-unitree-gr00t-pickplacecroissant",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_box_move",
+        "id": "p4685",
+        "license": "unknown",
+        "name": "unitree_box_move",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "nepyope-unitree-box-move",
+        "task_description": "Policy model unitree_box_move by nepyope.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-box-move",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "diasAiMaster",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "diasAiMaster/unitree-go2-velocity-flat",
+        "id": "p4686",
+        "license": "unknown",
+        "name": "unitree-go2-velocity-flat",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "diasaimaster-unitree-go2-velocity-flat",
+        "task_description": "Policy model unitree-go2-velocity-flat by diasAiMaster.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "diasaimaster-unitree-go2-velocity-flat",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nepyope",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nepyope/unitree_box_move_blue_full3_50k",
+        "id": "p4688",
+        "license": "unknown",
+        "name": "unitree_box_move_blue_full3_50k",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "nepyope-unitree-box-move-blue-full3-50k",
+        "task_description": "Policy model unitree_box_move_blue_full3_50k by nepyope.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nepyope-unitree-box-move-blue-full3-50k",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Sudhir2000",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "Sudhir2000/unitree-g1-apple-task",
+        "id": "p4689",
+        "license": "unknown",
+        "name": "unitree-g1-apple-task",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "sudhir2000-unitree-g1-apple-task",
+        "task_description": "Policy model unitree-g1-apple-task by Sudhir2000.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "sudhir2000-unitree-g1-apple-task",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "antoscardi",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "IsaacLab",
+        "hf_repo_id": null,
+        "id": "p8807",
+        "license": "unknown",
+        "name": "RL-locomotion-IsaacSim",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "antoscardi-rl-locomotion-isaacsim",
+        "task_description": "ROS 2 Humble node for real-time RL-based locomotion control of the Unitree G1 humanoid robot. Subscribes to odometry, joint states, velocity commands, and elevation maps to build an observation tensor and run inference on a trained policy network (IsaacLab/IsaacSim). Includes pre-trained walking mod",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "antoscardi-rl-locomotion-isaacsim",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "eai2-repos",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8884",
+        "license": "CC0-1.0",
+        "name": "awesome-unitree-humanoid-papers",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "eai2-repos-awesome-unitree-humanoid-papers",
+        "task_description": "A curated list of 83 papers on Unitree humanoid robots (G1/H1/H1-2), covering locomotion, manipulation, foundation models, and more (2025-2026)",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "eai2-repos-awesome-unitree-humanoid-papers",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "darth-alexus",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8907",
+        "license": "NOASSERTION",
+        "name": "humanoid_shadow_g1",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "darth-alexus-humanoid-shadow-g1",
+        "task_description": "A full-body humanoid robot model merging the Unitree G1 and Shadow Dexterous Hands, designed for dexterous manipulation and usable as an extension of the MuJoCo Menagerie.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "darth-alexus-humanoid-shadow-g1",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "zeonsunlightyu",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "community",
+        "framework": "IsaacLab",
+        "hf_repo_id": null,
+        "id": "p8909",
+        "license": "unknown",
+        "name": "LocomotionWithNP3O",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "zeonsunlightyu-locomotionwithnp3o",
+        "task_description": "unitree Go2 robot learns locomotion with N-P3O algorithm and HIM alike policy trained by isaacgym",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "zeonsunlightyu-locomotionwithnp3o",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "MichaelNguyenz229",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8915",
+        "license": "unknown",
+        "name": "humanoid-sim-eval-learning",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "michaelnguyenz229-humanoid-sim-eval-learning",
+        "task_description": "Behavioral evaluation of a pre-trained RL locomotion policy on the Unitree G1 humanoid in MuJoCo — testing proprioception limits across stairs, slopes, and uneven terrain.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "michaelnguyenz229-humanoid-sim-eval-learning",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "mustafa-5493",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8917",
+        "license": "MIT",
+        "name": "G1Walk",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "mustafa-5493-g1walk",
+        "task_description": "PPO + Transformer policy for Unitree G1 humanoid locomotion, trained from scratch in MuJoCo with a 3-phase curriculum.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "mustafa-5493-g1walk",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "deltartificial",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8918",
+        "license": "unknown",
+        "name": "g1",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "deltartificial-g1",
+        "task_description": "Simulate, train and deploy locomotion policies for Unitree G1 humanoid using Genesis on Mac M-series. 🦿",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "deltartificial-g1",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "adityabhas22",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8922",
+        "license": "Apache-2.0",
+        "name": "genesis",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "adityabhas22-genesis",
+        "task_description": "This repository contains the Genesis repository that we will use to train an RL policy for locomotion on our Unitree go2",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "adityabhas22-genesis",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "saifahmadgit",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8923",
+        "license": "Apache-2.0",
+        "name": "quadruped_locomotion_UnitreeGo2_RL",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "saifahmadgit-quadruped-locomotion-unitreego2-rl",
+        "task_description": "This repository is build on Genesis repository to train RL policies and simulate. I am making changes specific to Unitree go2 locomotion policies to achieve sim2 real behaviour.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "saifahmadgit-quadruped-locomotion-unitreego2-rl",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "luckyrobots",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8924",
+        "license": "unknown",
+        "name": "g1-manipulation-challenge",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "luckyrobots-g1-manipulation-challenge",
+        "task_description": "Pick & Place Challenge: Get a Unitree G1 humanoid to pick up a cylinder and place it on another table. MuJoCo simulation with pre-trained locomotion and reaching policies.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "luckyrobots-g1-manipulation-challenge",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "LauraMQuiros",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "IsaacLab",
+        "hf_repo_id": null,
+        "id": "p8925",
+        "license": "unknown",
+        "name": "b2w-rl",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "lauramquiros-b2w-rl",
+        "task_description": "Unified Wheeled-Legged Locomotion via Reinforcement Learning on the Unitree B2-W: A single RL policy trained end-to-end in IsaacLab that learns to coordinate wheel spinning and leg posture for locomotion on the Unitree B2-W — a quadruped with actuated wheels at the end of each leg.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "lauramquiros-b2w-rl",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Gautam-R-Patil",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "realmanrobot-hand-eye-calibration",
+          "masterhow-oneocc",
+          "sergionr2-racingrobot",
+          "gabrielnhn-ros2-line-follower",
+          "vivek1795-gesture-controlled-robotic-arm-in-mujoco",
+          "logesh1516-mycobot-280jn-description",
+          "crm-uam-visionrace",
+          "davide-ciraolo-fischertechnik-3d-robot-webcam-gestures-system",
+          "bobbycephy-robot-gripper-camera",
+          "samyukamtam-hexapod",
+          "tx-leo-camera-calibration-handeye-calibration",
+          "flexiv-camera-module",
+          "davidea97-multi-camera-hand-eye-calibration",
+          "rensauce-3ugersip-group3",
+          "fpj-gaoge-finsrov-an-underwater-camera-based-multi-robot-platform",
+          "sallu-786-ros2-mcp-web-portal",
+          "siddhant-135-sacrid-vision-pipeline",
+          "dobot-vx500-smart-camera",
+          "argymats-thesis-delta-robot",
+          "islamahmedes43-gochase2"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8926",
+        "license": "unknown",
+        "name": "RoboVision",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "gautam-r-patil-robovision",
+        "task_description": "Developed a physics-grounded locomotion policy for a Unitree quadruped in the Genesis environment using Deep RL (PPO). Trained the agent to autonomously walk, run, and rotate on its yaw axis via optimized reward functions and continuous proprioceptive feedback.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception",
+            "monocular_rgb"
+          ]
+        }
+      },
+      "slug": "gautam-r-patil-robovision",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Bhuvanlakhera23",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8939",
+        "license": "BSD-3-Clause",
+        "name": "sim2real_go2_rl",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "bhuvanlakhera23-sim2real-go2-rl",
+        "task_description": "A complete sim2real pipeline to deploy Reinforcement Learning policies on real hardware of Unitree Go2 Edu quadruped using Linux 22.04, ROS2 Humble and Unitree SDK2 Python.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "bhuvanlakhera23-sim2real-go2-rl",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "dennisgol1",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8948",
+        "license": "unknown",
+        "name": "Quadruped-Rough-Terrain-Explorer",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "dennisgol1-quadruped-rough-terrain-explorer",
+        "task_description": "Develop a robust locomotion and search policy for the Unitree Go1 quadruped to operate in unstructured environments. The system must navigate extreme terrains like stairs and rubble while identifying specific target assets.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "dennisgol1-quadruped-rough-terrain-explorer",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "JeanMayoko18",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8953",
+        "license": "unknown",
+        "name": "motion_tracking_controller",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "locomotion",
+        "slug": "jeanmayoko18-motion-tracking-controller",
+        "task_description": "ROS 2 Humble package for deploying reinforcement-learning policies to the Unitree G1 humanoid in both MuJoCo simulation (LeggedGym/unitree_rl_gym) and real-robot execution. Supports loading policies from WandB or local ONNX files, running real-time inference, and publishing actions through a unified",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "jeanmayoko18-motion-tracking-controller",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "JensenLav",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": null,
+        "id": "p8988",
+        "license": "unknown",
+        "name": "Sim-to-Real-H1-2",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "jensenlav-sim-to-real-h1-2",
+        "task_description": "robust sim to real for the Unitree H1-2 with example policies",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "jensenlav-sim-to-real-h1-2",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "\n\t\n\t\t\n\t\tMOSAIC Dataset\n\t\n\nThis repository releases the built-in MOSAIC multi-source motion dataset in the following paper:\nMOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation  \nThe dataset is organized into:\n\nHuman motions stored in an AMASS-style format\nUnitree G1 motions retargeted from human motions and converted to NPZ for training/visualization\n\nIt includes motions from:\n\nOptical MoCap (Vicon)\nInertial MoCap (IO-AI)… See the full description on the dataset page: https://huggingface.co/datasets/chuhonglin/MOSAIC_Dataset.",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "chuhonglin/MOSAIC_Dataset",
+        "id": "ds142",
+        "name": "MOSAIC_Dataset",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "chuhonglin-mosaic-dataset",
+        "source": "chuhonglin"
+      },
+      "slug": "chuhonglin-mosaic-dataset",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "cameras": null,
+        "compatible_policy_slugs": [
+          "unitreerobotics-unifolm-vla-base"
+        ],
+        "description": "Real Unitree G1 teleoperated dataset of the humanoid folding a towel, recorded with the Dex1 gripper. Includes full G1 state/action: left_arm (7 DoF), right_arm (7 DoF), body, Dex1 gripper, and end-effector poses. Published by Unitree Robotics.",
+        "episodes": 200,
+        "format": "lerobot",
+        "fps": null,
+        "frames_or_rows": 311000,
+        "hf_dataset_id": "unitreerobotics/G1_Dex1_Fold_Towel",
+        "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Fold_Towel",
+        "id": "ds290",
+        "license": "apache-2.0",
+        "license_short": "commercial-ok",
+        "name": "G1_Dex1_Fold_Towel",
+        "provenance_notes": "Verified via WebFetch of the HF dataset card. Apache 2.0 — commercial-friendly. This is the training data behind UnifoLM-VLA-Base's Fold Towel task.",
+        "robot_names": [
+          "unitree-g1"
+        ],
+        "robots": 1,
+        "slug": "unitreerobotics-g1-dex1-fold-towel",
+        "source": "unitreerobotics",
+        "task_slug": "fold-towel",
+        "verified_at": "2026-04-17"
+      },
+      "slug": "unitreerobotics-g1-dex1-fold-towel",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "cmcgartoll-g1-rl-locomotion",
+          "nicklashansen-newt"
+        ],
+        "description": "\n\t\n\t\t\n\t\tG1 RL Locomotion Dataset\n\t\n\nUnitree G1 humanoid locomotion RL training data collected on NVIDIA Jetson AGX Thor.\n\nRobot: Unitree G1 (29-DOF actuated, 71-dim state)\nBackends: MuJoCo (primary), Newton GPU (experimental)\nTotal transitions: ~270,000 (combined master)\nState dim: 71 (qpos:36 + qvel:35)\nAction dim: 29 (all actuated joints)\nFormat: NPZ (SB3 replay buffer compatible)\nCollection period: March 2026\n\n",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "cagataydev/g1-rl-locomotion",
+        "id": "ds319",
+        "name": "g1-rl-locomotion",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "cagataydev-g1-rl-locomotion",
+        "source": "cagataydev"
+      },
+      "slug": "cagataydev-g1-rl-locomotion",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "cameras": null,
+        "compatible_policy_slugs": [],
+        "description": "Real Unitree G1 whole-body teleoperated dataset: the humanoid loads clothes into a washing machine using Inspire hands. Laundry-pipeline task, upstream of folding.",
+        "episodes": 0,
+        "format": "lerobot",
+        "fps": null,
+        "frames_or_rows": null,
+        "hf_dataset_id": "unitreerobotics/G1_WBT_Inspire_Put_Clothes_into_Washing_Machine",
+        "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Inspire_Put_Clothes_into_Washing_Machine",
+        "id": "ds340",
+        "license": "apache-2.0",
+        "license_short": "commercial-ok",
+        "name": "G1_WBT_Inspire_Put_Clothes_into_Washing_Machine",
+        "provenance_notes": "Found in Unitree's HF org listing. Inspire hands variant.",
+        "robot_names": [
+          "unitree-g1"
+        ],
+        "robots": 1,
+        "slug": "unitreerobotics-g1-wbt-inspire-put-clothes-into-washing-machine",
+        "source": "unitreerobotics",
+        "task_slug": "put-clothes-into-washing-machine",
+        "verified_at": "2026-04-17"
+      },
+      "slug": "unitreerobotics-g1-wbt-inspire-put-clothes-into-washing-machine",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "cameras": null,
+        "compatible_policy_slugs": [],
+        "description": "Real Unitree G1 whole-body teleoperated (WBT) dataset: the humanoid picks up and collects clothes using Inspire hands (multi-finger, dexterous). Main-camera-only variant — lower storage footprint. Part of Unitree's laundry-pipeline data collection.",
+        "episodes": 0,
+        "format": "lerobot",
+        "fps": null,
+        "frames_or_rows": null,
+        "hf_dataset_id": "unitreerobotics/G1_WBT_Inspire_Collect_Clothes_MainCamOnly",
+        "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Inspire_Collect_Clothes_MainCamOnly",
+        "id": "ds379",
+        "license": "apache-2.0",
+        "license_short": "commercial-ok",
+        "name": "G1_WBT_Inspire_Collect_Clothes_MainCamOnly",
+        "provenance_notes": "Found in Unitree's HF org listing during research. Episode count not recorded at fetch time; user should verify.",
+        "robot_names": [
+          "unitree-g1"
+        ],
+        "robots": 1,
+        "slug": "unitreerobotics-g1-wbt-inspire-collect-clothes-maincamonly",
+        "source": "unitreerobotics",
+        "task_slug": "collect-clothes",
+        "verified_at": "2026-04-17"
+      },
+      "slug": "unitreerobotics-g1-wbt-inspire-collect-clothes-maincamonly",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "cameras": null,
+        "compatible_policy_slugs": [],
+        "description": "Real Unitree G1 whole-body teleoperated dataset: the humanoid picks clothes and places them into a basket, using Inspire hands. Part of Unitree's laundry-pipeline data collection.",
+        "episodes": 0,
+        "format": "lerobot",
+        "fps": null,
+        "frames_or_rows": null,
+        "hf_dataset_id": "unitreerobotics/G1_WBT_Inspire_Put_Clothes_Into_Basket",
+        "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Inspire_Put_Clothes_Into_Basket",
+        "id": "ds425",
+        "license": "apache-2.0",
+        "license_short": "commercial-ok",
+        "name": "G1_WBT_Inspire_Put_Clothes_Into_Basket",
+        "provenance_notes": "Found in Unitree's HF org listing. Inspire hands variant.",
+        "robot_names": [
+          "unitree-g1"
+        ],
+        "robots": 1,
+        "slug": "unitreerobotics-g1-wbt-inspire-put-clothes-into-basket",
+        "source": "unitreerobotics",
+        "task_slug": "put-clothes-into-basket",
+        "verified_at": "2026-04-17"
+      },
+      "slug": "unitreerobotics-g1-wbt-inspire-put-clothes-into-basket",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "vladocar-model",
+          "vladislavelite-model"
+        ],
+        "description": "\n\t\n\t\t\n\t\tMOSAIC Dataset\n\t\n\nProject Page | Paper | Code | Dataset | Model\nThis repository releases the built-in MOSAIC multi-source motion dataset in the following paper:\nMOSAIC: Bridging the Sim-to-Real Gap in Generalist Humanoid Motion Tracking and Teleoperation with Rapid Residual Adaptation  \nThe dataset is organized into:\n\nHuman motions stored in an AMASS-style format\nUnitree G1 motions retargeted from human motions and converted to NPZ for training/visualization\n\nIt includes motions from:… See the full description on the dataset page: https://huggingface.co/datasets/BAAI-Humanoid/MOSAIC_Dataset.",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "BAAI-Humanoid/MOSAIC_Dataset",
+        "id": "ds431",
+        "name": "MOSAIC_Dataset",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "baai-humanoid-mosaic-dataset",
+        "source": "BAAI-Humanoid"
+      },
+      "slug": "baai-humanoid-mosaic-dataset",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.1\",\n    \"robot_type\": \"Unitree_G1_Gripper\",\n    \"total_episodes\": 201,\n    \"total_frames\": 172649,\n    \"total_tasks\": 1,\n    \"total_videos\": 804,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 30,\n    \"splits\": {\n        \"train\": \"0:201\"},\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/unitreerobotics/G1_Dex1_MountCameraRedGripper_Dataset.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "unitreerobotics/G1_Dex1_MountCameraRedGripper_Dataset",
+        "id": "ds480",
+        "name": "G1_Dex1_MountCameraRedGripper_Dataset",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "unitreerobotics-g1-dex1-mountcameraredgripper-dataset",
+        "source": "unitreerobotics"
+      },
+      "slug": "unitreerobotics-g1-dex1-mountcameraredgripper-dataset",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "chris49-environment",
+          "vladocar-model",
+          "vladislavelite-model",
+          "cognitiveaisystems-rate"
+        ],
+        "description": "\n\t\n\t\t\n\t\tunitree_model\n\t\n\nThis is a repository providing Unitree's robot 3D models for different environments.\nFor more information about robots model, please visit unitree_ros.\n\n\t\n\t\t\n\t\tGenerate from urdf\n\t\n\nPlease follow import_urdf tutorial to convert URDF. \nDue to some bugs in the python script in version 4.5, please use Direct Import.\nSpecify the settings as follows:\n\nSelect Movebale Base in Links\nSelect Stiffness in Joint Configuration\nSelect Force in Drive Type\nAllow Self-Collision\n\n",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "unitreerobotics/unitree_model",
+        "id": "ds532",
+        "name": "unitree_model",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "unitreerobotics-unitree-model",
+        "source": "unitreerobotics"
+      },
+      "slug": "unitreerobotics-unitree-model",
+      "table": "datasets"
+    }
+  ]
+}

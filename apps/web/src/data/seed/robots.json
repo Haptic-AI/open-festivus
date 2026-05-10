@@ -1,0 +1,395 @@
+[
+  {
+    "id": "r1",
+    "slug": "so-100",
+    "name": "SO-100",
+    "manufacturer": "The Robot Studio",
+    "type": "arm",
+    "dof": 6,
+    "sensors": [
+      "Feetech STS3215 magnetic encoders",
+      "Wrist RGB camera (640x480@30fps)"
+    ],
+    "actuators": "6x Feetech STS3215 serial bus servos",
+    "price_usd": 110,
+    "weight_kg": 0.75,
+    "build_paths": [
+      {
+        "path": "print",
+        "cost_usd": 110,
+        "build_time_days": 3,
+        "purchase_url": "https://huggingface.co/docs/lerobot/so100"
+      },
+      {
+        "path": "kit",
+        "cost_usd": 180,
+        "build_time_days": 1,
+        "purchase_url": "https://www.therobotstudio.com/products/so-100-arm-kit"
+      }
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [
+      "so100-pick-place-act",
+      "octo-small"
+    ],
+    "compatible_env_slugs": [
+      "tabletop-clean",
+      "tabletop-cluttered"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/trs_so_arm100/so_arm100.png",
+    "community_size": "large",
+    "description": "Low-cost 6-DoF tabletop arm. Most popular arm in the LeRobot ecosystem. 3D-printable frame, STS3215 bus servos. ~20cm reach. Great first robot for imitation learning.",
+    "product_page_url": "https://huggingface.co/docs/lerobot/so100",
+    "category": "Education / desktop arm",
+    "form_factor": "arm-fixed",
+    "price_availability": "public"
+  },
+  {
+    "id": "r2",
+    "slug": "koch-v11",
+    "name": "Koch v1.1",
+    "manufacturer": "Open Source (Jess Moss)",
+    "type": "arm",
+    "dof": 6,
+    "sensors": [
+      "Dynamixel XL430 encoders",
+      "Wrist RGB camera (640x480@30fps)"
+    ],
+    "actuators": "6x Dynamixel XL430-W250 servos",
+    "price_usd": 250,
+    "weight_kg": 0.9,
+    "build_paths": [
+      {
+        "path": "print",
+        "cost_usd": 250,
+        "build_time_days": 4,
+        "purchase_url": "https://huggingface.co/docs/lerobot/koch_v11"
+      }
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [
+      "octo-small"
+    ],
+    "compatible_env_slugs": [
+      "tabletop-clean",
+      "tabletop-cluttered"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/low_cost_robot_arm/low_cost_robot_arm.png",
+    "community_size": "medium",
+    "description": "Open-source 6-DoF leader-follower arm for LeRobot teleoperation. Dynamixel servos give better torque than STS3215. Slightly pricier than SO-100 but more rigid.",
+    "product_page_url": "https://huggingface.co/docs/lerobot/koch_v11",
+    "category": "Education / desktop arm",
+    "form_factor": "arm-fixed",
+    "price_availability": "public"
+  },
+  {
+    "id": "r3",
+    "slug": "so-arm101",
+    "name": "SO-ARM101",
+    "manufacturer": "The Robot Studio",
+    "type": "arm",
+    "dof": 6,
+    "sensors": [
+      "Feetech STS3215 magnetic encoders",
+      "Wrist RGB camera (640x480@30fps)"
+    ],
+    "actuators": "6x Feetech STS3215 serial bus servos",
+    "price_usd": 130,
+    "weight_kg": 0.8,
+    "build_paths": [
+      {
+        "path": "print",
+        "cost_usd": 130,
+        "build_time_days": 3,
+        "purchase_url": "https://huggingface.co/docs/lerobot/so101"
+      }
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [
+      "so100-pick-place-act",
+      "octo-small"
+    ],
+    "compatible_env_slugs": [
+      "tabletop-clean",
+      "tabletop-cluttered"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/trs_so_arm100/so_arm100.png",
+    "community_size": "small",
+    "description": "Updated SO-100 variant with improved 3D-printed frame geometry and better cable routing. Same servo platform, slightly longer reach.",
+    "product_page_url": "https://huggingface.co/docs/lerobot/so101",
+    "category": "Education / desktop arm",
+    "form_factor": "arm-fixed",
+    "price_availability": "public"
+  },
+  {
+    "id": "r4",
+    "slug": "aloha-2",
+    "name": "ALOHA 2",
+    "manufacturer": "Trossen Robotics",
+    "type": "dual-arm",
+    "dof": 14,
+    "sensors": [
+      "Top-down RGB (480x640@50fps)",
+      "Wrist RGB Left (480x640@50fps)",
+      "Wrist RGB Right (480x640@50fps)",
+      "Dynamixel encoders"
+    ],
+    "actuators": "14x Dynamixel XM430-W350 servos (7 per arm including gripper)",
+    "price_usd": 21000,
+    "weight_kg": 18,
+    "build_paths": [
+      {
+        "path": "buy",
+        "cost_usd": 21000,
+        "build_time_days": 14,
+        "purchase_url": "https://www.trossenrobotics.com/aloha-2.aspx"
+      },
+      {
+        "path": "kit",
+        "cost_usd": 15000,
+        "build_time_days": 7,
+        "purchase_url": "https://www.trossenrobotics.com/aloha-2-kit.aspx"
+      }
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [
+      "act-aloha-sim-transfer-cube",
+      "act-aloha-sim-insertion",
+      "octo-base",
+      "pi0-base",
+      "mobile-aloha-cooking"
+    ],
+    "compatible_env_slugs": [
+      "aloha-kitchen",
+      "mujoco-aloha-bimanual",
+      "tabletop-cluttered"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/aloha/aloha.png",
+    "community_size": "large",
+    "description": "Dual ViperX 300 6-DoF arms (14 DoF total) for bimanual teleoperation and imitation learning. 3 cameras standard. Core hardware for ACT, Mobile ALOHA, and pi0 research. De facto bimanual platform.",
+    "product_page_url": "https://www.trossenrobotics.com/aloha-2.aspx",
+    "category": "Cobot arm / industrial",
+    "form_factor": "arm-fixed",
+    "price_availability": "public"
+  },
+  {
+    "id": "r5",
+    "slug": "franka-panda",
+    "name": "Franka Emika Panda",
+    "manufacturer": "Franka Emika",
+    "type": "arm",
+    "dof": 7,
+    "sensors": [
+      "Joint torque sensors (all 7 joints)",
+      "Joint encoders",
+      "Intel RealSense D435i (1280x720@30fps RGB-D)"
+    ],
+    "actuators": "7x Franka brushless joint motors with harmonic drives",
+    "price_usd": 35000,
+    "weight_kg": 18,
+    "build_paths": [
+      {
+        "path": "buy",
+        "cost_usd": 35000,
+        "build_time_days": 30,
+        "purchase_url": "https://franka.de/products"
+      }
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [
+      "diffusion-policy-pusht",
+      "diffusion-policy-robomimic-can",
+      "octo-base",
+      "octo-small",
+      "rt-2-x",
+      "rt-1",
+      "pi0-base"
+    ],
+    "compatible_env_slugs": [
+      "tabletop-clean",
+      "tabletop-cluttered",
+      "robomimic-can"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/franka_emika_panda/panda.png",
+    "community_size": "large",
+    "description": "7-DoF torque-controlled research arm. Joint torque sensors on all joints enable impedance control. De facto standard for manipulation research. CE marked for collaborative operation. Wide gripper ecosystem.",
+    "product_page_url": "https://franka.de/products",
+    "category": "Cobot arm / industrial",
+    "form_factor": "arm-fixed",
+    "price_availability": "on_request"
+  },
+  {
+    "id": "r6",
+    "slug": "unitree-go2",
+    "name": "Unitree Go2",
+    "manufacturer": "Unitree",
+    "type": "quadruped",
+    "dof": 12,
+    "sensors": [
+      "Body IMU",
+      "Joint encoders",
+      "Front stereo camera (1280x400)",
+      "Foot contact sensors"
+    ],
+    "actuators": "12x Unitree GO-M8010-6 brushless motors (3 per leg: hip, thigh, calf)",
+    "price_usd": 1600,
+    "weight_kg": 15,
+    "build_paths": [
+      {
+        "path": "buy",
+        "cost_usd": 1600,
+        "build_time_days": 7,
+        "purchase_url": "https://shop.unitree.com/products/unitree-go2"
+      }
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [
+      "walk-these-ways-go2",
+      "extreme-parkour-go2"
+    ],
+    "compatible_env_slugs": [
+      "flat-terrain",
+      "rough-terrain-outdoor",
+      "parkour-course"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_go2/go2.png",
+    "community_size": "large",
+    "description": "Compact quadruped, 12 actuated joints. Best price-to-capability ratio for legged locomotion research. Large sim-to-real community. Isaac Gym/Lab support out of the box.",
+    "product_page_url": "https://www.unitree.com/go2/",
+    "category": "Quadruped / UGV",
+    "form_factor": "quadruped",
+    "price_availability": "public"
+  },
+  {
+    "id": "r7",
+    "slug": "unitree-g1",
+    "name": "Unitree G1",
+    "manufacturer": "Unitree",
+    "type": "humanoid",
+    "dof": 23,
+    "sensors": [
+      "Torso IMU",
+      "Joint encoders",
+      "Intel RealSense D435i (1280x720@30fps RGB-D)",
+      "Wrist F/T sensors"
+    ],
+    "actuators": "23x Unitree brushless motors including 12-DoF dexterous hands",
+    "price_usd": 16000,
+    "weight_kg": 35,
+    "build_paths": [
+      {
+        "path": "buy",
+        "cost_usd": 16000,
+        "build_time_days": 21,
+        "purchase_url": "https://shop.unitree.com/products/unitree-g1"
+      }
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [
+      "g1-whole-body-control"
+    ],
+    "compatible_env_slugs": [
+      "indoor-flat",
+      "flat-terrain"
+    ],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_g1/g1.png",
+    "community_size": "medium",
+    "description": "Compact humanoid with 23 DoF including dexterous hands. 127cm tall, 35kg. Emerging platform for whole-body loco-manipulation research. Isaac Lab support growing.",
+    "product_page_url": "https://www.unitree.com/g1/",
+    "category": "Humanoid",
+    "form_factor": "humanoid",
+    "price_availability": "public"
+  },
+  {
+    "id": "r8",
+    "slug": "dji-tello",
+    "name": "DJI Tello",
+    "manufacturer": "DJI / Ryze Tech",
+    "type": "drone",
+    "dof": null,
+    "sensors": [
+      "Front RGB camera (960x720@30fps)",
+      "Onboard IMU",
+      "Downward ToF rangefinder"
+    ],
+    "actuators": "4x brushless prop motors",
+    "price_usd": 99,
+    "weight_kg": 0.08,
+    "build_paths": [
+      {
+        "path": "buy",
+        "cost_usd": 99,
+        "build_time_days": 1,
+        "purchase_url": "https://store.dji.com/product/tello"
+      }
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [
+      "tello-visual-landing"
+    ],
+    "compatible_env_slugs": [
+      "indoor-flight-cage"
+    ],
+    "image_url": null,
+    "community_size": "large",
+    "description": "Programmable micro quadrotor for education and lightweight aerial research. 13-min flight time, 100m range. Python SDK. Cheapest path into aerial robotics. No GPS — indoor only for autonomous flight.",
+    "product_page_url": "https://store.dji.com/product/tello",
+    "category": "Drone",
+    "form_factor": "drone",
+    "price_availability": "public"
+  },
+  {
+    "id": "r9",
+    "slug": "unitree-h1",
+    "name": "Unitree H1",
+    "manufacturer": "Unitree Robotics",
+    "type": "humanoid",
+    "dof": null,
+    "sensors": [
+      "Torso IMU",
+      "Joint encoders"
+    ],
+    "actuators": null,
+    "price_usd": null,
+    "weight_kg": null,
+    "build_paths": [],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": [
+      "flat-terrain"
+    ],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "Unitrees compact humanoid platform. Field-deployed across several labs.",
+    "product_page_url": "https://www.unitree.com/h1/",
+    "category": "Humanoid",
+    "form_factor": "humanoid",
+    "price_availability": "unknown"
+  },
+  {
+    "id": "r10",
+    "slug": "hello-stretch",
+    "name": "Hello Stretch 3",
+    "manufacturer": "Hello Robot",
+    "type": "arm",
+    "dof": null,
+    "sensors": [
+      "Intel RealSense D435i",
+      "Wide-angle head camera"
+    ],
+    "actuators": null,
+    "price_usd": null,
+    "weight_kg": null,
+    "build_paths": [],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": [],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "Mobile manipulator targeted at home and accessibility use cases. Lift and telescoping arm on a wheeled base.",
+    "product_page_url": "https://hello-robot.com/stretch-3",
+    "category": "Mobile manipulator",
+    "form_factor": "arm-mobile",
+    "price_availability": "public"
+  }
+]

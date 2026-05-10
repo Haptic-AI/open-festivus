@@ -1,0 +1,13 @@
+{
+  "compatible_policy_slugs": [],
+  "description": "\n\t\n\t\t\n\t\tByteCameraDepth Dataset\n\t\n\nPaper | Project Page | Code\nByteCameraDepth is a multi-camera depth estimation dataset containing synchronized depth, color, and auxiliary data captured from various 3D cameras. The dataset provides comprehensive depth sensing from multiple cameras in various in-door scenarios, making it ideal for developing and evaluating depth estimation algorithms.\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Overview\n\t\n\n\nPurpose: Multi-camera depth estimation research and benchmarking\nTotal… See the full description on the dataset page: https://huggingface.co/datasets/ByteDance-Seed/ByteCameraDepth.",
+  "episodes": 0,
+  "format": "other",
+  "hf_dataset_id": "ByteDance-Seed/ByteCameraDepth",
+  "id": "ds503",
+  "name": "ByteCameraDepth",
+  "robot_names": [],
+  "robots": 0,
+  "slug": "bytedance-seed-bytecameradepth",
+  "source": "ByteDance-Seed"
+}

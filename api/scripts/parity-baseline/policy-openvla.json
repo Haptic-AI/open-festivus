@@ -1,0 +1,52 @@
+{
+  "action_space": {
+    "dimensions": 0,
+    "frequency_hz": 0,
+    "type": "other"
+  },
+  "author": "openvla",
+  "benchmarks": [],
+  "compatible_env_slugs": [],
+  "compatible_robot_slugs": [
+    "irmvlab-unihand",
+    "nvlabs-handover-sim",
+    "irvlab-poseiden",
+    "denghaoyuan123-awesome-rl-vla",
+    "guoheyu-omnivla",
+    "ananasburn-smolvla-manipulation",
+    "zhenyangliu-activevla-injecting-active-perception-into-vla",
+    "allenai-vla-evaluation-harness",
+    "vlad-brasoveanu-stm32-robotic-arm-6dof",
+    "openhelix-team-openhelix",
+    "rk-edge-simscaleai",
+    "sonjuonr-visual-fusion-gru",
+    "wwzzz-ilstudio",
+    "abdelrahmanfarhan-vla-panda-mujoco",
+    "nvlabs-protomotions",
+    "ivlabs-autonomous-delivery-robot",
+    "zainali24-physical-ai-humanoid-robotics",
+    "shiv207-vla-simulated-tests",
+    "internrobotics-vlac"
+  ],
+  "evidence_level": "community",
+  "framework": "PyTorch",
+  "hf_repo_id": "openvla/openvla-7b",
+  "id": "p1",
+  "license": "mit",
+  "name": "openvla-7b",
+  "observation_space": {
+    "components": [],
+    "type": "other"
+  },
+  "paper_arxiv_url": "https://arxiv.org/abs/2406.09246",
+  "skill_type": "other",
+  "slug": "openvla-openvla-7b",
+  "task_description": "Policy model from openvla. Tags: transformers, safetensors, openvla, feature-extraction, robotics.",
+  "taxonomy": {
+    "action_dimensions": 0,
+    "required_control": "learned_latent",
+    "required_perception": [
+      "proprioception"
+    ]
+  }
+}

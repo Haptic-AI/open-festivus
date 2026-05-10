@@ -1,0 +1,380 @@
+[
+  {
+    "id": "r9",
+    "slug": "ur5e",
+    "name": "Universal Robots UR5e",
+    "manufacturer": "Universal Robots",
+    "type": "arm",
+    "dof": 6,
+    "sensors": ["Joint position encoders (all 6 joints)", "Built-in force/torque sensor (tool flange)", "Safety-rated I/O"],
+    "actuators": "6x brushless DC motors with harmonic drive gearing",
+    "price_usd": 35000,
+    "weight_kg": 20.6,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 35000, "build_time_days": 14, "purchase_url": "https://www.universal-robots.com/products/ur5-robot/"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": ["octo-base", "rt-1", "rt-2-x", "diffusion-policy-robomimic-can"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered", "robomimic-can"],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/universal_robots_ur5e/ur5e.png",
+    "community_size": "large",
+    "description": "6-DoF collaborative arm with 850mm reach and 5kg payload. Built-in force sensing and 500Hz control loop. CE marked for collaborative operation. Mature ROS/ROS2 ecosystem with MuJoCo and Isaac Sim models. One of the most widely used arms in manipulation research."
+  },
+  {
+    "id": "r10",
+    "slug": "kinova-gen3",
+    "name": "Kinova Gen3",
+    "manufacturer": "Kinova Robotics",
+    "type": "arm",
+    "dof": 7,
+    "sensors": ["Integrated torque sensors (all 7 joints)", "Joint position encoders", "Intel RealSense D435i depth camera (wrist-mounted)"],
+    "actuators": "7x Kinova smart actuators with harmonic drives, 1kHz control loop",
+    "price_usd": 33500,
+    "weight_kg": 8.2,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 33500, "build_time_days": 21, "purchase_url": "https://www.kinovarobotics.com/product/gen3-robots"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": ["octo-base", "pi0-base"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "Ultra-lightweight 7-DoF arm at only 8.2kg with 902mm reach and 4kg payload. Integrated torque sensors and built-in Intel RealSense vision module. Infinite joint rotation and 1kHz control loop. Growing adoption in imitation learning and sim-to-real transfer research."
+  },
+  {
+    "id": "r11",
+    "slug": "ufactory-xarm6",
+    "name": "UFACTORY xArm 6",
+    "manufacturer": "UFACTORY",
+    "type": "arm",
+    "dof": 6,
+    "sensors": ["Joint encoders (all 6 joints)", "Integrated current-based collision detection"],
+    "actuators": "6x brushless DC servo motors with harmonic drives, carbon fiber + aluminum frame",
+    "price_usd": 8849,
+    "weight_kg": 12.2,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 8849, "build_time_days": 14, "purchase_url": "https://www.ufactory.us/product/ufactory-xarm-6"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": ["octo-base"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "6-DoF collaborative arm with 700mm reach and 5kg payload. Carbon fiber construction keeps weight low. CE certified with built-in collision detection. Cost-effective alternative to UR5e for tabletop manipulation and policy learning experiments."
+  },
+  {
+    "id": "r12",
+    "slug": "ufactory-xarm7",
+    "name": "UFACTORY xArm 7",
+    "manufacturer": "UFACTORY",
+    "type": "arm",
+    "dof": 7,
+    "sensors": ["Joint encoders (all 7 joints)", "Integrated current-based collision detection"],
+    "actuators": "7x brushless DC servo motors with harmonic drives, carbon fiber + aluminum frame",
+    "price_usd": 10449,
+    "weight_kg": 13.7,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 10449, "build_time_days": 14, "purchase_url": "https://www.ufactory.us/product/ufactory-xarm-7"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": ["octo-base"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "7-DoF collaborative arm adding kinematic redundancy to the xArm platform. 700mm reach, 3.5kg payload. Extra DoF enables null-space optimization and obstacle avoidance. Preferred by research groups working on whole-arm planning and compliant control policies."
+  },
+  {
+    "id": "r13",
+    "slug": "viperx-300s",
+    "name": "ViperX 300 S",
+    "manufacturer": "Trossen Robotics",
+    "type": "arm",
+    "dof": 6,
+    "sensors": ["Dynamixel servo position/velocity/current feedback (all joints)", "Temperature monitoring"],
+    "actuators": "8x DYNAMIXEL X-Series servos (XM540-W270 and XM430-W350 mix), extruded aluminum frame",
+    "price_usd": 6743,
+    "weight_kg": 5.0,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 6743, "build_time_days": 7, "purchase_url": "https://www.trossenrobotics.com/viperx-300"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": ["act-aloha-sim-transfer-cube", "act-aloha-sim-insertion", "octo-base", "pi0-base", "mobile-aloha-cooking"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered", "mujoco-aloha-bimanual", "aloha-kitchen"],
+    "image_url": null,
+    "community_size": "large",
+    "description": "6-DoF Dynamixel-based arm with 750mm reach and 750g payload. Core hardware in the ALOHA and ALOHA 2 bimanual teleoperation systems. Standard arm for ACT policy training. Open-source ROS/ROS2 stack and MuJoCo Menagerie model. Cornerstone of the imitation learning research ecosystem."
+  },
+  {
+    "id": "r14",
+    "slug": "widowx-250",
+    "name": "WidowX 250 6DOF",
+    "manufacturer": "Trossen Robotics",
+    "type": "arm",
+    "dof": 6,
+    "sensors": ["Dynamixel servo position/velocity/current feedback (all joints)", "Temperature monitoring"],
+    "actuators": "7x DYNAMIXEL XM430-W350-T + 2x XL430-W250-T servos, extruded aluminum frame",
+    "price_usd": 3550,
+    "weight_kg": 3.5,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 3550, "build_time_days": 7, "purchase_url": "https://www.trossenrobotics.com/widowx-250"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": ["rt-2-x", "octo-base", "octo-small"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "image_url": null,
+    "community_size": "large",
+    "description": "Compact 6-DoF arm with 650mm reach and 250g payload. Hardware platform for the BridgeData V2 dataset, one of the largest real-robot manipulation datasets. Critical robot for training and evaluating foundation models like RT-2-X and Octo. Lower cost and smaller footprint vs ViperX, popular for multi-robot data collection setups."
+  },
+  {
+    "id": "r15",
+    "slug": "openmanipulator-x",
+    "name": "OpenManipulator-X",
+    "manufacturer": "ROBOTIS",
+    "type": "arm",
+    "dof": 5,
+    "sensors": ["Dynamixel XM430-W350 servo feedback (position, velocity, current, temperature)"],
+    "actuators": "4x DYNAMIXEL XM430-W350 (arm) + 1x XM430-W350 (gripper), 3D-printed frame",
+    "price_usd": 1629,
+    "weight_kg": 1.0,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 1629, "build_time_days": 3, "purchase_url": "https://robotis.us/openmanipulator-x-rm-x52-tnm/"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "image_url": null,
+    "community_size": "small",
+    "description": "Low-cost open-source 5-DoF arm (4-DoF + gripper) with 380mm reach and 500g payload. DYNAMIXEL XM430 platform with open-source CAD and ROS/ROS2 packages. Accessible entry point for basic pick-and-place and sim-to-real experiments. Limited reach and DoF constrain complex policy learning."
+  },
+  {
+    "id": "r16",
+    "slug": "kuka-iiwa-14",
+    "name": "KUKA LBR iiwa 14",
+    "manufacturer": "KUKA",
+    "type": "arm",
+    "dof": 7,
+    "sensors": ["Joint torque sensors (all 7 axes)", "Joint position encoders", "IP54 environmental protection"],
+    "actuators": "7x brushless servo motors with strain-wave (harmonic) gearing, integrated torque sensing per joint",
+    "price_usd": 68000,
+    "weight_kg": 29.9,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 68000, "build_time_days": 60, "purchase_url": "https://www.kuka.com/en-us/products/robotics-systems/industrial-robots/lbr-iiwa"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "7-DoF torque-controlled industrial cobot with 820mm reach and 14kg payload. Best-in-class joint torque sensors enable precise impedance and force control. Premium platform for contact-rich manipulation, deformable object handling, and assembly research. CE certified under ISO/TS 15066."
+  },
+  {
+    "id": "r17",
+    "slug": "boston-dynamics-spot",
+    "name": "Spot",
+    "manufacturer": "Boston Dynamics",
+    "type": "quadruped",
+    "dof": 12,
+    "sensors": ["5 pairs of stereo cameras (360-degree vision)", "IMU", "Joint encoders", "Foot contact/force sensors"],
+    "actuators": "12 brushless electric motors with geared transmissions (3 per leg: hip abduction, hip flexion, knee)",
+    "price_usd": 74500,
+    "weight_kg": 32.5,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 74500, "build_time_days": 30, "purchase_url": "https://shop.bostondynamics.com/"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["flat-terrain", "rough-terrain-outdoor"],
+    "image_url": null,
+    "community_size": "large",
+    "description": "Most commercially deployed quadruped. 12 actuated DoF with mature SDK/API for autonomous navigation and inspection. Supports payload rail for arms, LiDAR, and cameras. Growing Physical AI research presence with NVIDIA Isaac Lab integration, though proprietary control stack limits low-level policy deployment."
+  },
+  {
+    "id": "r18",
+    "slug": "anymal-d",
+    "name": "ANYmal D",
+    "manufacturer": "ANYbotics",
+    "type": "quadruped",
+    "dof": 12,
+    "sensors": ["3D LiDAR (360-degree)", "Wide-angle depth cameras", "IMU", "Joint torque sensors (integrated in SEAs)", "4K optical zoom camera", "Thermal camera", "Ultrasonic microphone"],
+    "actuators": "12 custom ANYdrive series-elastic actuators (SEAs), up to 85 N-m torque each",
+    "price_usd": 150000,
+    "weight_kg": 50,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 150000, "build_time_days": 60, "purchase_url": "https://www.anybotics.com/"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["flat-terrain", "rough-terrain-outdoor"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "Ruggedized IP67-rated quadruped for autonomous industrial inspection. Series-elastic actuators provide excellent torque control for locomotion policy research. Academic roots at ETH Zurich. Featured in prominent publications on parkour, rough terrain traversal, and whole-body control via learned policies. ATEX Zone 1 certified variant available."
+  },
+  {
+    "id": "r19",
+    "slug": "unitree-b2",
+    "name": "Unitree B2",
+    "manufacturer": "Unitree",
+    "type": "quadruped",
+    "dof": 12,
+    "sensors": ["RS-Helios 5515 3D LiDAR (360-degree)", "2x Intel RealSense D435i depth cameras", "2x optical cameras", "IMU", "Joint dual encoders", "Foot force sensors"],
+    "actuators": "12 brushless motors with ~360 N-m max torque, hollow-axis design with dual encoders",
+    "price_usd": 100000,
+    "weight_kg": 60,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 100000, "build_time_days": 30, "purchase_url": "https://shop.unitree.com/products/unitree-b2"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["flat-terrain", "rough-terrain-outdoor"],
+    "image_url": null,
+    "community_size": "small",
+    "description": "Industrial-grade quadruped for long-endurance autonomous patrol, inspection, and heavy payload transport (up to 40kg sustained, 120kg peak). 5-hour battery life and 6 m/s top speed. 12-DoF architecture compatible with Isaac Gym/Lab locomotion policies. Bridges gap between research and field deployment."
+  },
+  {
+    "id": "r20",
+    "slug": "unitree-h1",
+    "name": "Unitree H1",
+    "manufacturer": "Unitree",
+    "type": "humanoid",
+    "dof": 19,
+    "sensors": ["3D LiDAR (360-degree)", "Intel RealSense D435i depth camera with IMU", "Joint encoders"],
+    "actuators": "19x brushless motors (hip ~220 N-m, knee ~360 N-m, ankle ~45 N-m, arm ~75 N-m)",
+    "price_usd": 90000,
+    "weight_kg": 47,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 90000, "build_time_days": 30, "purchase_url": "https://shop.unitree.com/products/unitree-h1"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["indoor-flat", "flat-terrain"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "Full-size humanoid (180cm tall, 47kg) that set a world record for bipedal running at 3.3 m/s. 19 actuated DoF with powerful joint motors. Affordable full-size humanoid platform for whole-body locomotion and loco-manipulation research. Growing Isaac Lab support for RL-based bipedal policy development."
+  },
+  {
+    "id": "r21",
+    "slug": "agility-digit",
+    "name": "Digit",
+    "manufacturer": "Agility Robotics",
+    "type": "humanoid",
+    "dof": 16,
+    "sensors": ["LiDAR", "4x Intel RealSense depth cameras", "MEMS IMU", "Absolute and incremental joint encoders"],
+    "actuators": "Custom brushless DC motors with proprietary transmissions, backward-bending legs with compliant elements",
+    "price_usd": 250000,
+    "weight_kg": 65,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 250000, "build_time_days": 90, "purchase_url": "https://www.agilityrobotics.com/"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["indoor-flat", "flat-terrain"],
+    "image_url": null,
+    "community_size": "small",
+    "description": "Purpose-built bipedal humanoid for logistics and warehouse automation. First humanoid robot deployed full-time in a commercial warehouse. 16 actuated DoF with backward-bending legs for excellent balance and stair navigation. Relevant as a real-world deployment target for learned locomotion and manipulation policies, though closed platform limits academic adoption."
+  },
+  {
+    "id": "r22",
+    "slug": "hello-robot-stretch3",
+    "name": "Hello Robot Stretch 3",
+    "manufacturer": "Hello Robot",
+    "type": "rover",
+    "dof": 11,
+    "sensors": ["Intel RealSense D435if RGB-D camera (head-mounted)", "Intel RealSense D405 depth camera (gripper-mounted)", "BNO085 9-DoF IMU", "ADXL343 wrist accelerometer", "4 cliff sensors", "Wheel odometry", "RP-LiDAR A1"],
+    "actuators": "Stepper motors (lift, telescoping arm), Dynamixel servos (wrist, gripper), brushed DC motors (mobile base)",
+    "price_usd": 24950,
+    "weight_kg": 24.5,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 24950, "build_time_days": 14, "purchase_url": "https://hello-robot.com/purchase"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": ["octo-base", "rt-2-x"],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "image_url": null,
+    "community_size": "large",
+    "description": "Lightweight open-source mobile manipulator for assistive and home robotics research. Compact form factor navigates doorways and tight spaces. Telescoping arm provides practical reach for everyday manipulation. Key platform for learned manipulation policies at Google DeepMind, Meta, and universities. Open ROS 2 stack and Python API."
+  },
+  {
+    "id": "r23",
+    "slug": "agilex-limo",
+    "name": "AgileX LIMO",
+    "manufacturer": "AgileX Robotics",
+    "type": "rover",
+    "dof": 0,
+    "sensors": ["NVIDIA Jetson Nano/Orin Nano (compute)", "EAI XL2 2D LiDAR", "Depth camera (Orbbec or RealSense)", "IMU", "Wheel encoders"],
+    "actuators": "4x 14.4W hub motors (differential, Ackermann, tracked, and Mecanum steering modes)",
+    "price_usd": 2500,
+    "weight_kg": 4.2,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 2500, "build_time_days": 7, "purchase_url": "https://global.agilex.ai/products/limo-pro"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["flat-terrain"],
+    "image_url": null,
+    "community_size": "medium",
+    "description": "Compact multi-modal research rover supporting four steering modes (differential, Ackermann, tracked, Mecanum) in one platform. Runs ROS/ROS 2 on NVIDIA Jetson. Popular in university courses and labs for autonomous navigation, SLAM, and path planning experiments. Small size (322x220mm) and low cost make it an accessible mobile robotics entry point."
+  },
+  {
+    "id": "r24",
+    "slug": "clearpath-jackal",
+    "name": "Clearpath Jackal",
+    "manufacturer": "Clearpath Robotics",
+    "type": "rover",
+    "dof": 0,
+    "sensors": ["GPS (u-blox)", "IMU (Microstrain)", "Wheel encoders"],
+    "actuators": "4x brushed DC motors in 4x4 drivetrain (skid-steer), up to 500W onboard power",
+    "price_usd": 18000,
+    "weight_kg": 17,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 18000, "build_time_days": 30, "purchase_url": "https://clearpathrobotics.com/jackal-small-unmanned-ground-vehicle/"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["flat-terrain", "rough-terrain-outdoor"],
+    "image_url": null,
+    "community_size": "large",
+    "description": "Rugged small-footprint outdoor UGV. De facto standard for field robotics research. Ships fully integrated with ROS, onboard Intel i5 PC, GPS, and IMU for out-of-the-box autonomous navigation. IP62 weatherproof (-20 to 45C). Widely used for learned navigation policies, terrain traversal research, and multi-robot coordination."
+  },
+  {
+    "id": "r25",
+    "slug": "crazyflie-21",
+    "name": "Crazyflie 2.1",
+    "manufacturer": "Bitcraze",
+    "type": "drone",
+    "dof": 0,
+    "sensors": ["BMI088 3-axis accelerometer + gyroscope (IMU)", "BMP388 barometer"],
+    "actuators": "4x coreless brushed DC motors (7x20mm) with 45mm propellers",
+    "price_usd": 240,
+    "weight_kg": 0.027,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 240, "build_time_days": 1, "purchase_url": "https://store.bitcraze.io/products/crazyflie-2-1-plus"}
+    ],
+    "deploy_readiness": "lab_only",
+    "compatible_policy_slugs": [],
+    "compatible_env_slugs": ["indoor-flight-cage"],
+    "image_url": null,
+    "community_size": "large",
+    "description": "Standard micro-drone platform for indoor swarm robotics and aerial policy learning research. At 27 grams, safe for indoor research without cages. Open-source firmware, hardware, and Python API. Modular expansion decks (optical flow, UWB localization, Lighthouse tracking). Featured in numerous publications on learned quadrotor control and multi-agent RL."
+  },
+  {
+    "id": "r26",
+    "slug": "unitree-go1",
+    "name": "Unitree Go1",
+    "manufacturer": "Unitree",
+    "type": "quadruped",
+    "dof": 12,
+    "sensors": ["5 pairs of stereo fisheye cameras (360-degree)", "3 sets of ultrasonic sensors", "IMU", "Foot force sensors", "Joint encoders"],
+    "actuators": "12 brushless DC motors (hip/thigh: 23.7 N-m, knee: 35.55 N-m)",
+    "price_usd": 2700,
+    "weight_kg": 12,
+    "build_paths": [
+      {"path": "buy", "cost_usd": 2700, "build_time_days": 7, "purchase_url": "https://shop.unitree.com/"}
+    ],
+    "deploy_readiness": "ce_marked",
+    "compatible_policy_slugs": ["walk-these-ways-go2"],
+    "compatible_env_slugs": ["flat-terrain", "rough-terrain-outdoor"],
+    "image_url": "https://raw.githubusercontent.com/google-deepmind/mujoco_menagerie/main/unitree_go1/go1.png",
+    "community_size": "large",
+    "description": "Predecessor to Go2, one of the first affordable quadrupeds to achieve mass research adoption. 12-DoF architecture with Isaac Gym compatibility. While Go2 has largely superseded it, Go1 remains widely referenced in Physical AI literature and many labs still operate units. Important historical platform in learned locomotion policy ecosystem."
+  }
+]

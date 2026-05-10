@@ -1,0 +1,310 @@
+[
+  {
+    "id": "p16",
+    "slug": "openvla-7b",
+    "name": "OpenVLA",
+    "author": "Stanford / UC Berkeley / Google DeepMind / TRI",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "7B-parameter vision-language-action model trained on 970K real-world demos from Open X-Embodiment. Fused SigLIP+DINOv2 visual encoder with Llama 2 backbone. Outputs tokenized robot actions from RGB image + language instruction. Fine-tunable via LoRA on consumer GPUs.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 7, "frequency_hz": 5},
+    "observation_space": {"type": "multimodal", "components": ["primary_rgb (224x224)", "language_instruction"]},
+    "compatible_robot_slugs": ["widowx-250", "franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "WidowX 250 + Google Robot", "environment": "real (BridgeV2 + Google eval)", "success_rate": 0.72, "episodes": 500},
+      {"robot": "Franka Panda", "environment": "real (tabletop fine-tuned)", "success_rate": 0.68, "episodes": 100}
+    ],
+    "hf_repo_id": "openvla/openvla-7b",
+    "paper_arxiv_url": "https://arxiv.org/abs/2406.09246",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p17",
+    "slug": "vinn",
+    "name": "VINN",
+    "author": "NYU (Lerrel Pinto Lab)",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "Non-parametric imitation learning via k-nearest-neighbor lookup in a BYOL-learned visual embedding space. No policy training needed beyond collecting demos -- at test time, finds visually similar demo frames and averages their actions. Simple but effective baseline.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 3, "frequency_hz": 1},
+    "observation_space": {"type": "vision", "components": ["primary_rgb"]},
+    "compatible_robot_slugs": ["hello-robot-stretch3"],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "benchmarks": [
+      {"robot": "Hello Robot Stretch", "environment": "real (door opening, seen)", "success_rate": 0.80, "episodes": 50},
+      {"robot": "Hello Robot Stretch", "environment": "real (door opening, novel)", "success_rate": 0.40, "episodes": 50}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2112.01511",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p18",
+    "slug": "bc-z",
+    "name": "BC-Z",
+    "author": "Google / UC Berkeley / Stanford",
+    "framework": "TensorFlow",
+    "license": "apache-2.0",
+    "task_description": "Zero-shot task generalization via large-scale behavioral cloning. Trained on 25,877 teleoperated demos across 100 tasks (125 hours). Conditioned on language embeddings or human video demos. Generalizes to 24 unseen tasks without task-specific demonstrations.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 7, "frequency_hz": 10},
+    "observation_space": {"type": "multimodal", "components": ["primary_rgb", "language_embedding"]},
+    "compatible_robot_slugs": [],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "Google Everyday Robot", "environment": "real (24 unseen tasks, zero-shot)", "success_rate": 0.44, "episodes": 500}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2202.02005",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p19",
+    "slug": "cliport",
+    "name": "CLIPort",
+    "author": "UW / NVIDIA / Google",
+    "framework": "PyTorch",
+    "license": "apache-2.0",
+    "task_description": "Language-conditioned imitation learning combining CLIP semantic understanding with TransporterNet spatial precision. Two-stream architecture processes RGB-D observations to predict pick-and-place actions via pixel locations and rotations. Handles 10+ tasks from language instructions.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "other", "dimensions": 6, "frequency_hz": 1},
+    "observation_space": {"type": "multimodal", "components": ["rgbd_topdown", "language_instruction"]},
+    "compatible_robot_slugs": ["ur5e", "franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "benchmarks": [
+      {"robot": "UR5e (sim)", "environment": "sim (Ravens benchmark, 10 tasks)", "success_rate": 0.85, "episodes": 1000},
+      {"robot": "Franka Panda", "environment": "real (9 tasks, 179 demos)", "success_rate": 0.70, "episodes": 100}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2109.12098",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p20",
+    "slug": "peract",
+    "name": "PerAct",
+    "author": "UW / NVIDIA",
+    "framework": "PyTorch",
+    "license": "apache-2.0",
+    "task_description": "Perceiver-Actor for multi-task 6-DoF manipulation. Voxelizes workspace into 100x100x100 grid from multi-view RGB-D, processes with Perceiver IO transformer (2048 latents, 6 self-attention layers). Detects next-best voxel for keyframe actions. Strong inductive bias for 6-DoF from few demos per task.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 8, "frequency_hz": 1},
+    "observation_space": {"type": "multimodal", "components": ["front_rgbd (128x128)", "left_shoulder_rgbd (128x128)", "right_shoulder_rgbd (128x128)", "wrist_rgbd (128x128)", "language_instruction"]},
+    "compatible_robot_slugs": ["franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "Franka Panda (sim)", "environment": "sim (RLBench 18 tasks, 249 variations)", "success_rate": 0.43, "episodes": 500}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2209.05451",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p21",
+    "slug": "rvt-2",
+    "name": "RVT-2",
+    "author": "NVIDIA",
+    "framework": "PyTorch",
+    "license": "other",
+    "task_description": "Multi-view transformer with coarse-to-fine rendering for precise 3D manipulation. Re-renders camera inputs from virtual views, uses cross-view attention for keyframe action prediction, then zooms in for millimeter-level gripper pose accuracy. 81.4% on RLBench 18 tasks, trains 36x faster than PerAct.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 7, "frequency_hz": 1},
+    "observation_space": {"type": "multimodal", "components": ["multi_view_rgbd (re-rendered virtual views)", "language_instruction"]},
+    "compatible_robot_slugs": ["franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "Franka Panda (sim)", "environment": "sim (RLBench 18 tasks)", "success_rate": 0.814, "episodes": 500}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2406.08545",
+    "evidence_level": "reported"
+  },
+  {
+    "id": "p22",
+    "slug": "dp3",
+    "name": "3D Diffusion Policy (DP3)",
+    "author": "Shanghai Qizhi / SJTU / Tsinghua / Shanghai AI Lab",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "Diffusion policy conditioned on compact 3D point cloud features. Extracts sparse point clouds (512-1024 points) from a single depth camera, encodes via lightweight point encoder, then generates action trajectories with a diffusion model. Strong spatial awareness enables precise manipulation and viewpoint generalization.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "joint-position", "dimensions": 7, "frequency_hz": 10},
+    "observation_space": {"type": "multimodal", "components": ["point_cloud (512-1024 pts from RealSense L515)", "joint_pos"]},
+    "compatible_robot_slugs": ["franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "benchmarks": [
+      {"robot": "Franka Panda + Allegro Hand", "environment": "real (4 dexterous tasks)", "success_rate": 0.85, "episodes": 40}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2403.03954",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p23",
+    "slug": "umi",
+    "name": "UMI",
+    "author": "Stanford / Columbia / TRI",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "Universal Manipulation Interface for in-the-wild data collection and cross-robot policy transfer. Humans collect demos with handheld GoPro-equipped grippers using SLAM-based 3D tracking. Diffusion policy backbone with relative-trajectory action representation enables hardware-agnostic deployment without retraining.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 7, "frequency_hz": 10},
+    "observation_space": {"type": "multimodal", "components": ["wrist_gopro_fisheye_rgb (155deg)", "end_effector_trajectory", "gripper_width"]},
+    "compatible_robot_slugs": ["ur5e", "franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "UR5", "environment": "real (cup arrangement)", "success_rate": 1.00, "episodes": 20},
+      {"robot": "UR5", "environment": "real (dynamic tossing)", "success_rate": 0.875, "episodes": 120},
+      {"robot": "UR5", "environment": "real (bimanual cloth folding)", "success_rate": 0.70, "episodes": 20},
+      {"robot": "Franka FR2", "environment": "real (cup arrangement, cross-robot)", "success_rate": 0.90, "episodes": 20}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2402.10329",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p24",
+    "slug": "hulc",
+    "name": "HULC",
+    "author": "University of Freiburg",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "Hierarchical Universal Language Conditioned policy for long-horizon manipulation. Multimodal transformer encoder organizes behaviors into categorical latent plans, local policies execute low-level actions. Learns a single 7-DoF policy for sequential manipulation tasks from language instructions. CALVIN benchmark baseline.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "joint-position", "dimensions": 7, "frequency_hz": 30},
+    "observation_space": {"type": "multimodal", "components": ["static_rgb", "gripper_rgb", "joint_pos", "language_instruction"]},
+    "compatible_robot_slugs": ["franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "benchmarks": [
+      {"robot": "Franka Panda (sim)", "environment": "sim (CALVIN 34 subtasks)", "success_rate": 0.827, "episodes": 1000}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2204.06252",
+    "evidence_level": "reported"
+  },
+  {
+    "id": "p25",
+    "slug": "robomimic-bcrnn",
+    "name": "Robomimic BC-RNN",
+    "author": "Stanford / UT Austin (ARISE)",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "Behavioral cloning with recurrent neural network (LSTM) backbone for sequential manipulation. Processes observation histories to model temporal correlations. Optional GMM action head for multi-modal distributions. Key baseline in the Robomimic benchmark suite, consistently outperforms non-recurrent BC on human demos.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 7, "frequency_hz": 20},
+    "observation_space": {"type": "multimodal", "components": ["agentview_rgb (84x84)", "wrist_rgb (84x84)", "joint_pos"]},
+    "compatible_robot_slugs": ["franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean", "robomimic-can"],
+    "benchmarks": [
+      {"robot": "Franka Panda (sim)", "environment": "sim (Lift, Proficient-Human)", "success_rate": 1.00, "episodes": 200},
+      {"robot": "Franka Panda (sim)", "environment": "sim (Can, Multi-Human)", "success_rate": 0.96, "episodes": 300},
+      {"robot": "Franka Panda", "environment": "real (Lift)", "success_rate": 0.967, "episodes": 30},
+      {"robot": "Franka Panda", "environment": "real (Can)", "success_rate": 0.733, "episodes": 30}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2108.03298",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p26",
+    "slug": "amp-locomotion",
+    "name": "AMP (Adversarial Motion Priors)",
+    "author": "UC Berkeley (Pieter Abbeel, Sergey Levine)",
+    "framework": "PyTorch",
+    "license": "bsd-3-clause",
+    "task_description": "Adversarial imitation learning for stylized locomotion. Motion capture clips train a discriminator providing style-reward signals while task rewards guide goal completion. Produces naturalistic gaits without manual reward shaping. Widely extended to real quadrupeds and humanoids via IsaacGym/IsaacLab.",
+    "skill_type": "locomotion",
+    "action_space": {"type": "joint-position", "dimensions": 28, "frequency_hz": 30},
+    "observation_space": {"type": "proprioception", "components": ["joint_angles", "joint_angular_velocities", "body_pos", "body_orientation", "body_linear_vel", "body_angular_vel"]},
+    "compatible_robot_slugs": ["unitree-g1"],
+    "compatible_env_slugs": ["flat-terrain", "indoor-flat"],
+    "benchmarks": [],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2104.02180",
+    "evidence_level": "reported"
+  },
+  {
+    "id": "p27",
+    "slug": "dreamwaq",
+    "name": "DreamWaQ",
+    "author": "KAIST",
+    "framework": "PyTorch",
+    "license": "other",
+    "task_description": "RL-based quadrupedal locomotion using implicit terrain imagination from proprioceptive sensing only. Learns a latent terrain representation via teacher-student distillation, enabling gait adaptation without exteroceptive sensors. Robust outdoor sim-to-real transfer on challenging terrain.",
+    "skill_type": "locomotion",
+    "action_space": {"type": "joint-position", "dimensions": 12, "frequency_hz": 50},
+    "observation_space": {"type": "proprioception", "components": ["body_angular_vel (3)", "gravity_vector (3)", "velocity_command (3)", "joint_angles (12)", "joint_angular_vel (12)", "previous_action (12)"]},
+    "compatible_robot_slugs": ["unitree-go1"],
+    "compatible_env_slugs": ["flat-terrain", "rough-terrain-outdoor"],
+    "benchmarks": [
+      {"robot": "Unitree A1", "environment": "real (outdoor rough terrain, 430m course)", "success_rate": 0.95, "episodes": 100}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2301.10602",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p28",
+    "slug": "transporter-nets",
+    "name": "Transporter Networks",
+    "author": "Google Brain / Google Research",
+    "framework": "TensorFlow",
+    "license": "apache-2.0",
+    "task_description": "Infers spatial displacements from visual input to parameterize pick-and-place actions. Decomposes manipulation into picking attention (where to pick) and placing cross-correlation (where and how to place). Exploits spatial equivariance for extreme sample efficiency -- learns from as few as 10 demos per task.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "other", "dimensions": 6, "frequency_hz": 1},
+    "observation_space": {"type": "vision", "components": ["rgbd_topdown (640x480)"]},
+    "compatible_robot_slugs": ["ur5e"],
+    "compatible_env_slugs": ["tabletop-clean"],
+    "benchmarks": [
+      {"robot": "UR5e (sim)", "environment": "sim (Ravens benchmark, 10 tasks)", "success_rate": 0.90, "episodes": 1000}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2010.14406",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p29",
+    "slug": "voxposer",
+    "name": "VoxPoser",
+    "author": "Stanford",
+    "framework": "PyTorch",
+    "license": "mit",
+    "task_description": "Composes 3D voxel value maps for robot manipulation using LLM-generated code. An LLM writes Python code that interacts with open-vocabulary vision models to create 3D affordance/constraint maps. MPC planner synthesizes closed-loop 6-DoF trajectories from the maps. Zero-shot generalization to novel tasks and objects.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 6, "frequency_hz": 5},
+    "observation_space": {"type": "multimodal", "components": ["rgbd_images", "point_cloud", "language_instruction", "open_vocab_detections"]},
+    "compatible_robot_slugs": ["franka-panda"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "Franka Panda (sim)", "environment": "sim (RLBench 13 tasks, unseen instructions)", "success_rate": 0.767, "episodes": 200},
+      {"robot": "Franka Panda", "environment": "real (5 tabletop tasks)", "success_rate": 0.88, "episodes": 50}
+    ],
+    "hf_repo_id": null,
+    "paper_arxiv_url": "https://arxiv.org/abs/2307.05973",
+    "evidence_level": "verified"
+  },
+  {
+    "id": "p30",
+    "slug": "susie",
+    "name": "SuSIE",
+    "author": "UC Berkeley (RAIL Lab)",
+    "framework": "JAX",
+    "license": "mit",
+    "task_description": "Hierarchical manipulation via subgoal synthesis with image-editing diffusion models. Finetunes InstructPix2Pix on robot video to generate visual subgoals from language commands. Low-level goal-conditioned diffusion policy executes toward each subgoal. Leverages Internet-scale visual pretraining for zero-shot generalization.",
+    "skill_type": "manipulation",
+    "action_space": {"type": "end-effector-pose", "dimensions": 7, "frequency_hz": 5},
+    "observation_space": {"type": "multimodal", "components": ["primary_rgb", "language_instruction", "generated_subgoal_image"]},
+    "compatible_robot_slugs": ["widowx-250"],
+    "compatible_env_slugs": ["tabletop-clean", "tabletop-cluttered"],
+    "benchmarks": [
+      {"robot": "WidowX 250", "environment": "real (tabletop manipulation)", "success_rate": 0.75, "episodes": 100}
+    ],
+    "hf_repo_id": "kvablack/susie",
+    "paper_arxiv_url": "https://arxiv.org/abs/2310.10639",
+    "evidence_level": "verified"
+  }
+]

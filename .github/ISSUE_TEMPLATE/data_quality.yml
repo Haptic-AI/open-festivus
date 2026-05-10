@@ -1,0 +1,57 @@
+name: Data quality (escalation)
+description: Use this only when the in-app /contribute flow cannot handle your edit.
+title: "[Data]: "
+labels: ["data-quality"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Stop. Read this first.
+
+        For record edits (adding a robot, fixing a dataset description,
+        flagging a broken link, claiming compatibility between two
+        components), use the in-app `/contribute` flow at
+        https://festivus.hapticlabs.ai/contribute. It has typed forms,
+        validation, and a moderator queue.
+
+        This template is **only** for cases the `/contribute` flow
+        cannot handle:
+
+        - The form crashes or the API returns 500.
+        - The data type you need to edit isn't yet supported.
+        - The change is structural (a schema fix, not a content fix).
+
+        If your issue is actually a content edit, this issue will be
+        closed with a link back to `/contribute`.
+
+  - type: textarea
+    id: contribute_attempt
+    attributes:
+      label: What did /contribute do?
+      description: |
+        Describe what you tried to do via the in-app flow and what
+        went wrong. Paste error messages, response codes, or
+        screenshots if helpful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: What change do you want made?
+      description: |
+        Be concrete. Which record (slug, URL), which field, what value
+        change.
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: |
+        Where does the corrected information come from? URL of the
+        manufacturer's spec page, a paper, a GitHub README. Edits
+        without sources are hard to act on.
+    validations:
+      required: true

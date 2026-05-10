@@ -1,0 +1,33 @@
+{
+  "action_space": {
+    "dimensions": 0,
+    "frequency_hz": 0,
+    "type": "other"
+  },
+  "author": "UCSC-VLAA",
+  "benchmarks": [],
+  "compatible_env_slugs": [],
+  "compatible_robot_slugs": [],
+  "evidence_level": "untested",
+  "framework": "PyTorch",
+  "hf_repo_id": "UCSC-VLAA/ViT-H-14-CLIPA-336-laion2B",
+  "id": "p1001",
+  "license": "apache-2.0",
+  "name": "ViT-H-14-CLIPA-336-laion2B",
+  "observation_space": {
+    "components": [],
+    "type": "other"
+  },
+  "paper_arxiv_url": "https://arxiv.org/abs/2305.07017",
+  "skill_type": "other",
+  "slug": "ucsc-vlaa-vit-h-14-clipa-336-laion2b",
+  "task_description": "Policy model from UCSC-VLAA. Tags: open_clip, safetensors, clip, zero-shot-image-classification, dataset:laion/laion2b-en.",
+  "taxonomy": {
+    "action_dimensions": 0,
+    "required_control": "learned_latent",
+    "required_perception": [
+      "proprioception",
+      "monocular_rgb"
+    ]
+  }
+}

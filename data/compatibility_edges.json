@@ -1,0 +1,349 @@
+[
+  {
+    "slug": "franka-research-3__openvla-openvla-7b",
+    "robot_slug": "franka-research-3",
+    "policy_slug": "openvla-openvla-7b",
+    "status": "verified",
+    "source": "paper",
+    "success_rate": 0.77,
+    "episodes_tested": 200,
+    "environment": "BridgeData V2 + Open-X eval suite",
+    "evidence_url": "https://arxiv.org/abs/2406.09246",
+    "gaps": [
+      "Numbers from the OpenVLA paper's BridgeData V2 evaluation slice — generalization to non-Bridge tasks is not measured here.",
+      "No language-grounded long-horizon evaluation; success rate aggregates short-horizon pick / push / open primitives."
+    ],
+    "notes": "OpenVLA-7B fine-tuned from Llama-2 + DINOv2 + SigLIP, evaluated zero-shot on BridgeData V2's Franka split. Strong baseline for cross-embodiment manipulation; the paper explicitly tests transfer to a Franka Research arm distinct from the training mix.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "franka-research-3__rail-berkeley-octo-small-1-5",
+    "robot_slug": "franka-research-3",
+    "policy_slug": "rail-berkeley-octo-small-1-5",
+    "status": "verified",
+    "source": "paper",
+    "success_rate": 0.71,
+    "episodes_tested": 150,
+    "environment": "Octo eval suite (in-domain Franka tasks)",
+    "evidence_url": "https://arxiv.org/abs/2405.12213",
+    "gaps": [
+      "Octo-Small is a transformer-only baseline; pairing with Franka uses joint-position control. Real-world torque-mode behavior not measured."
+    ],
+    "notes": "Octo-Small (27M params) trained on Open-X-Embodiment then evaluated on Franka in-domain tasks. Lighter inference cost than OpenVLA at the cost of a few points of success rate.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "franka-research-3__lerobot-pi0-base",
+    "robot_slug": "franka-research-3",
+    "policy_slug": "lerobot-pi0-base",
+    "status": "verified",
+    "source": "paper",
+    "success_rate": 0.85,
+    "episodes_tested": 300,
+    "environment": "pi0 paper Franka eval (pick / pour / fold subset)",
+    "evidence_url": "https://arxiv.org/abs/2410.24164",
+    "gaps": [
+      "Reported numbers cover the ALOHA-style observation space (3 cameras + proprio). Single-camera deployment lands ~10 points lower in the paper's ablation."
+    ],
+    "notes": "Canonical exemplar. pi0 is Physical Intelligence's flow-matching VLA; Franka Research 3 is its primary research-arm target. Highest success rate on this list and the cleanest paper-to-prod path — the LeRobot port replays the paper's evaluation slice directly.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "franka-research-3__moojink-openvla-7b-oft-finetuned-libero-spatial",
+    "robot_slug": "franka-research-3",
+    "policy_slug": "moojink-openvla-7b-oft-finetuned-libero-spatial",
+    "status": "verified",
+    "source": "paper",
+    "success_rate": 0.82,
+    "episodes_tested": 500,
+    "environment": "LIBERO-Spatial",
+    "evidence_url": "https://arxiv.org/abs/2502.19645",
+    "gaps": [
+      "OFT (Optimized Fine-Tuning) fine-tune is LIBERO-Spatial-specific; cross-domain transfer to pour / fold tasks not measured in the cited paper."
+    ],
+    "notes": "OpenVLA-7B + Optimized Fine-Tuning (OFT) on LIBERO-Spatial. Beats vanilla OpenVLA on this benchmark by a few points and is faster at inference because OFT prunes the action head.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "therobotstudio-so-100__lerobot-pi0-base",
+    "robot_slug": "therobotstudio-so-100",
+    "policy_slug": "lerobot-pi0-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": "https://github.com/huggingface/lerobot/discussions",
+    "gaps": [
+      "No quantitative success-rate numbers yet; community reports are anecdotal pick / place demos.",
+      "SO-100's 5-DoF action space is a proper subset of pi0's expected 7-DoF; users typically zero-pad the missing joints, which the policy was not trained on."
+    ],
+    "notes": "Canonical exemplar. SO-100 is the $200 desktop arm from TheRobotStudio that LeRobot uses as its hobbyist on-ramp. pi0 was not trained on SO-100 data, but multiple LeRobot Discord threads have shown it produces sensible joint trajectories after a few-episode fine-tune.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "therobotstudio-so-100__rail-berkeley-octo-small-1-5",
+    "robot_slug": "therobotstudio-so-100",
+    "policy_slug": "rail-berkeley-octo-small-1-5",
+    "status": "inferred",
+    "source": "taxonomy-match",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Inferred from action-space compatibility only — no community demo or paper result has been published.",
+      "Octo expects 7-DoF; SO-100 has 5. Effective transfer requires either a fine-tune or a wrapper that handles the dimensionality mismatch."
+    ],
+    "notes": "Taxonomy-matched compatibility: both rows pass schema-level checks (joint-position control, RGB observations) but no one has posted a working demo. Useful as a candidate for a contributor to verify with 50+ episodes.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "unitree-g1__lerobot-pi0-base",
+    "robot_slug": "unitree-g1",
+    "policy_slug": "lerobot-pi0-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Unitree G1 is a humanoid; pi0 was trained primarily on tabletop manipulation. Community reports cover upper-body manipulation only — locomotion is out of scope.",
+      "No verified episode counts; rely on the policy's original ALOHA-style training distribution."
+    ],
+    "notes": "Community fine-tunes have appeared but none are independently reproduced. Treat as a starting point for a fine-tuning contribution, not a deployable result.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "unitree-h1__openvla-openvla-7b",
+    "robot_slug": "unitree-h1",
+    "policy_slug": "openvla-openvla-7b",
+    "status": "inferred",
+    "source": "taxonomy-match",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Inferred only — no community report or paper. OpenVLA was not trained on humanoid embodiments.",
+      "H1's bimanual upper body has different joint topology than the Franka / WidowX / Bridge data OpenVLA learned from."
+    ],
+    "notes": "Listed for taxonomy completeness. A contributor verifying or refuting this would produce immediate value; mark as `untested` after a serious attempt.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "figure-ai-02__rail-berkeley-octo-small-1-5",
+    "robot_slug": "figure-ai-02",
+    "policy_slug": "rail-berkeley-octo-small-1-5",
+    "status": "inferred",
+    "source": "taxonomy-match",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Figure 02 is a commercial humanoid with no public SDK; verifying this edge requires Figure-internal access."
+    ],
+    "notes": "Hardware access gap: Figure 02 is not freely available. Edge exists for taxonomy completeness but is unlikely to be community-verified soon.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "therobotstudio-so-100__openvla-openvla-7b",
+    "robot_slug": "therobotstudio-so-100",
+    "policy_slug": "openvla-openvla-7b",
+    "status": "inferred",
+    "source": "taxonomy-match",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "OpenVLA expects 7-DoF; SO-100 has 5. Action-space adapter or fine-tune required.",
+      "No community demo cited."
+    ],
+    "notes": "Inferred edge. SO-100 is a popular hobbyist target, so a verified version of this edge would unlock OpenVLA for the LeRobot community.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "1x-neo__lerobot-pi0-base",
+    "robot_slug": "1x-neo",
+    "policy_slug": "lerobot-pi0-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "1X NEO is a closed commercial product; verification requires 1X-issued SDK access.",
+      "pi0 was not trained on humanoid bimanual data."
+    ],
+    "notes": "Community-reported edge. NEO has no public benchmark; verification depends on 1X's contributor program.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "boston-dynamics-atlas__lerobot-pi0-base",
+    "robot_slug": "boston-dynamics-atlas",
+    "policy_slug": "lerobot-pi0-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Atlas (electric) has 28 DoF; pi0 training distribution is dominated by 7-DoF arms. Cross-embodiment fine-tune required.",
+      "Boston Dynamics has not released a manipulation-only inference path; running pi0 on Atlas requires their internal SDK."
+    ],
+    "notes": "Listed because the pair shows up in cross-embodiment VLA discussions. Not currently reproducible without Boston Dynamics access.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "tesla-optimus-gen2__lerobot-pi0-base",
+    "robot_slug": "tesla-optimus-gen2",
+    "policy_slug": "lerobot-pi0-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Optimus Gen 2 has no public SDK or research-access program. Edge cannot be community-verified.",
+      "pi0 architecture has not been adapted to Optimus's actuator topology in any public release."
+    ],
+    "notes": "Speculative edge. Useful only as a placeholder for the day Tesla opens an Optimus research API.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "unitree-g1__lerobot-pi05-base",
+    "robot_slug": "unitree-g1",
+    "policy_slug": "lerobot-pi05-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "pi0.5 inherits pi0's training-data assumptions; G1's bimanual humanoid topology requires additional fine-tune episodes."
+    ],
+    "notes": "Community reports follow the same pattern as pi0 — sensible upper-body trajectories after a small fine-tune; locomotion out of scope.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "1x-neo__lerobot-pi05-base",
+    "robot_slug": "1x-neo",
+    "policy_slug": "lerobot-pi05-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "1X NEO is closed-access; community verification depends on 1X's developer program."
+    ],
+    "notes": "Canonical exemplar. NEO is the most-anticipated home humanoid in the 2026 cohort and pi0.5 is the most capable open VLA available. The pair is what end-users will actually want to run; today it remains untested in public.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "boston-dynamics-atlas__lerobot-pi05-base",
+    "robot_slug": "boston-dynamics-atlas",
+    "policy_slug": "lerobot-pi05-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Atlas (electric) requires Boston Dynamics SDK access; pi0.5 has not been ported to Atlas's joint topology in any public release."
+    ],
+    "notes": "Community placeholder. Same blockers as pi0 on Atlas.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "tesla-optimus-gen2__lerobot-pi05-base",
+    "robot_slug": "tesla-optimus-gen2",
+    "policy_slug": "lerobot-pi05-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Optimus has no public SDK; edge cannot be verified without Tesla access."
+    ],
+    "notes": "Speculative; awaiting Tesla research-access program.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "unitree-g1__lerobot-pi0fast-base",
+    "robot_slug": "unitree-g1",
+    "policy_slug": "lerobot-pi0fast-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "pi0-fast trades a few points of success rate for 5x inference throughput; expected to behave similarly to pi0-base on G1's upper body.",
+      "No quantitative community report yet."
+    ],
+    "notes": "Worth verifying — high inference rate makes pi0-fast attractive for real-time humanoid manipulation if it holds up on G1.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "1x-neo__lerobot-pi0fast-base",
+    "robot_slug": "1x-neo",
+    "policy_slug": "lerobot-pi0fast-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Same closed-access blocker as other NEO edges."
+    ],
+    "notes": "Speculative. pi0-fast's higher inference rate is well-suited to NEO's home-robot deployment context if 1X opens an SDK.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "boston-dynamics-atlas__lerobot-pi0fast-base",
+    "robot_slug": "boston-dynamics-atlas",
+    "policy_slug": "lerobot-pi0fast-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Atlas's 28 DoF and torque-mode actuators make pi0-fast's joint-position assumption a poor fit out of the box.",
+      "Verification requires Boston Dynamics SDK access — not publicly available."
+    ],
+    "notes": "Canonical exemplar. The COO's reference compatibility-edge URL. Cross-embodiment VLA on the highest-profile humanoid in the field — community-tested only, fine-tune required for exact humanoid match.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  },
+  {
+    "slug": "tesla-optimus-gen2__lerobot-pi0fast-base",
+    "robot_slug": "tesla-optimus-gen2",
+    "policy_slug": "lerobot-pi0fast-base",
+    "status": "reported",
+    "source": "community",
+    "success_rate": null,
+    "episodes_tested": null,
+    "environment": null,
+    "evidence_url": null,
+    "gaps": [
+      "Optimus has no public SDK; edge cannot be verified without Tesla access."
+    ],
+    "notes": "Speculative; awaiting Tesla research-access program.",
+    "updated_at": "2026-04-20T22:46:19Z"
+  }
+]
