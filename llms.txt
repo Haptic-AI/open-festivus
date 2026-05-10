@@ -1,0 +1,38 @@
+# Festivus
+
+> Open source Physical AI platform by Haptic. A curated dataset of robots, policies, environments, datasets, and benchmarks plus the tooling to explore, contribute to, and deploy them.
+
+Festivus is for engineers and researchers building agents that act in the physical world. It provides a typed, browseable corpus and a public HTTP API so AI agents and humans can discover compatible robots, policies, and datasets without re-scraping the web.
+
+The platform is split across three runnable surfaces and a typed dataset: a Next.js web app for browsing and editing records, an Express API serving the dataset over HTTP, and JSON seed files under `data/` covering robots, policies, datasets, papers, benchmarks, environments, tasks, simulations, compatibility edges, and deploy notes.
+
+## Docs
+
+- [Architecture](https://github.com/Haptic-AI/open-festivus/blob/main/docs/architecture.md): system design, monorepo layout, and trade-offs (~2K tokens).
+- [Public API](https://github.com/Haptic-AI/open-festivus/blob/main/docs/public-api.md): endpoint list, rate limits, auth, and curl examples (~2K tokens).
+- [Agentic-first principle](https://github.com/Haptic-AI/open-festivus/blob/main/docs/agentic-first.md): the design principle behind the platform (~1K tokens).
+- [Coding guide](https://github.com/Haptic-AI/open-festivus/blob/main/docs/coding-guide.md): code style and conventions for contributors (~3K tokens).
+- [Prompting guide](https://github.com/Haptic-AI/open-festivus/blob/main/docs/prompting-guide.md): conventions for talking to the in-app agent (~1K tokens).
+- [Testing](https://github.com/Haptic-AI/open-festivus/blob/main/docs/testing.md): test strategy (~1K tokens).
+- [Observability](https://github.com/Haptic-AI/open-festivus/blob/main/docs/observability.md): metrics and traces we emit (~1K tokens).
+- [Brand](https://github.com/Haptic-AI/open-festivus/blob/main/docs/brand.md): voice and visual identity (~1K tokens).
+
+## API
+
+- [API base](https://api.festivus.hapticlabs.ai): production data API. Read routes are public. `GET /v1/robots`, `/v1/policies`, `/v1/datasets`, `/v1/benchmarks`, `/v1/environments`, `/v1/tasks`, `/v1/papers`, `/v1/deploy-notes`, `/v1/stats`, `/health` (negligible — JSON responses, see docs).
+- [Anonymous rate limit](https://github.com/Haptic-AI/open-festivus/blob/main/docs/public-api.md#rate-limits): 50 req/s per IP, no key required.
+- [Keyed rate limit](https://festivus.hapticlabs.ai/settings/api-keys): 500 req/s per key. Header: `X-API-Key: fek_<key>`.
+- [Sitemap](https://festivus.hapticlabs.ai/sitemap.xml): every indexable URL (large; ~30K URLs).
+
+## Source
+
+- [Repository](https://github.com/Haptic-AI/open-festivus): Apache 2.0, monorepo (Next.js + Express + Postgres).
+- [Contributing](https://github.com/Haptic-AI/open-festivus/blob/main/CONTRIBUTING.md): code via PR with DCO sign-off; data via the in-app `/contribute` flow (~1K tokens).
+- [Security](https://github.com/Haptic-AI/open-festivus/blob/main/SECURITY.md): private disclosure channel and SLA (under 1K tokens).
+
+## Optional
+
+- [Provenance](https://github.com/Haptic-AI/open-festivus/blob/main/data/PROVENANCE.md): upstream sources for every dataset record (~3K tokens).
+- [Agent instructions (AGENTS.md)](https://github.com/Haptic-AI/open-festivus/blob/main/AGENTS.md): entry point for AI coding agents working on the repo (~2K tokens).
+- [API skill (api/skill.md)](https://github.com/Haptic-AI/open-festivus/blob/main/api/skill.md): what the data API can answer, framed for agents (~1K tokens).
+- [Web skill (apps/web/skill.md)](https://github.com/Haptic-AI/open-festivus/blob/main/apps/web/skill.md): what the web app can do, framed for agents (~1K tokens).

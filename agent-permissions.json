@@ -1,0 +1,73 @@
+{
+  "$schema": "https://github.com/Haptic-AI/open-festivus/blob/main/AGENTS.md",
+  "name": "Festivus",
+  "description": "Open-source Physical AI platform. Curated dataset of robots, policies, environments, datasets, and benchmarks served over a public HTTP API.",
+  "homepage": "https://festivus.hapticlabs.ai",
+  "contact": {
+    "security": "https://github.com/Haptic-AI/open-festivus/blob/main/SECURITY.md",
+    "issues": "https://github.com/Haptic-AI/open-festivus/issues"
+  },
+  "interactions": {
+    "read": {
+      "allowed": true,
+      "scope": "all public web pages and the data API at https://api.festivus.hapticlabs.ai",
+      "auth": "none required for read",
+      "notes": "Robots.txt grants explicit Allow to ClaudeBot, GPTBot, PerplexityBot, Google-Extended, Amazonbot, cohere-ai, and others. See /robots.txt."
+    },
+    "search": {
+      "allowed": true,
+      "scope": "GET /v1/<resource>?q=<term> on the data API",
+      "auth": "none"
+    },
+    "write": {
+      "allowed": false,
+      "scope": "PUT/PATCH/DELETE /v1/write/* on the data API",
+      "auth": "issued X-API-Key with tier=write; not self-serve",
+      "humanInTheLoop": true,
+      "notes": "Dataset contributions go through the human-curated /contribute flow on the web app, not direct API writes."
+    },
+    "training": {
+      "allowed": true,
+      "scope": "All public content under the Apache 2.0 license. Provenance attribution required where the upstream dataset requires it; see data/PROVENANCE.md.",
+      "notes": "We want the dataset to be useful to LLMs and AI coding agents. No opt-out for training on public content."
+    }
+  },
+  "permissions": {
+    "crawl": "all",
+    "index": "all",
+    "snippet": "all",
+    "ai-summary": "all",
+    "ai-training": "all"
+  },
+  "rateLimits": {
+    "anonymous": {
+      "requestsPerSecond": 50,
+      "scope": "per-IP per-Lambda-instance",
+      "responseOnExceed": "HTTP 429 {\"error\":\"rate_limit\",\"tier\":\"anon\"}"
+    },
+    "keyed": {
+      "requestsPerSecond": 500,
+      "scope": "per-key per-Lambda-instance",
+      "header": "X-API-Key: fek_<key>",
+      "issuance": "https://festivus.hapticlabs.ai/settings/api-keys",
+      "responseOnExceed": "HTTP 429 {\"error\":\"rate_limit\",\"tier\":\"keyed\"}"
+    },
+    "edgeMitigation": {
+      "provider": "Vercel Attack Challenge",
+      "responseOnTrigger": "HTTP 403 with header x-vercel-mitigated: challenge",
+      "guidance": "Do not retry; back off. Aggressive retry triggers further mitigation."
+    }
+  },
+  "endpoints": {
+    "api": "https://api.festivus.hapticlabs.ai",
+    "web": "https://festivus.hapticlabs.ai",
+    "llmsTxt": "https://festivus.hapticlabs.ai/llms.txt",
+    "sitemap": "https://festivus.hapticlabs.ai/sitemap.xml",
+    "agentsMd": "https://github.com/Haptic-AI/open-festivus/blob/main/AGENTS.md",
+    "skillFiles": [
+      "https://github.com/Haptic-AI/open-festivus/blob/main/api/skill.md",
+      "https://github.com/Haptic-AI/open-festivus/blob/main/apps/web/skill.md"
+    ]
+  },
+  "license": "Apache-2.0"
+}

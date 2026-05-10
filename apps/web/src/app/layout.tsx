@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: TITLE,
   description: DESCRIPTION,
   metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     title: TITLE,
     description: DESCRIPTION,
@@ -37,6 +40,15 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: TITLE,
     description: DESCRIPTION,
+  },
+  // AI/agent-facing hints. Read by AEO crawlers (agentic-seo, etc.) and
+  // honored by major LLM crawlers as a content-classification signal.
+  // `ai:page-type` lets agents categorize before fetching the body.
+  other: {
+    "ai:page-type": "landing",
+    "ai:content-license": "Apache-2.0",
+    "ai:llms-txt": `${SITE_URL}/llms.txt`,
+    "ai:agents-md": "https://github.com/Haptic-AI/open-festivus/blob/main/AGENTS.md",
   },
 }
 
