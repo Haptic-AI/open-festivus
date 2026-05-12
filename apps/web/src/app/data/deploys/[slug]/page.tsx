@@ -4,9 +4,9 @@ import { notFound } from "next/navigation"
 import type { IDeployNote } from "@festivus/types"
 import { AskAIButton } from "@/components/agent-chat/AskAIButton"
 import { SiteHeader } from "@/components/site-header"
-import { FestivusClient } from "@/lib/api/festivus-client"
-
 export const dynamicParams = true
+
+const API_BASE = (process.env["FESTIVUS_DATASET_API_URL"] ?? "https://api.festivus.hapticlabs.ai").replace(/\/$/, "")
 
 const SEVERITY_COLOR: Record<string, string> = {
   critical: "bg-annotation-red/10 text-annotation-red",
@@ -18,9 +18,23 @@ interface IPageProps {
   params: Promise<{ slug: string }>
 }
 
+// Direct slug lookup — `/v1/deploy-notes/:slug` is O(1) at the API. Previous
+// implementation called `searchDeployNotes({ limit: 500 })` and linear-scanned,
+// which cost ~100× bytes-over-the-wire per page render. Mirrors the
+// benchmarks/[slug] pattern; uses raw fetch rather than FestivusClient because
+// the client has no single-record getDeployNote method yet (its parsers cover
+// list responses only). Adding one is its own typed-parser PR.
 async function findDeploy(slug: string): Promise<IDeployNote | null> {
-  const notes = await new FestivusClient().searchDeployNotes({ limit: 500 })
-  return notes?.find((n) => n.slug === slug) ?? null
+  try {
+    const res = await fetch(`${API_BASE}/v1/deploy-notes/${encodeURIComponent(slug)}`, {
+      next: { revalidate: 60 },
+      headers: { accept: "application/json" },
+    })
+    if (!res.ok) return null
+    return (await res.json()) as IDeployNote
+  } catch {
+    return null
+  }
 }
 
 export async function generateMetadata({ params }: IPageProps): Promise<Metadata> {

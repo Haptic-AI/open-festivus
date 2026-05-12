@@ -30,20 +30,12 @@ async function fetchOne<T>(path: string): Promise<T | null> {
   }
 }
 
-async function fetchEdges(): Promise<ICompatibilityEdge[]> {
-  try {
-    const res = await fetch(`${API_BASE}/v1/compatibility-edges?limit=500`, FETCH_OPTS)
-    if (!res.ok) return []
-    const body = (await res.json()) as { results?: ICompatibilityEdge[] }
-    return body.results ?? []
-  } catch {
-    return []
-  }
-}
-
+// Direct slug lookup — `/v1/compatibility-edges/:slug` is O(1) at the API.
+// Previous implementation fetched 500 records and linear-scanned, which cost
+// ~100× bytes-over-the-wire per page render and added a latent CF-throttle
+// risk during ISR revalidation. Mirrors the benchmarks/[slug] pattern.
 async function findEdge(slug: string): Promise<ICompatibilityEdge | null> {
-  const edges = await fetchEdges()
-  return edges.find((e) => e.slug === slug) ?? null
+  return fetchOne<ICompatibilityEdge>(`/v1/compatibility-edges/${encodeURIComponent(slug)}`)
 }
 
 interface IPageProps {
