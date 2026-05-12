@@ -1,0 +1,25 @@
+title: "Idea: "
+labels: ["idea"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For open-ended "what if" threads. Concrete feature requests
+        with a clear problem statement go in Issues.
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What's the idea?
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Why does it belong in Festivus?
+      description: |
+        Optional. Helps separate "fun thing I want to build" from
+        "thing the platform needs."
+    validations:
+      required: false

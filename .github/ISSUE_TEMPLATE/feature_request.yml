@@ -1,0 +1,50 @@
+name: Feature request
+description: A concrete proposal for new behavior.
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for concrete feature requests with a clear problem
+        statement. Open-ended ideas and "what if we..." threads belong
+        in [Discussions](https://github.com/Haptic-AI/open-festivus/discussions).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: |
+        Describe the user-visible problem, not your proposed solution.
+        Skipping this section is the most common reason a feature
+        request gets closed.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: How would you fix it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: |
+        What other approaches did you consider, and why did you reject
+        them?
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope and impact
+      description: |
+        Which surfaces does this touch? `apps/web`, `api/`, the data
+        schema, the in-app `/contribute` flow, all of the above?
+    validations:
+      required: true

@@ -1,0 +1,214 @@
+[
+  {
+    "slug": "lerobot-xvla-folding",
+    "hf_repo_id": "lerobot/xvla-folding",
+    "hf_url": "https://huggingface.co/lerobot/xvla-folding",
+    "edits": {
+      "verified_hardware": [],
+      "verified_hardware_note": "X-VLA repackage checkpoint — cross-embodiment design, but the card does not name the robot this checkpoint was trained on. Evaluated on 3 real-world robots per the paper (arXiv 2510.10274), Unitree G1 not among them.",
+      "compatible_robot_slugs_proposed": [],
+      "g1_compatible": false,
+      "g1_compatible_note": "Cross-embodiment but no G1 adapter or action head shipped. Fine-tune required.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/lerobot/xvla-folding"
+    }
+  },
+  {
+    "slug": "zekai-chen-pi05-fold-towel",
+    "hf_repo_id": "Zekai-Chen/pi05_fold_towel",
+    "hf_url": "https://huggingface.co/Zekai-Chen/pi05_fold_towel",
+    "edits": {
+      "verified_hardware": ["so-101-bimanual"],
+      "verified_hardware_note": "Trained on SO-100/SO-101 bimanual teleop (dataset Zekai-Chen/bi_so101_baseline_4cam). π0.5 fine-tune.",
+      "compatible_robot_slugs_proposed": ["so-101"],
+      "g1_compatible": false,
+      "g1_compatible_note": "SO-101 action space (14 DoF) incompatible with G1 kinematics. Weights not portable.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/Zekai-Chen/pi05_fold_towel"
+    }
+  },
+  {
+    "slug": "2toinf-x-vla-softfold",
+    "hf_repo_id": "2toINF/X-VLA-SoftFold",
+    "hf_url": "https://huggingface.co/2toINF/X-VLA-SoftFold",
+    "edits": {
+      "verified_hardware": [],
+      "verified_hardware_note": "Trained on Bridge + SoftFold with a 6D end-effector action space. Cross-embodiment foundation. Paper arXiv 2510.10274 (Oct 2025).",
+      "compatible_robot_slugs_proposed": [],
+      "g1_compatible": false,
+      "g1_compatible_note": "Cross-embodiment base. Would need a G1 source embedding to deploy — research-feasible, nothing published.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/2toINF/X-VLA-SoftFold"
+    }
+  },
+  {
+    "slug": "lerobot-data-collection-folding-final",
+    "hf_repo_id": "lerobot-data-collection/folding_final",
+    "hf_url": "https://huggingface.co/lerobot-data-collection/folding_final",
+    "edits": {
+      "verified_hardware": ["so-100"],
+      "verified_hardware_note": "SO-100 follower (per inference example). π0.5 fine-tune trained on dataset level2_final_quality3 (~3.25M samples).",
+      "compatible_robot_slugs_proposed": ["so-100"],
+      "g1_compatible": false,
+      "g1_compatible_note": "SO-100 hardware-locked.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/lerobot-data-collection/folding_final"
+    }
+  },
+  {
+    "slug": "zekai-chen-policy-fold-towel-r1",
+    "hf_repo_id": "Zekai-Chen/policy_fold_towel_r1",
+    "hf_url": "https://huggingface.co/Zekai-Chen/policy_fold_towel_r1",
+    "edits": {
+      "verified_hardware": ["so-101-bimanual"],
+      "verified_hardware_note": "bi-SO101 π0.5 fine-tune (4B params). Dataset Zekai-Chen/bi_so101_fold_towel_merged_r1.",
+      "compatible_robot_slugs_proposed": ["so-101"],
+      "g1_compatible": false,
+      "g1_compatible_note": "Same family as zekai-chen-pi05-fold-towel. SO-101 only.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/Zekai-Chen/policy_fold_towel_r1"
+    }
+  },
+  {
+    "slug": "mimic-robotics-xvla-speed-cloth-folding-3cam-15hz-32ac-b40-24-mar-allckpt",
+    "hf_repo_id": "Mimic-Robotics/xvla_speed_cloth_folding_3cam_15hz_32ac_b40_24_mar_allckpt",
+    "hf_url": "https://huggingface.co/Mimic-Robotics/xvla_speed_cloth_folding_3cam_15hz_32ac_b40_24_mar_allckpt",
+    "edits": {
+      "verified_hardware": ["mimic-robotics-internal"],
+      "verified_hardware_note": "Mimic Robotics internal platform (dataset mimic_simpleClothFolding_v1, 176 episodes, 3 cams @ 15 Hz).",
+      "compatible_robot_slugs_proposed": ["mimic-robotics-internal"],
+      "g1_compatible": false,
+      "g1_compatible_note": "Weights tied to Mimic's proprietary hardware. Architecturally xVLA, not portable.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/Mimic-Robotics/xvla_speed_cloth_folding_3cam_15hz_32ac_b40_24_mar_allckpt"
+    }
+  },
+  {
+    "slug": "lerobot-data-collection-folding-final10",
+    "hf_repo_id": "lerobot-data-collection/folding_final10",
+    "hf_url": "https://huggingface.co/lerobot-data-collection/folding_final10",
+    "edits": {
+      "verified_hardware": ["so-100"],
+      "verified_hardware_note": "Same SO-100 campaign as folding_final. π0.5 base. Dataset has human-in-loop samples (~3.41M).",
+      "compatible_robot_slugs_proposed": ["so-100"],
+      "g1_compatible": false,
+      "g1_compatible_note": "SO-100 hardware-locked.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/lerobot-data-collection/folding_final10"
+    }
+  },
+  {
+    "slug": "qualia-robotics-smolvla-bimanual-fold-cloth-dataset1-6e5ccbfb",
+    "hf_repo_id": "qualia-robotics/smolvla-bimanual-fold-cloth-dataset1-6e5ccbfb",
+    "hf_url": "https://huggingface.co/qualia-robotics/smolvla-bimanual-fold-cloth-dataset1-6e5ccbfb",
+    "edits": {
+      "verified_hardware": ["so-101-bimanual"],
+      "verified_hardware_note": "Fine-tune of lerobot/smolvla_base on programme184/bimanual-fold-cloth-dataset1. Most likely SO-101 bimanual.",
+      "compatible_robot_slugs_proposed": ["so-101"],
+      "g1_compatible": false,
+      "g1_compatible_note": "This specific checkpoint is SO-101-locked. SmolVLA base itself is embodiment-agnostic — a G1 fine-tune of smolvla_base is in Tier 2 of the compat edges.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/qualia-robotics/smolvla-bimanual-fold-cloth-dataset1-6e5ccbfb"
+    }
+  },
+  {
+    "slug": "lerobot-data-collection-folding-sarm-reward",
+    "hf_repo_id": "lerobot-data-collection/folding_sarm_reward",
+    "hf_url": "https://huggingface.co/lerobot-data-collection/folding_sarm_reward",
+    "edits": {
+      "verified_hardware": ["so-100"],
+      "verified_hardware_note": "SO-100-family ACT policy. Reward-modeling experiment. Dataset level12_quality0_2026-02-08.",
+      "compatible_robot_slugs_proposed": ["so-100"],
+      "g1_compatible": false,
+      "g1_compatible_note": "SO-100 hardware-locked. Small experimental checkpoint.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/lerobot-data-collection/folding_sarm_reward"
+    }
+  },
+  {
+    "slug": "flameyyyyy-diffusion-z1-dual-dex1-foldclothes-policy",
+    "hf_repo_id": "Flameyyyyy/diffusion_Z1_Dual_Dex1_FoldClothes_policy",
+    "hf_url": "https://huggingface.co/Flameyyyyy/diffusion_Z1_Dual_Dex1_FoldClothes_policy",
+    "edits": {
+      "verified_hardware": ["unitree-z1"],
+      "verified_hardware_note": "Unitree Z1 dual-arm + Dex1 hands (7 DoF × 2 = 14 DoF). Trained on unitreerobotics/Z1_Dual_Dex1_FoldClothes_Dataset (293k samples).",
+      "compatible_robot_slugs_proposed": ["unitree-z1"],
+      "g1_compatible": false,
+      "g1_compatible_note": "Z1 is a fixed-base dual-arm system, not a humanoid — whole-body kinematics differ from G1. BUT: same Dex1 end-effector. The end-effector fold motion is transferable as reference data for G1 fine-tuning.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/Flameyyyyy/diffusion_Z1_Dual_Dex1_FoldClothes_policy"
+    }
+  },
+  {
+    "slug": "gongsta-act-policy-koch-tshirt-folding-v2",
+    "hf_repo_id": "Gongsta/act_policy_koch-tshirt-folding-v2",
+    "hf_url": "https://huggingface.co/Gongsta/act_policy_koch-tshirt-folding-v2",
+    "edits": {
+      "verified_hardware": ["koch-bimanual"],
+      "verified_hardware_note": "Koch bimanual (low-cost teleop arms). ACT policy, 63k episodes.",
+      "compatible_robot_slugs_proposed": ["koch"],
+      "g1_compatible": false,
+      "g1_compatible_note": "Koch hardware-locked. Hobbyist-grade.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/Gongsta/act_policy_koch-tshirt-folding-v2"
+    }
+  },
+  {
+    "slug": "hupy440-policy-act-1foldtest1cuda",
+    "hf_repo_id": "Hupy440/policy_act_1foldtest1cuda",
+    "hf_url": "https://huggingface.co/Hupy440/policy_act_1foldtest1cuda",
+    "edits": {
+      "verified_hardware": [],
+      "verified_hardware_note": "Tiny experimental checkpoint (15 episodes). Hardware not specified on the card.",
+      "compatible_robot_slugs_proposed": [],
+      "g1_compatible": false,
+      "g1_compatible_note": "Undocumented. Treat as unusable.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/Hupy440/policy_act_1foldtest1cuda"
+    }
+  },
+  {
+    "slug": "the-sam-uel-folding-no-style-64-batch",
+    "hf_repo_id": "the-sam-uel/folding-no-style-64-batch",
+    "hf_url": "https://huggingface.co/the-sam-uel/folding-no-style-64-batch",
+    "edits": {
+      "verified_hardware": [],
+      "verified_hardware_note": "No model card, no README. Cannot verify hardware.",
+      "compatible_robot_slugs_proposed": [],
+      "g1_compatible": false,
+      "g1_compatible_note": "Undocumented. Do not cite.",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://huggingface.co/the-sam-uel/folding-no-style-64-batch"
+    }
+  },
+  {
+    "slug": "the-future-dev-cloth-diff",
+    "hf_repo_id": null,
+    "hf_url": null,
+    "edits": {
+      "verified_hardware": [],
+      "verified_hardware_note": "Research GitHub repo (github.com/the-future-dev/cloth-diff) for 'Sample-efficient Imitation Learning for Deformable Object Manipulation Using Diffusion Models'. Repo appears incomplete at fetch time. No robot specified.",
+      "compatible_robot_slugs_proposed": [],
+      "g1_compatible": false,
+      "g1_compatible_note": "Research code, not a deployable policy.",
+      "github_repo_url": "https://github.com/the-future-dev/cloth-diff",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://github.com/the-future-dev/cloth-diff"
+    }
+  },
+  {
+    "slug": "avsurfer123-cloth-manipulation",
+    "hf_repo_id": null,
+    "hf_url": null,
+    "edits": {
+      "verified_hardware": ["willow-garage-pr2"],
+      "verified_hardware_note": "PR2 (Willow Garage). GitHub repo description explicit: 'Code for the PR2 robot to run the cloth manipulation RL model'.",
+      "compatible_robot_slugs_proposed": ["willow-garage-pr2"],
+      "g1_compatible": false,
+      "g1_compatible_note": "PR2 hardware-locked. Legacy research artifact (no HF).",
+      "github_repo_url": "https://github.com/avsurfer123/cloth-manipulation",
+      "verified_at": "2026-04-17",
+      "verified_via_url": "https://github.com/avsurfer123/cloth-manipulation"
+    }
+  }
+]

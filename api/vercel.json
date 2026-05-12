@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install --no-frozen-lockfile && pnpm --filter @festivus/api exec prisma generate --schema=./prisma/schema.prisma",
+  "functions": {
+    "api/index.ts": {
+      "includeFiles": "../data/environments.json"
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}

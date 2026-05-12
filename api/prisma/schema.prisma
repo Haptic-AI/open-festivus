@@ -1,0 +1,250 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model compatibility_edges {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_compatibility_edges_data", type: Gin)
+  @@index([search_text], map: "idx_compatibility_edges_search", type: Gin)
+}
+
+model laundry_compat_edges {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")?
+
+  @@index([data], map: "idx_laundry_compat_edges_data", type: Gin)
+  @@index([search_text], map: "idx_laundry_compat_edges_search", type: Gin)
+}
+
+model benchmarks {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_benchmarks_data", type: Gin)
+  @@index([search_text], map: "idx_benchmarks_search", type: Gin)
+}
+
+model datasets {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_datasets_data", type: Gin)
+  @@index([search_text], map: "idx_datasets_search", type: Gin)
+}
+
+model deploy_notes {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_deploy_notes_data", type: Gin)
+  @@index([search_text], map: "idx_deploy_notes_search", type: Gin)
+}
+
+model policies {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_policies_data", type: Gin)
+  @@index([search_text], map: "idx_policies_search", type: Gin)
+}
+
+model robots {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_robots_data", type: Gin)
+  @@index([search_text], map: "idx_robots_search", type: Gin)
+}
+
+model api_keys {
+  id           Int       @id @default(autoincrement())
+  user_id      String
+  key_hash     String    @unique
+  name         String?
+  tier         String    @default("free")
+  owner_email  String?   // Snapshot of the Clerk user's primary email at mint time. Used as the reply-to on submitter notifications.
+  owner_id     String?   // FK to users.id (spec 029). Nullable for pre-spec rows; backfilled in Step 1.5.
+  created_at   DateTime  @default(now()) @db.Timestamptz(6)
+  last_used_at DateTime? @db.Timestamptz(6)
+  revoked_at   DateTime? @db.Timestamptz(6)
+
+  owner users? @relation(fields: [owner_id], references: [id], onDelete: SetNull)
+
+  @@index([user_id], map: "idx_api_keys_user_id")
+  @@index([owner_id], map: "idx_api_keys_owner_id")
+}
+
+model environments {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_environments_data", type: Gin)
+  @@index([search_text], map: "idx_environments_search", type: Gin)
+}
+
+model hardware {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_hardware_data", type: Gin)
+  @@index([search_text], map: "idx_hardware_search", type: Gin)
+}
+
+model papers {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_papers_data", type: Gin)
+  @@index([search_text], map: "idx_papers_search", type: Gin)
+}
+
+model tasks {
+  id          Int                      @id @default(autoincrement())
+  slug        String                   @unique
+  data        Json
+  search_text Unsupported("tsvector")? @default(dbgenerated("to_tsvector('english'::regconfig, ((((((((((COALESCE((data ->> 'name'::text), ''::text) || ' '::text) || COALESCE((data ->> 'description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'task_description'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'manufacturer'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'author'::text), ''::text)) || ' '::text) || COALESCE((data ->> 'slug'::text), ''::text)))"))
+
+  @@index([data], map: "idx_tasks_data", type: Gin)
+  @@index([search_text], map: "idx_tasks_search", type: Gin)
+}
+
+/// Individual render submission to the oneclick-policy service (spec 025 + 026).
+/// One row per episode of a parent Simulation — durable, queryable, per-submission state.
+/// Status transitions: pending -> running -> (done | failed).
+/// Spec 026: renamed from `simulations`. `simulation_id` + `episode_index` are
+/// nullable in this phase and tightened to NOT NULL in Phase 3.3 once the
+/// creation flow always populates them.
+model episodes {
+  id              String           @id @default(cuid())
+  simulation_id   String
+  episode_index   Int
+  hf_url          String
+  env_slug        String
+  policy_slug     String?
+  task_slug       String?
+  oneclick_job_id String?
+  status          SimulationStatus @default(pending)
+  video_url       String?
+  error_message   String?
+  created_at      DateTime         @default(now()) @db.Timestamptz(6)
+  updated_at      DateTime         @updatedAt @db.Timestamptz(6)
+
+  simulation simulations @relation(fields: [simulation_id], references: [id], onDelete: Cascade)
+
+  @@index([status], map: "idx_episodes_status")
+  @@index([created_at], map: "idx_episodes_created_at")
+  @@index([env_slug], map: "idx_episodes_env_slug")
+  @@index([simulation_id], map: "idx_episodes_simulation_id")
+}
+
+enum SimulationStatus {
+  pending
+  running
+  done
+  failed
+}
+
+/// Parent Simulation grouping N Episodes (spec 026).
+/// Owns the policy × environment (× task? × robot?) taxonomy for a rendered run.
+model simulations {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  policy_slug      String
+  environment_slug String
+  task_slug        String?
+  robot_slug       String?
+  created_at       DateTime @default(now()) @db.Timestamptz(6)
+  updated_at       DateTime @updatedAt @db.Timestamptz(6)
+
+  episodes episodes[]
+
+  @@index([policy_slug], map: "idx_simulations_policy_slug")
+  @@index([environment_slug], map: "idx_simulations_environment_slug")
+}
+
+/// Audit trail for every data mutation. Edits land optimistically (live
+/// immediately) and sit in pending_review until a moderator acts.
+model mutations {
+  id          Int       @id @default(autoincrement())
+  created_at  DateTime  @default(now()) @db.Timestamptz(6)
+  table_name  String
+  slug        String
+  field_path  String    // top-level field that changed (e.g. "weight_kg")
+  actor_id    String    // Clerk user ID of the person who made the edit
+  actor_email String?   // denormalized for moderator convenience
+  author_id   String?   // FK to users.id (spec 029). Nullable for pre-spec rows; backfilled in Step 1.5.
+  reason      String?
+  patch       Json      // the partial object sent by the caller
+  old_values  Json      // previous values of ONLY the changed fields
+  new_values  Json      // new values of ONLY the changed fields
+  status      String    @default("pending_review") // pending_review | approved | rejected | reverted
+  reviewed_by String?   // Clerk user ID of the moderator
+  reviewed_at DateTime? @db.Timestamptz(6)
+  review_note String?   // moderator's reason for approve/reject/revert
+
+  author users? @relation(fields: [author_id], references: [id], onDelete: SetNull)
+
+  @@index([table_name, slug], map: "idx_mutations_table_slug")
+  @@index([status], map: "idx_mutations_status")
+  @@index([created_at], map: "idx_mutations_created_at")
+  @@index([actor_id], map: "idx_mutations_actor_id")
+  @@index([author_id, created_at(sort: Desc)], map: "idx_mutations_author_id_created_at")
+}
+
+/// Canonical user row keyed on Clerk user id (spec 029). Every API-key owner
+/// and every moderation author resolves to a row here. Nullable FKs on
+/// api_keys.owner_id and mutations.author_id point at this table; rows created
+/// before spec 029 cutover may have those FKs null.
+model users {
+  id            String   @id @default(cuid())
+  clerk_user_id String   @unique
+  email         String?
+  created_at    DateTime @default(now()) @db.Timestamptz(6)
+  updated_at    DateTime @updatedAt @db.Timestamptz(6)
+
+  api_keys  api_keys[]
+  mutations mutations[]
+}
+
+/// Workbench project persistent state (spec 028). One row per user × project.
+/// Replaces the Upstash Redis backing store. `data` JSONB holds the full
+/// IPersistedWorkbenchState; validated by Zod on every read in apps/web.
+model workbench_projects {
+  id         Int      @id @default(autoincrement())
+  project_id String
+  user_id    String
+  name       String
+  data       Json
+  created_at DateTime @default(now()) @db.Timestamptz(6)
+  updated_at DateTime @updatedAt @db.Timestamptz(6)
+
+  @@unique([project_id, user_id])
+  @@index([user_id, updated_at(sort: Desc)], map: "idx_workbench_projects_user_updated")
+}

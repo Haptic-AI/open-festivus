@@ -1,0 +1,50 @@
+{
+  "name": "@festivus/web",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:prompts": "node scripts/build-prompts.mjs",
+    "dev": "pnpm build:prompts && node ../../scripts/dev-guard.mjs && next dev --turbopack",
+    "dev:web-only": "pnpm build:prompts && next dev --turbopack",
+    "build": "pnpm build:prompts && next build",
+    "start": "next start",
+    "typecheck": "pnpm build:prompts && tsc --noEmit",
+    "lint": "eslint . --max-warnings 0",
+    "check": "pnpm typecheck && pnpm lint"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.82.0",
+    "@clerk/nextjs": "^7.0.12",
+    "@festivus/types": "workspace:*",
+    "@prisma/client": "^6.19.3",
+    "@telemetrydeck/sdk": "^2.0.4",
+    "@vercel/analytics": "^2.0.1",
+    "@vercel/speed-insights": "^2.0.0",
+    "@xyflow/react": "^12.10.2",
+    "lucide-react": "^1.7.0",
+    "next": "^15.3.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.3.1",
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "^15.3.0",
+    "eslint-plugin-react": "^7.37.0",
+    "tailwindcss": "^4.1.0",
+    "typescript": "^5.7.0"
+  },
+  "browserslist": [
+    "chrome >= 90",
+    "edge >= 90",
+    "firefox >= 88",
+    "safari >= 14",
+    "not dead"
+  ]
+}

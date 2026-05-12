@@ -1,0 +1,15 @@
+{
+  "compatible_policy_slugs": [
+    "option3a0oquznn7bdhdbxb-open"
+  ],
+  "description": "\n\t\n\t\t\n\t\tDataset Overview\n\t\n\nThis dataset consists of bz2 compressed rlogs captured from OpenPilot. These logs do not contain any user-sensitive information. \nThe primary purpose of this dataset is to facilitate data-driven solutions for improving lateral and longitudinal control in community-supported vehicles.\n\n\t\n\t\t\n\t\tContents\n\t\n\nThe rlogs are composed of various events as defined in the OpenPilot log schema. The schema can be found here.\nTo ensure user privacy, many event types have been… See the full description on the dataset page: https://huggingface.co/datasets/MoreTorque/rlogs.",
+  "episodes": 0,
+  "format": "other",
+  "hf_dataset_id": "MoreTorque/rlogs",
+  "id": "ds501",
+  "name": "rlogs",
+  "robot_names": [],
+  "robots": 0,
+  "slug": "moretorque-rlogs",
+  "source": "MoreTorque"
+}

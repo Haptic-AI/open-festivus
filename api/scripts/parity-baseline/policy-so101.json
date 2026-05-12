@@ -1,0 +1,52 @@
+{
+  "action_space": {
+    "dimensions": 0,
+    "frequency_hz": 0,
+    "type": "other"
+  },
+  "author": "aShunSasaki",
+  "benchmarks": [],
+  "compatible_env_slugs": [],
+  "compatible_robot_slugs": [
+    "irmvlab-unihand",
+    "nvlabs-handover-sim",
+    "irvlab-poseiden",
+    "denghaoyuan123-awesome-rl-vla",
+    "guoheyu-omnivla",
+    "ananasburn-smolvla-manipulation",
+    "zhenyangliu-activevla-injecting-active-perception-into-vla",
+    "allenai-vla-evaluation-harness",
+    "vlad-brasoveanu-stm32-robotic-arm-6dof",
+    "openhelix-team-openhelix",
+    "rk-edge-simscaleai",
+    "sonjuonr-visual-fusion-gru",
+    "wwzzz-ilstudio",
+    "abdelrahmanfarhan-vla-panda-mujoco",
+    "nvlabs-protomotions",
+    "ivlabs-autonomous-delivery-robot",
+    "zainali24-physical-ai-humanoid-robotics",
+    "shiv207-vla-simulated-tests",
+    "internrobotics-vlac"
+  ],
+  "evidence_level": "untested",
+  "framework": "LeRobot",
+  "hf_repo_id": "aShunSasaki/so101_pp_box_3col_bg_gray_300_policy_rev1",
+  "id": "p1003",
+  "license": "apache-2.0",
+  "name": "so101_pp_box_3col_bg_gray_300_policy_rev1",
+  "observation_space": {
+    "components": [],
+    "type": "other"
+  },
+  "paper_arxiv_url": "https://arxiv.org/abs/2506.01844",
+  "skill_type": "other",
+  "slug": "ashunsasaki-so101-pp-box-3col-bg-gray-300-policy-rev1",
+  "task_description": "Policy model from aShunSasaki. Tags: lerobot, safetensors, robotics, smolvla, dataset:aShunSasaki/so101_pp_box_3col_bg_gray_300.",
+  "taxonomy": {
+    "action_dimensions": 0,
+    "required_control": "learned_latent",
+    "required_perception": [
+      "proprioception"
+    ]
+  }
+}

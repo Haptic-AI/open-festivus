@@ -1,0 +1,26 @@
+[
+  {
+    "policy_slug": "sb3-sac-humanoid-v3",
+    "environment_slug": "isaac-lab-humanoid",
+    "robot_slug": "unitree-h1",
+    "episode_count": 2
+  },
+  {
+    "policy_slug": "sb3-tqc-humanoid-v3",
+    "environment_slug": "isaac-lab-humanoid",
+    "robot_slug": "unitree-g1",
+    "episode_count": 2
+  },
+  {
+    "policy_slug": "sb3-td3-humanoid-v3",
+    "environment_slug": "isaac-lab-humanoid",
+    "robot_slug": "boston-dynamics-atlas",
+    "episode_count": 2
+  },
+  {
+    "policy_slug": "sb3-sac-humanoid-v3",
+    "environment_slug": "mujoco-humanoid-cloth",
+    "robot_slug": "unitree-h1",
+    "episode_count": 2
+  }
+]

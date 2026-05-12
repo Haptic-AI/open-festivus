@@ -1,0 +1,1945 @@
+{
+  "count": 186,
+  "limit": 50,
+  "offset": 0,
+  "results": [
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "lerobot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "community",
+        "framework": "LeRobot",
+        "hf_repo_id": "lerobot/act_aloha_sim_transfer_cube_human",
+        "id": "p67",
+        "license": "apache-2.0",
+        "name": "act_aloha_sim_transfer_cube_human",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "manipulation",
+        "slug": "lerobot-act-aloha-sim-transfer-cube-human",
+        "task_description": "Policy model from lerobot. Tags: transformers, safetensors, act-policy, model_hub_mixin, pytorch_model_hub_mixin.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "lerobot-act-aloha-sim-transfer-cube-human",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "lerobot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "community",
+        "framework": "LeRobot",
+        "hf_repo_id": "lerobot/act_aloha_sim_insertion_human",
+        "id": "p110",
+        "license": "apache-2.0",
+        "name": "act_aloha_sim_insertion_human",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "manipulation",
+        "slug": "lerobot-act-aloha-sim-insertion-human",
+        "task_description": "Policy model from lerobot. Tags: safetensors, act-policy, model_hub_mixin, pytorch_model_hub_mixin, robotics.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "lerobot-act-aloha-sim-insertion-human",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Haozhan72",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "irmvlab-unihand",
+          "nvlabs-handover-sim",
+          "irvlab-poseiden",
+          "denghaoyuan123-awesome-rl-vla",
+          "guoheyu-omnivla",
+          "ananasburn-smolvla-manipulation",
+          "zhenyangliu-activevla-injecting-active-perception-into-vla",
+          "allenai-vla-evaluation-harness",
+          "vlad-brasoveanu-stm32-robotic-arm-6dof",
+          "openhelix-team-openhelix",
+          "rk-edge-simscaleai",
+          "sonjuonr-visual-fusion-gru",
+          "wwzzz-ilstudio",
+          "abdelrahmanfarhan-vla-panda-mujoco",
+          "nvlabs-protomotions",
+          "ivlabs-autonomous-delivery-robot",
+          "zainali24-physical-ai-humanoid-robotics",
+          "shiv207-vla-simulated-tests",
+          "internrobotics-vlac"
+        ],
+        "evidence_level": "reported",
+        "framework": "PyTorch",
+        "hf_repo_id": "Haozhan72/robotwin2_beat_block_hammer_seed1k_sft_aloha_25chunks_10k",
+        "id": "p460",
+        "license": "unknown",
+        "name": "robotwin2_beat_block_hammer_seed1k_sft_aloha_25chunks_10k",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "haozhan72-robotwin2-beat-block-hammer-seed1k-sft-aloha-25chunks-10k",
+        "task_description": "Policy model from Haozhan72. Tags: safetensors, openvla, custom_code, region:us.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "learned_latent",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "haozhan72-robotwin2-beat-block-hammer-seed1k-sft-aloha-25chunks-10k",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "yongjincho",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "reported",
+        "framework": "LeRobot",
+        "hf_repo_id": "yongjincho/act_aloha_sim_transfer_cube_human",
+        "id": "p504",
+        "license": "apache-2.0",
+        "name": "act_aloha_sim_transfer_cube_human",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "manipulation",
+        "slug": "yongjincho-act-aloha-sim-transfer-cube-human",
+        "task_description": "Policy model from yongjincho. Tags: lerobot, safetensors, act, robotics, dataset:unknown.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "yongjincho-act-aloha-sim-transfer-cube-human",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Haozhan72",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "irmvlab-unihand",
+          "nvlabs-handover-sim",
+          "irvlab-poseiden",
+          "denghaoyuan123-awesome-rl-vla",
+          "guoheyu-omnivla",
+          "ananasburn-smolvla-manipulation",
+          "zhenyangliu-activevla-injecting-active-perception-into-vla",
+          "allenai-vla-evaluation-harness",
+          "vlad-brasoveanu-stm32-robotic-arm-6dof",
+          "openhelix-team-openhelix",
+          "rk-edge-simscaleai",
+          "sonjuonr-visual-fusion-gru",
+          "wwzzz-ilstudio",
+          "abdelrahmanfarhan-vla-panda-mujoco",
+          "nvlabs-protomotions",
+          "ivlabs-autonomous-delivery-robot",
+          "zainali24-physical-ai-humanoid-robotics",
+          "shiv207-vla-simulated-tests",
+          "internrobotics-vlac"
+        ],
+        "evidence_level": "reported",
+        "framework": "PyTorch",
+        "hf_repo_id": "Haozhan72/robotwin2_stack_bowls_two_seed1k_sft_aloha_25chunks_40k",
+        "id": "p802",
+        "license": "unknown",
+        "name": "robotwin2_stack_bowls_two_seed1k_sft_aloha_25chunks_40k",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "haozhan72-robotwin2-stack-bowls-two-seed1k-sft-aloha-25chunks-40k",
+        "task_description": "Policy model from Haozhan72. Tags: safetensors, openvla, custom_code, region:us.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "learned_latent",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "haozhan72-robotwin2-stack-bowls-two-seed1k-sft-aloha-25chunks-40k",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "nvidia",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "nvidia/Cosmos-Policy-ALOHA-Predict2-2B",
+        "id": "p976",
+        "license": "unknown",
+        "name": "Cosmos-Policy-ALOHA-Predict2-2B",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "other",
+        "slug": "nvidia-cosmos-policy-aloha-predict2-2b",
+        "task_description": "Policy model from nvidia. Tags: cosmos-policy, dataset:nvidia/ALOHA-Cosmos-Policy, arxiv:2601.16163, arxiv:2304.13705, base_model:nvidia/Cosmos-Predict2-2B-Video2World.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "nvidia-cosmos-policy-aloha-predict2-2b",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "qualia-robotics",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "qualia-robotics/act-aloha-static-cups-open-3be940b9",
+        "id": "p1348",
+        "license": "apache-2.0",
+        "name": "act-aloha-static-cups-open-3be940b9",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "other",
+        "slug": "qualia-robotics-act-aloha-static-cups-open-3be940b9",
+        "task_description": "Policy model from qualia-robotics. Tags: lerobot, safetensors, robotics, act, dataset:lerobot/aloha_static_cups_open.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "qualia-robotics-act-aloha-static-cups-open-3be940b9",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Bernard2357",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "Bernard2357/lerobot-aloha-act-model",
+        "id": "p1398",
+        "license": "apache-2.0",
+        "name": "lerobot-aloha-act-model",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "manipulation",
+        "slug": "bernard2357-lerobot-aloha-act-model",
+        "task_description": "Policy model from Bernard2357. Tags: lerobot, safetensors, robotics, act, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "bernard2357-lerobot-aloha-act-model",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "qualia-robotics",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "irmvlab-unihand",
+          "nvlabs-handover-sim",
+          "irvlab-poseiden",
+          "denghaoyuan123-awesome-rl-vla",
+          "guoheyu-omnivla",
+          "ananasburn-smolvla-manipulation",
+          "zhenyangliu-activevla-injecting-active-perception-into-vla",
+          "allenai-vla-evaluation-harness",
+          "vlad-brasoveanu-stm32-robotic-arm-6dof",
+          "openhelix-team-openhelix",
+          "rk-edge-simscaleai",
+          "sonjuonr-visual-fusion-gru",
+          "wwzzz-ilstudio",
+          "abdelrahmanfarhan-vla-panda-mujoco",
+          "nvlabs-protomotions",
+          "ivlabs-autonomous-delivery-robot",
+          "zainali24-physical-ai-humanoid-robotics",
+          "shiv207-vla-simulated-tests",
+          "internrobotics-vlac"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "qualia-robotics/smolvla-aloha-static-coffee-87e074e8",
+        "id": "p1418",
+        "license": "apache-2.0",
+        "name": "smolvla-aloha-static-coffee-87e074e8",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2506.01844",
+        "skill_type": "other",
+        "slug": "qualia-robotics-smolvla-aloha-static-coffee-87e074e8",
+        "task_description": "Policy model from qualia-robotics. Tags: lerobot, safetensors, smolvla, robotics, dataset:lerobot/aloha_static_coffee.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "learned_latent",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "qualia-robotics-smolvla-aloha-static-coffee-87e074e8",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Bernard2357",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "Bernard2357/lerobot-aloha-act-model2",
+        "id": "p1646",
+        "license": "apache-2.0",
+        "name": "lerobot-aloha-act-model2",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": "https://arxiv.org/abs/2304.13705",
+        "skill_type": "manipulation",
+        "slug": "bernard2357-lerobot-aloha-act-model2",
+        "task_description": "Policy model from Bernard2357. Tags: lerobot, safetensors, robotics, act, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "bernard2357-lerobot-aloha-act-model2",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "Weke",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "Weke/act_aloha_sim_insertion_human_policy",
+        "id": "p4750",
+        "license": "unknown",
+        "name": "act_aloha_sim_insertion_human_policy",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "weke-act-aloha-sim-insertion-human-policy",
+        "task_description": "Policy model act_aloha_sim_insertion_human_policy by Weke.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "weke-act-aloha-sim-insertion-human-policy",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cjgogo",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "cjgogo/pi0-aloha-robotwin-lora-30k_adjust_bottle",
+        "id": "p5652",
+        "license": "unknown",
+        "name": "pi0-aloha-robotwin-lora-30k_adjust_bottle",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "cjgogo-pi0-aloha-robotwin-lora-30k-adjust-bottle",
+        "task_description": "Policy model pi0-aloha-robotwin-lora-30k_adjust_bottle by cjgogo.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cjgogo-pi0-aloha-robotwin-lora-30k-adjust-bottle",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cjgogo",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "cjgogo/pi0-aloha-robotwin-lora_beat_block_hammer",
+        "id": "p5653",
+        "license": "unknown",
+        "name": "pi0-aloha-robotwin-lora_beat_block_hammer",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "cjgogo-pi0-aloha-robotwin-lora-beat-block-hammer",
+        "task_description": "Policy model pi0-aloha-robotwin-lora_beat_block_hammer by cjgogo.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cjgogo-pi0-aloha-robotwin-lora-beat-block-hammer",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cjgogo",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "cjgogo/pi0-aloha-robotwin-lora_click_alarmclock",
+        "id": "p5654",
+        "license": "unknown",
+        "name": "pi0-aloha-robotwin-lora_click_alarmclock",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "cjgogo-pi0-aloha-robotwin-lora-click-alarmclock",
+        "task_description": "Policy model pi0-aloha-robotwin-lora_click_alarmclock by cjgogo.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cjgogo-pi0-aloha-robotwin-lora-click-alarmclock",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cjgogo",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "cjgogo/pi0-aloha-robotwin-lora_open_laptop",
+        "id": "p5656",
+        "license": "unknown",
+        "name": "pi0-aloha-robotwin-lora_open_laptop",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "cjgogo-pi0-aloha-robotwin-lora-open-laptop",
+        "task_description": "Policy model pi0-aloha-robotwin-lora_open_laptop by cjgogo.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cjgogo-pi0-aloha-robotwin-lora-open-laptop",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "cjgogo",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "cjgogo/pi0-aloha-robotwin-lora_place_container_plate",
+        "id": "p5657",
+        "license": "unknown",
+        "name": "pi0-aloha-robotwin-lora_place_container_plate",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "cjgogo-pi0-aloha-robotwin-lora-place-container-plate",
+        "task_description": "Policy model pi0-aloha-robotwin-lora_place_container_plate by cjgogo.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "cjgogo-pi0-aloha-robotwin-lora-place-container-plate",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "KongkongLiu",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "KongkongLiu/pi0_base_robotwin_place_empty_cup-aloha-random",
+        "id": "p5664",
+        "license": "unknown",
+        "name": "pi0_base_robotwin_place_empty_cup-aloha-random",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "kongkongliu-pi0-base-robotwin-place-empty-cup-aloha-random",
+        "task_description": "Policy model pi0_base_robotwin_place_empty_cup-aloha-random by KongkongLiu.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "kongkongliu-pi0-base-robotwin-place-empty-cup-aloha-random",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "siyuhsu",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "siyuhsu/pi0_base_aloha_robotwin_full",
+        "id": "p5665",
+        "license": "unknown",
+        "name": "pi0_base_aloha_robotwin_full",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "siyuhsu-pi0-base-aloha-robotwin-full",
+        "task_description": "Policy model pi0_base_aloha_robotwin_full by siyuhsu.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "siyuhsu-pi0-base-aloha-robotwin-full",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "SakikoTogawa",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "realmanrobot-hand-eye-calibration",
+          "masterhow-oneocc",
+          "sergionr2-racingrobot",
+          "gabrielnhn-ros2-line-follower",
+          "vivek1795-gesture-controlled-robotic-arm-in-mujoco",
+          "logesh1516-mycobot-280jn-description",
+          "crm-uam-visionrace",
+          "davide-ciraolo-fischertechnik-3d-robot-webcam-gestures-system",
+          "bobbycephy-robot-gripper-camera",
+          "samyukamtam-hexapod",
+          "tx-leo-camera-calibration-handeye-calibration",
+          "flexiv-camera-module",
+          "davidea97-multi-camera-hand-eye-calibration",
+          "rensauce-3ugersip-group3",
+          "fpj-gaoge-finsrov-an-underwater-camera-based-multi-robot-platform",
+          "sallu-786-ros2-mcp-web-portal",
+          "siddhant-135-sacrid-vision-pipeline",
+          "dobot-vx500-smart-camera",
+          "argymats-thesis-delta-robot",
+          "islamahmedes43-gochase2"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "SakikoTogawa/pi0_base_aloha_robotwin_lora-blocks_ranking_rgb-aloha-agilex_clean_50-concept_dim64x4",
+        "id": "p5679",
+        "license": "unknown",
+        "name": "pi0_base_aloha_robotwin_lora-blocks_ranking_rgb-aloha-agilex_clean_50-concept_dim64x4",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "sakikotogawa-pi0-base-aloha-robotwin-lora-blocks-ranking-rgb-aloha-agilex-clean-",
+        "task_description": "Policy model pi0_base_aloha_robotwin_lora-blocks_ranking_rgb-aloha-agilex_clean_50-concept_dim64x4 by SakikoTogawa.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception",
+            "monocular_rgb"
+          ]
+        }
+      },
+      "slug": "sakikotogawa-pi0-base-aloha-robotwin-lora-blocks-ranking-rgb-aloha-agilex-clean-",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "SakikoTogawa",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "realmanrobot-hand-eye-calibration",
+          "masterhow-oneocc",
+          "sergionr2-racingrobot",
+          "gabrielnhn-ros2-line-follower",
+          "vivek1795-gesture-controlled-robotic-arm-in-mujoco",
+          "logesh1516-mycobot-280jn-description",
+          "crm-uam-visionrace",
+          "davide-ciraolo-fischertechnik-3d-robot-webcam-gestures-system",
+          "bobbycephy-robot-gripper-camera",
+          "samyukamtam-hexapod",
+          "tx-leo-camera-calibration-handeye-calibration",
+          "flexiv-camera-module",
+          "davidea97-multi-camera-hand-eye-calibration",
+          "rensauce-3ugersip-group3",
+          "fpj-gaoge-finsrov-an-underwater-camera-based-multi-robot-platform",
+          "sallu-786-ros2-mcp-web-portal",
+          "siddhant-135-sacrid-vision-pipeline",
+          "dobot-vx500-smart-camera",
+          "argymats-thesis-delta-robot",
+          "islamahmedes43-gochase2"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "SakikoTogawa/pi0_robotwin_lora-blocks_ranking_rgb-aloha-agilex_clean_50-mae_dim256x3_layer14-default",
+        "id": "p5683",
+        "license": "unknown",
+        "name": "pi0_robotwin_lora-blocks_ranking_rgb-aloha-agilex_clean_50-mae_dim256x3_layer14-default",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "other",
+        "slug": "sakikotogawa-pi0-robotwin-lora-blocks-ranking-rgb-aloha-agilex-clean-50-mae-dim2",
+        "task_description": "Policy model pi0_robotwin_lora-blocks_ranking_rgb-aloha-agilex_clean_50-mae_dim256x3_layer14-default by SakikoTogawa.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception",
+            "monocular_rgb"
+          ]
+        }
+      },
+      "slug": "sakikotogawa-pi0-robotwin-lora-blocks-ranking-rgb-aloha-agilex-clean-50-mae-dim2",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "maximellerbach",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "maximellerbach/act_aloha_transfer",
+        "id": "p6771",
+        "license": "apache-2.0",
+        "name": "act_aloha_transfer",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "maximellerbach-act-aloha-transfer",
+        "task_description": "Policy model: act_aloha_transfer. Tags: lerobot, safetensors, robotics, wam, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "maximellerbach-act-aloha-transfer",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "adimunot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "adimunot/act_aloha_transfer_cube",
+        "id": "p6773",
+        "license": "apache-2.0",
+        "name": "act_aloha_transfer_cube",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "adimunot-act-aloha-transfer-cube",
+        "task_description": "Policy model: act_aloha_transfer_cube. Tags: lerobot, safetensors, act, robotics, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "adimunot-act-aloha-transfer-cube",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "adimunot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "adimunot/diffusion_aloha_transfer_cube",
+        "id": "p6774",
+        "license": "apache-2.0",
+        "name": "diffusion_aloha_transfer_cube",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "adimunot-diffusion-aloha-transfer-cube",
+        "task_description": "Policy model: diffusion_aloha_transfer_cube. Tags: lerobot, safetensors, robotics, diffusion, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "adimunot-diffusion-aloha-transfer-cube",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "adimunot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "adimunot/act_aloha_transfer_cube_a100",
+        "id": "p6788",
+        "license": "apache-2.0",
+        "name": "act_aloha_transfer_cube_a100",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "adimunot-act-aloha-transfer-cube-a100",
+        "task_description": "Policy model: act_aloha_transfer_cube_a100. Tags: lerobot, safetensors, robotics, act, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "adimunot-act-aloha-transfer-cube-a100",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "qualia-robotics",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "LeRobot",
+        "hf_repo_id": "qualia-robotics/act-aloha-sim-transfer-cube-human-a76db398",
+        "id": "p6795",
+        "license": "apache-2.0",
+        "name": "act-aloha-sim-transfer-cube-human-a76db398",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "qualia-robotics-act-aloha-sim-transfer-cube-human-a76db398",
+        "task_description": "Policy model: act-aloha-sim-transfer-cube-human-a76db398. Tags: lerobot, safetensors, act, robotics, dataset:lerobot/aloha_sim_transfer_cube_human.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "qualia-robotics-act-aloha-sim-transfer-cube-human-a76db398",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "otime3",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "irmvlab-unihand",
+          "nvlabs-handover-sim",
+          "irvlab-poseiden",
+          "denghaoyuan123-awesome-rl-vla",
+          "guoheyu-omnivla",
+          "ananasburn-smolvla-manipulation",
+          "zhenyangliu-activevla-injecting-active-perception-into-vla",
+          "allenai-vla-evaluation-harness",
+          "vlad-brasoveanu-stm32-robotic-arm-6dof",
+          "openhelix-team-openhelix",
+          "rk-edge-simscaleai",
+          "sonjuonr-visual-fusion-gru",
+          "wwzzz-ilstudio",
+          "abdelrahmanfarhan-vla-panda-mujoco",
+          "nvlabs-protomotions",
+          "ivlabs-autonomous-delivery-robot",
+          "zainali24-physical-ai-humanoid-robotics",
+          "shiv207-vla-simulated-tests",
+          "internrobotics-vlac"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "otime3/smolvla_aloha_transfer_cube_human",
+        "id": "p6800",
+        "license": "unknown",
+        "name": "smolvla_aloha_transfer_cube_human",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "otime3-smolvla-aloha-transfer-cube-human",
+        "task_description": "Policy model: smolvla_aloha_transfer_cube_human. Tags: safetensors, region:us.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "learned_latent",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "otime3-smolvla-aloha-transfer-cube-human",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "action_space": {
+          "dimensions": 0,
+          "frequency_hz": 0,
+          "type": "other"
+        },
+        "author": "adimunot",
+        "benchmarks": [],
+        "compatible_env_slugs": [],
+        "compatible_robot_slugs": [
+          "anybotics-anymal-c",
+          "aloha",
+          "google-barkour-vb",
+          "boston-dynamics-spot",
+          "franka-fr3",
+          "google-barkour-v0",
+          "agilex-piper",
+          "berkeley-humanoid",
+          "bitcraze-crazyflie-2",
+          "anybotics-anymal-b",
+          "agility-cassie",
+          "arx-l5",
+          "booster-t1",
+          "franka-emika-panda",
+          "franka-fr3-v2",
+          "dynamixel-2r",
+          "flexiv-rizon4",
+          "assets",
+          "apptronik-apollo",
+          "fourier-n1"
+        ],
+        "evidence_level": "untested",
+        "framework": "PyTorch",
+        "hf_repo_id": "adimunot/act_aloha_transfer_cube_kaggle",
+        "id": "p6820",
+        "license": "unknown",
+        "name": "act_aloha_transfer_cube_kaggle",
+        "observation_space": {
+          "components": [],
+          "type": "other"
+        },
+        "paper_arxiv_url": null,
+        "skill_type": "manipulation",
+        "slug": "adimunot-act-aloha-transfer-cube-kaggle",
+        "task_description": "Policy model: act_aloha_transfer_cube_kaggle. Tags: safetensors, region:us.",
+        "taxonomy": {
+          "action_dimensions": 0,
+          "required_control": "joint_position",
+          "required_perception": [
+            "proprioception"
+          ]
+        }
+      },
+      "slug": "adimunot-act-aloha-transfer-cube-kaggle",
+      "table": "policies"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"total_videos\": 50,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_human.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_transfer_cube_human",
+        "id": "ds78",
+        "name": "aloha_sim_transfer_cube_human",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-transfer-cube-human",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-transfer-cube-human",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 25000,\n    \"total_tasks\": 1,\n    \"total_videos\": 50,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_insertion_human.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_insertion_human",
+        "id": "ds82",
+        "name": "aloha_sim_insertion_human",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-insertion-human",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-insertion-human",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"total_videos\": 50,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_insertion_scripted.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_insertion_scripted",
+        "id": "ds105",
+        "name": "aloha_sim_insertion_scripted",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-insertion-scripted",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-insertion-scripted",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v3.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet\",\n    \"video_path\": \"videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4\",\n    \"features\": {… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_scripted.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_transfer_cube_scripted",
+        "id": "ds122",
+        "name": "aloha_sim_transfer_cube_scripted",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-transfer-cube-scripted",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-transfer-cube-scripted",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"total_videos\": 0,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\": null,\n    \"features\": {… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_human_image.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_transfer_cube_human_image",
+        "id": "ds139",
+        "name": "aloha_sim_transfer_cube_human_image",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-transfer-cube-human-image",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-transfer-cube-human-image",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 25000,\n    \"total_tasks\": 1,\n    \"total_videos\": 0,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\": null,\n    \"features\": {… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_insertion_human_image.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_insertion_human_image",
+        "id": "ds141",
+        "name": "aloha_sim_insertion_human_image",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-insertion-human-image",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-insertion-human-image",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"total_videos\": 0,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\": null,\n    \"features\": {… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_insertion_scripted_image.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_insertion_scripted_image",
+        "id": "ds143",
+        "name": "aloha_sim_insertion_scripted_image",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-insertion-scripted-image",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-insertion-scripted-image",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "Dataset from JimmyH16. Tags: region:us.",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "JimmyH16/labelled_robotwin_aloha-agilex_clean_50",
+        "id": "ds149",
+        "name": "labelled_robotwin_aloha-agilex_clean_50",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "jimmyh16-labelled-robotwin-aloha-agilex-clean-50",
+        "source": "JimmyH16"
+      },
+      "slug": "jimmyh16-labelled-robotwin-aloha-agilex-clean-50",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"total_videos\": 0,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\": null,\n    \"features\": {… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_sim_transfer_cube_scripted_image.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_sim_transfer_cube_scripted_image",
+        "id": "ds150",
+        "name": "aloha_sim_transfer_cube_scripted_image",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-sim-transfer-cube-scripted-image",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-sim-transfer-cube-scripted-image",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "BiPlay contains 9.7 hours of bimanual data collected with an aloha robot at the RAIL lab @ UC Berkeley, USA. It contains 7023 clips, 2000 language annotations and 326 unique scenes.\nPaper: https://huggingface.co/papers/2410.10088\nCode: https://github.com/sudeepdasari/dit-policy\nIf you use the dataset please cite:\n@inproceedings{dasari2025ingredients,\n  title={The Ingredients for Robotic Diffusion Transformers},\n  author={Sudeep Dasari and Oier Mees and Sebastian Zhao and Mohan Kumar Srirama… See the full description on the dataset page: https://huggingface.co/datasets/oier-mees/BiPlay.",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "oier-mees/BiPlay",
+        "id": "ds172",
+        "name": "BiPlay",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "oier-mees-biplay",
+        "source": "oier-mees"
+      },
+      "slug": "oier-mees-biplay",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v3.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 85,\n    \"total_frames\": 127500,\n    \"total_tasks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:85\"\n    },\n    \"data_path\": \"data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet\",\n    \"video_path\": \"videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4\",\n    \"features\": {… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_mobile_cabinet.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_mobile_cabinet",
+        "id": "ds257",
+        "name": "aloha_mobile_cabinet",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-mobile-cabinet",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-mobile-cabinet",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "option3a0oquznn7bdhdbxb-open"
+        ],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 50,\n    \"total_frames\": 20000,\n    \"total_tasks\": 1,\n    \"total_videos\": 200,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:50\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/lerobot/aloha_static_cups_open.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "lerobot/aloha_static_cups_open",
+        "id": "ds287",
+        "name": "aloha_static_cups_open",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "lerobot-aloha-static-cups-open",
+        "source": "lerobot"
+      },
+      "slug": "lerobot-aloha-static-cups-open",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "cognitiveaisystems-rate"
+        ],
+        "description": "without depth data. processed data. generated from python scripts/process_data.py $task_name $setting $expert_data_num \n",
+        "episodes": 0,
+        "format": "hdf5",
+        "hf_dataset_id": "juyil/robotwin_aloha_clean_hdf5",
+        "id": "ds428",
+        "name": "robotwin_aloha_clean_hdf5",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "juyil-robotwin-aloha-clean-hdf5",
+        "source": "juyil"
+      },
+      "slug": "juyil-robotwin-aloha-clean-hdf5",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v3.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 2500,\n    \"total_frames\": 549787,\n    \"total_tasks\": 2409,\n    \"chunks_size\": 1000,\n    \"data_files_size_in_mb\": 100,\n    \"video_files_size_in_mb\": 200,\n    \"fps\": 15,\n    \"splits\": {\n        \"train\": \"0:2500\"},\n    \"data_path\": \"data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/SUZ-tsinghua/RoboTwin_clean.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "SUZ-tsinghua/RoboTwin_clean",
+        "id": "ds439",
+        "name": "RoboTwin_clean",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "suz-tsinghua-robotwin-clean",
+        "source": "SUZ-tsinghua"
+      },
+      "slug": "suz-tsinghua-robotwin-clean",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v3.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 2400,\n    \"total_frames\": 436031,\n    \"total_tasks\": 2359,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:2400\"\n    },\n    \"data_path\": \"data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet\",\n    \"video_path\": \"videos/{video_key}/chunk-{chunk_index:03d}/file-{file_index:03d}.mp4\"… See the full description on the dataset page: https://huggingface.co/datasets/quincyu/trace_robotwin_rand_val.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "quincyu/trace_robotwin_rand_val",
+        "id": "ds447",
+        "name": "trace_robotwin_rand_val",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "quincyu-trace-robotwin-rand-val",
+        "source": "quincyu"
+      },
+      "slug": "quincyu-trace-robotwin-rand-val",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "option3a0oquznn7bdhdbxb-open"
+        ],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v3.0\",\n    \"robot_type\": \"aloha_dual\",\n    \"total_episodes\": 51,\n    \"total_frames\": 24808,\n    \"total_tasks\": 1,\n    \"chunks_size\": 1000,\n    \"data_files_size_in_mb\": 100,\n    \"video_files_size_in_mb\": 500,\n    \"fps\": 30,\n    \"splits\": {\n        \"train\": \"0:51\"\n    },\n    \"data_path\": \"data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/OpenGraphLabs-Research/lerobot-simulation-burger-delivery-01.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "OpenGraphLabs-Research/lerobot-simulation-burger-delivery-01",
+        "id": "ds681",
+        "name": "lerobot-simulation-burger-delivery-01",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "opengraphlabs-research-lerobot-simulation-burger-delivery-01",
+        "source": "OpenGraphLabs-Research"
+      },
+      "slug": "opengraphlabs-research-lerobot-simulation-burger-delivery-01",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "\n\t\n\t\t\n\t\tMobile Aloha Dataset for RDT\n\t\n\n\n\t\n\t\t\n\t\tDataset\n\t\n\nDownload the  tfrecord_part_a* files from this repository. To reconstruct and extract the complete dataset, execute the following commands:\ncat tfrecord_part_a* > tfrecord_part_a.zip\nunzip tfrecord_part_a.zip\n\n",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "robotics-diffusion-transformer/aloha-data",
+        "id": "ds742",
+        "name": "aloha-data",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "robotics-diffusion-transformer-aloha-data",
+        "source": "robotics-diffusion-transformer"
+      },
+      "slug": "robotics-diffusion-transformer-aloha-data",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "option3a0oquznn7bdhdbxb-open"
+        ],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v3.0\",\n    \"robot_type\": \"so_arm_101\",\n    \"total_episodes\": 13,\n    \"total_frames\": 1401,\n    \"total_tasks\": 1,\n    \"chunks_size\": 1000,\n    \"data_files_size_in_mb\": 100,\n    \"video_files_size_in_mb\": 200,\n    \"fps\": 30,\n    \"splits\": {\n        \"train\": \"0:13\"\n    },\n    \"data_path\": \"data/chunk-{chunk_index:03d}/file-{file_index:03d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/OpenGraphLabs-Research/lerobot-simulation-aloha-dual-burger-delivery-01.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "OpenGraphLabs-Research/lerobot-simulation-aloha-dual-burger-delivery-01",
+        "id": "ds749",
+        "name": "lerobot-simulation-aloha-dual-burger-delivery-01",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "opengraphlabs-research-lerobot-simulation-aloha-dual-burger-delivery-01",
+        "source": "OpenGraphLabs-Research"
+      },
+      "slug": "opengraphlabs-research-lerobot-simulation-aloha-dual-burger-delivery-01",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 100,\n    \"total_frames\": 49959,\n    \"total_tasks\": 1,\n    \"total_videos\": 200,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:100\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/autobio-bench/pickup-mujoco.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "autobio-bench/pickup-mujoco",
+        "id": "ds1000",
+        "name": "pickup-mujoco",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "autobio-bench-pickup-mujoco",
+        "source": "autobio-bench"
+      },
+      "slug": "autobio-bench-pickup-mujoco",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "Dataset from JeffsonYu. Tags: region:us.",
+        "episodes": 0,
+        "format": "other",
+        "hf_dataset_id": "JeffsonYu/aloha_PourWaterCfg_isaac",
+        "id": "ds1116",
+        "name": "aloha_PourWaterCfg_isaac",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "jeffsonyu-aloha-pourwatercfg-isaac",
+        "source": "JeffsonYu"
+      },
+      "slug": "jeffsonyu-aloha-pourwatercfg-isaac",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 100,\n    \"total_frames\": 136834,\n    \"total_tasks\": 1,\n    \"total_videos\": 300,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:100\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/autobio-bench/screw_loose-mujoco.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "autobio-bench/screw_loose-mujoco",
+        "id": "ds1365",
+        "name": "screw_loose-mujoco",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "autobio-bench-screw-loose-mujoco",
+        "source": "autobio-bench"
+      },
+      "slug": "autobio-bench-screw-loose-mujoco",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [],
+        "description": "This dataset was created using LeRobot.\n\n\t\n\t\t\n\t\tDataset Structure\n\t\n\nmeta/info.json:\n{\n    \"codebase_version\": \"v2.0\",\n    \"robot_type\": \"aloha\",\n    \"total_episodes\": 100,\n    \"total_frames\": 154830,\n    \"total_tasks\": 1,\n    \"total_videos\": 300,\n    \"total_chunks\": 1,\n    \"chunks_size\": 1000,\n    \"fps\": 50,\n    \"splits\": {\n        \"train\": \"0:100\"\n    },\n    \"data_path\": \"data/chunk-{episode_chunk:03d}/episode_{episode_index:06d}.parquet\",\n    \"video_path\":… See the full description on the dataset page: https://huggingface.co/datasets/autobio-bench/screw_tighten-mujoco.",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "autobio-bench/screw_tighten-mujoco",
+        "id": "ds1494",
+        "name": "screw_tighten-mujoco",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "autobio-bench-screw-tighten-mujoco",
+        "source": "autobio-bench"
+      },
+      "slug": "autobio-bench-screw-tighten-mujoco",
+      "table": "datasets"
+    },
+    {
+      "data": {
+        "compatible_policy_slugs": [
+          "lora501-manipulation"
+        ],
+        "description": "This dataset was created using LeRobot.\n",
+        "episodes": 0,
+        "format": "lerobot",
+        "hf_dataset_id": "MaxFridge/aloha_solo_basic_manipulation",
+        "id": "ds1958",
+        "name": "aloha_solo_basic_manipulation",
+        "robot_names": [],
+        "robots": 0,
+        "slug": "maxfridge-aloha-solo-basic-manipulation",
+        "source": "MaxFridge"
+      },
+      "slug": "maxfridge-aloha-solo-basic-manipulation",
+      "table": "datasets"
+    }
+  ]
+}

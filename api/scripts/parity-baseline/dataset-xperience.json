@@ -1,0 +1,17 @@
+{
+  "compatible_policy_slugs": [
+    "xnhyacinth-embodied",
+    "vladislavelite-model",
+    "vladocar-model"
+  ],
+  "description": "\n\t\n\t\t\n\t\t⚠️ Important: If you have already submitted an access request but have not completed the required DocuSign agreement, your request will remain pending. Please complete signing and we will grant access once verified.\n\t\n\n\n  \n    \n  \n  \n  Interactive Intelligence from Human Xperience\n\n\n\n\t\n\t\t\n\t\n\t\n\t\tXperience-10M\n\t\n\n\n\t\n\t\t\n\t\n\t\n\t\tDataset Summary\n\t\n\nXperience-10M is a large-scale egocentric multimodal dataset of human experience for embodied AI, robotics, world models, and spatial… See the full description on the dataset page: https://huggingface.co/datasets/ropedia-ai/xperience-10m.",
+  "episodes": 0,
+  "format": "other",
+  "hf_dataset_id": "ropedia-ai/xperience-10m",
+  "id": "ds1",
+  "name": "xperience-10m",
+  "robot_names": [],
+  "robots": 0,
+  "slug": "ropedia-ai-xperience-10m",
+  "source": "ropedia-ai"
+}

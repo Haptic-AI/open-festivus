@@ -1,0 +1,21 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: Question or "I'm trying to use this for X"
+    url: https://github.com/Haptic-AI/open-festivus/discussions
+    about: |
+      Open-ended questions, design discussions, and "is this the right
+      tool for my problem" threads go in Discussions, not Issues.
+
+  - name: Record edits (add a robot, fix a dataset, flag broken link)
+    url: https://festivus.hapticlabs.ai/contribute
+    about: |
+      Code is open. Data is curated. Use the in-app /contribute flow
+      for record changes. GitHub PRs against data/*.json will be
+      closed with a pointer back to /contribute.
+
+  - name: Security vulnerability
+    url: https://github.com/Haptic-AI/open-festivus/security/policy
+    about: |
+      Don't open a public issue for security findings. Use the
+      private disclosure channel in SECURITY.md.

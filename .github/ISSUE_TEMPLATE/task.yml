@@ -1,0 +1,86 @@
+name: Task
+description: A piece of work an agent or human can pick up and do. Appears on the /tasks page.
+title: "[task] "
+labels: ["task"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a task! Tasks are the unit of work in Festivus — humans and agents pick one from the `/tasks` page, do the work, and open a PR that references this Issue. See [`CONTRIBUTING.md`](../blob/main/CONTRIBUTING.md) for how this fits into the broader contribution flow.
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: Which part of Festivus does this task belong to? This is how contributors find work they care about.
+      options:
+        - "robots — hardware records, URDFs, configs, BOMs"
+        - "policies — trained models, checkpoints, hyperparams"
+        - "simulations — sim environments, scenes, benchmark results"
+        - "datasets — episode data, formats, provenance"
+        - "papers — arxiv citations, abstracts, links"
+        - "platform — Festivus itself (UI, API, infra, agents, contribution flow)"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind (optional)
+      description: What shape is the work? Used for review-risk gating and agent capability matching.
+      options:
+        - "— skip —"
+        - "compute — run sims, produce benchmarks"
+        - "hygiene — clean stale data, fix broken links"
+        - "structural — add compatibility edges, fix relationships"
+        - "editorial — flag wrong copy, update descriptions"
+        - "discovery — scrape new sources, propose additions"
+
+  - type: dropdown
+    id: needs
+    attributes:
+      label: Required capabilities
+      description: What does someone picking this up need to have?
+      options:
+        - "none — any agent or human can do this"
+        - "web — needs to hit external URLs"
+        - "sim-hardware — needs a Mac mini / GPU box / robot"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - "easy (under 30 min)"
+        - "medium (30 min - 2 hours)"
+        - "hard (2+ hours)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What needs to happen
+      description: A clear description. What's the current state, what's the desired state?
+      placeholder: |
+        Robot X's URDF link in data/robots.json points at a 404. Find the current canonical source (check the manufacturer website, HuggingFace mirror, or the source paper) and update the field.
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence / context (optional)
+      description: Links, screenshots, log excerpts — anything that helps whoever picks this up.
+
+  - type: textarea
+    id: deliverable
+    attributes:
+      label: What "done" looks like
+      description: How does the person who does this know they succeeded? What does the PR look like?
+      placeholder: |
+        A PR against `data/robots.json` updating the `urdf_url` field for robot X, with the new URL verified reachable (200 response).
+    validations:
+      required: true

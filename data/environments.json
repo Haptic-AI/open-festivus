@@ -1,0 +1,102 @@
+[
+  {
+    "id": "env11",
+    "slug": "rlbench-workspace",
+    "name": "RLBench Multi-Task Workspace",
+    "simulator": "other",
+    "scene": "rlbench_default",
+    "description": "CoppeliaSim workspace with 4 RGB-D cameras (front, left shoulder, right shoulder, wrist) overlooking a tabletop. Standard evaluation environment for PerAct, RVT, and RVT-2. 100 tasks with scripted oracle demos.",
+    "conditions": {
+      "location": "indoor lab",
+      "surface": "wooden table (0.6m x 1.0m)",
+      "lighting": "uniform overhead, 500 lux",
+      "objects": "task-specific (100 task variants with diverse objects)",
+      "obstacles": "task-dependent (ovens, drawers, containers)",
+      "physics": "CoppeliaSim/PyRep (Bullet engine, dt=0.005s)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["franka-panda"],
+    "deploy_command": "python eval.py --task_type rlbench --task_name open_drawer --episodes 25",
+    "preview_description": "Franka arm at center of a tabletop workspace. Four camera viewpoints show the scene from different angles. A drawer, can, and colored blocks on the table."
+  },
+  {
+    "id": "env12",
+    "slug": "calvin-tabletop",
+    "name": "CALVIN Tabletop",
+    "simulator": "pybullet",
+    "scene": "calvin_env_d",
+    "description": "Language-conditioned manipulation workspace with sliding doors, drawers, buttons, LED lights, and colored blocks. 34 unique subtask types across 4 environment configurations (A-D). Standard benchmark for HULC.",
+    "conditions": {
+      "location": "indoor lab",
+      "surface": "wooden desk with mounted fixtures (0.6m x 1.0m)",
+      "lighting": "uniform overhead, 500 lux, LED indicators on desk",
+      "objects": "sliding doors, drawers, buttons, colored blocks, LED lights",
+      "obstacles": "desk fixtures, drawer handles",
+      "physics": "PyBullet (dt=0.004s, default friction)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["franka-panda"],
+    "deploy_command": "python evaluate_policy.py --dataset_path calvin_env_d --checkpoint hulc_best.ckpt",
+    "preview_description": "Desk with colored sliding doors on the left, a drawer, three colored blocks, and a button panel. Franka arm reaches from the right side. Overhead and wrist camera views."
+  },
+  {
+    "id": "env13",
+    "slug": "ravens-tabletop",
+    "name": "Ravens Tabletop",
+    "simulator": "pybullet",
+    "scene": "ravens_default",
+    "description": "Top-down tabletop workspace in PyBullet for pick-and-place rearrangement tasks. Orthographic camera provides pixel-space action parameterization. 10 tasks from simple block stacking to complex kit assembly.",
+    "conditions": {
+      "location": "indoor lab (top-down view only)",
+      "surface": "flat table (0.5m x 1.0m)",
+      "lighting": "uniform (rendered top-down orthographic)",
+      "objects": "colored blocks, bowls, cables, boxes, kits",
+      "obstacles": "none (open workspace)",
+      "physics": "PyBullet (dt=0.001s, UR5e with suction gripper)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["ur5e"],
+    "deploy_command": "python ravens/test.py --task=place-red-in-green --agent=transporter --n_demos=100",
+    "preview_description": "Top-down orthographic view of a tabletop with scattered colored blocks and bowls. UR5e suction gripper hovers above. Clean white background."
+  },
+  {
+    "id": "env14",
+    "slug": "home-doorway",
+    "name": "Home Doorway",
+    "simulator": "other",
+    "scene": "home_doorway_real",
+    "description": "Real-world home environment for mobile manipulation. Cabinets, doors, and drawers of varying sizes and handle types. Used for VINN door-opening experiments on Hello Robot Stretch.",
+    "conditions": {
+      "location": "indoor home (kitchen, bathroom, hallway)",
+      "surface": "tile, wood, carpet (varied)",
+      "lighting": "natural + artificial (variable, 200-1000 lux)",
+      "objects": "door handles, cabinet knobs, drawers",
+      "obstacles": "furniture, walls, door frames, thresholds",
+      "physics": "real-world",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["hello-robot-stretch3"],
+    "deploy_command": "python eval_vinn.py --task door_opening --env home",
+    "preview_description": "Hello Robot Stretch approaching a kitchen cabinet. Natural home lighting, wooden cabinets with metal handles. Wrist camera view shows the handle close-up."
+  },
+  {
+    "id": "env15",
+    "slug": "outdoor-stairs-terrain",
+    "name": "Outdoor Stairs & Steps",
+    "simulator": "isaac-sim",
+    "scene": "stairs_curriculum",
+    "description": "Procedurally generated staircases and step terrain for quadruped and humanoid locomotion. Step heights from 5-25cm, widths 20-40cm. Tests stair climbing, descent, and transitions. Used for DreamWaQ and ANYmal research.",
+    "conditions": {
+      "location": "outdoor urban environment",
+      "surface": "concrete stairs (friction 0.6-1.0, randomized)",
+      "lighting": "N/A (proprioception-only)",
+      "objects": "none",
+      "obstacles": "stairs (5-25cm height), curbs, step edges",
+      "physics": "Isaac Sim (dt=0.005s, terrain curriculum, DR on friction/mass)",
+      "scale": "real-world 1:1"
+    },
+    "compatible_robot_slugs": ["unitree-go2", "unitree-go1", "unitree-h1", "anymal-d"],
+    "deploy_command": "python train.py --task Quadruped-Stairs --num_envs 4096 --curriculum progressive",
+    "preview_description": "Series of concrete steps ascending. A quadruped robot mid-climb on a 15cm step. Multiple parallel environments visible in the background."
+  }
+]

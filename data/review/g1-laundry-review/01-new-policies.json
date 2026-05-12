@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "unitreerobotics-unifolm-vla-base",
+    "name": "UnifoLM-VLA-Base",
+    "hf_repo_id": "unitreerobotics/UnifoLM-VLA-Base",
+    "hf_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Base",
+    "paper_arxiv_url": null,
+    "github_repo_url": "https://github.com/unitreerobotics/unifolm-vla",
+    "author": "Unitree Robotics",
+    "license": "cc-by-nc-sa-4.0",
+    "license_short": "non-commercial",
+    "framework": "unifolm-vla",
+    "skill_type": "manipulation-foundation",
+    "task_description": "Unified Vision-Language-Action policy trained by Unitree Robotics on real Unitree G1 teleoperation data across 12 manipulation tasks: Fold Towel, Stack Block, Bag Insert, Erase Board, Clean Table, Pack PencilBox, Pour Medicine, Pack PingPong, Prepare Fruit, Organize Tools, Wipe Table, and dual-robot table clean. Released 2026-03-16. Single-policy model covering all 12 tasks.",
+    "action_space": "G1 whole-body: left_arm (7 DoF) + right_arm (7 DoF) + body + Dex1 gripper; end-effector poses available",
+    "observation_space": "multi-camera (head + wrist cams) + proprioception",
+    "compatible_robot_slugs": ["unitree-g1"],
+    "compatible_env_slugs": ["real-world", "unitree-xr-teleoperate"],
+    "evidence_level": "validated",
+    "taxonomy": {
+      "category": "vla",
+      "subcategory": "manipulation-foundation",
+      "modality": "vision-language-action",
+      "embodiment": "humanoid-bimanual"
+    },
+    "benchmarks": [],
+    "training_datasets": [
+      "unitreerobotics/G1_Dex1_Fold_Towel"
+    ],
+    "verified_hardware": ["unitree-g1"],
+    "verified_via_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Base",
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Verified via WebFetch of the HF model card and the GitHub repo README. Non-commercial license. This is the ONLY currently-published policy with real G1 fold training."
+  },
+  {
+    "slug": "unitreerobotics-unifolm-vla-libero",
+    "name": "UnifoLM-VLA-Libero",
+    "hf_repo_id": "unitreerobotics/UnifoLM-VLA-Libero",
+    "hf_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Libero",
+    "paper_arxiv_url": null,
+    "github_repo_url": "https://github.com/unitreerobotics/unifolm-vla",
+    "author": "Unitree Robotics",
+    "license": "cc-by-nc-sa-4.0",
+    "license_short": "non-commercial",
+    "framework": "unifolm-vla",
+    "skill_type": "manipulation-foundation",
+    "task_description": "UnifoLM-VLA variant tuned on the LIBERO manipulation benchmark (simulation). Same architecture as UnifoLM-VLA-Base; useful for evaluation and cross-benchmark comparison, not directly for G1 deployment.",
+    "action_space": "LIBERO action space",
+    "observation_space": "LIBERO observations",
+    "compatible_robot_slugs": ["unitree-g1"],
+    "compatible_env_slugs": ["libero"],
+    "evidence_level": "reported",
+    "taxonomy": {
+      "category": "vla",
+      "subcategory": "manipulation-foundation",
+      "modality": "vision-language-action",
+      "embodiment": "humanoid-bimanual"
+    },
+    "benchmarks": ["libero"],
+    "training_datasets": [],
+    "verified_hardware": ["unitree-g1"],
+    "verified_via_url": "https://huggingface.co/unitreerobotics/UnifoLM-VLA-Libero",
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Verified via WebFetch. LIBERO-tuned variant of the same Unitree VLA family. Non-commercial license."
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "slug": "unitreerobotics-g1-dex1-fold-towel",
+    "name": "G1 Dex1 Fold Towel",
+    "hf_dataset_id": "unitreerobotics/G1_Dex1_Fold_Towel",
+    "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_Dex1_Fold_Towel",
+    "description": "Real Unitree G1 teleoperated dataset of the humanoid folding a towel, recorded with the Dex1 gripper. Includes full G1 state/action: left_arm (7 DoF), right_arm (7 DoF), body, Dex1 gripper, and end-effector poses. Published by Unitree Robotics.",
+    "episodes": 200,
+    "robots": 1,
+    "robot_names": [
+      "unitree-g1"
+    ],
+    "source": "unitreerobotics",
+    "format": "lerobot",
+    "license": "apache-2.0",
+    "frames_or_rows": 311000,
+    "fps": null,
+    "cameras": null,
+    "task_slug": "fold-towel",
+    "compatible_policy_slugs": [
+      "unitreerobotics-unifolm-vla-base"
+    ],
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Verified via WebFetch of the HF dataset card. Apache 2.0 \u2014 commercial-friendly. This is the training data behind UnifoLM-VLA-Base's Fold Towel task.",
+    "license_short": "commercial-ok"
+  },
+  {
+    "slug": "unitreerobotics-z1-dual-dex1-foldclothes-dataset",
+    "name": "Z1 Dual Dex1 FoldClothes Dataset",
+    "hf_dataset_id": "unitreerobotics/Z1_Dual_Dex1_FoldClothes_Dataset",
+    "hf_url": "https://huggingface.co/datasets/unitreerobotics/Z1_Dual_Dex1_FoldClothes_Dataset",
+    "description": "Unitree Z1 dual-arm (14 DoF) fold-clothes dataset with Dex1 parallel-grip end-effectors. Task: fold a T-shirt with the Unitree logo. 100\u2013200 sec per episode, 4 cameras @ 30 Hz. Not G1 but same Dex1 hand; useful as a cross-embodiment reference for cloth manipulation on the Unitree ecosystem.",
+    "episodes": 83,
+    "robots": 1,
+    "robot_names": [
+      "unitree-z1"
+    ],
+    "source": "unitreerobotics",
+    "format": "lerobot",
+    "license": "apache-2.0",
+    "frames_or_rows": 293197,
+    "fps": 30,
+    "cameras": 4,
+    "task_slug": "fold-clothes",
+    "compatible_policy_slugs": [
+      "flameyyyyy-diffusion-z1-dual-dex1-foldclothes-policy"
+    ],
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Verified via WebFetch. Referenced by Flameyyyyy's Z1 diffusion-policy fold-clothes checkpoint already in the policies catalog.",
+    "license_short": "commercial-ok"
+  },
+  {
+    "slug": "unitreerobotics-g1-wbt-inspire-collect-clothes-maincamonly",
+    "name": "G1 WBT Inspire Collect Clothes (Main Cam Only)",
+    "hf_dataset_id": "unitreerobotics/G1_WBT_Inspire_Collect_Clothes_MainCamOnly",
+    "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Inspire_Collect_Clothes_MainCamOnly",
+    "description": "Real Unitree G1 whole-body teleoperated (WBT) dataset: the humanoid picks up and collects clothes using Inspire hands (multi-finger, dexterous). Main-camera-only variant \u2014 lower storage footprint. Part of Unitree's laundry-pipeline data collection.",
+    "episodes": null,
+    "robots": 1,
+    "robot_names": [
+      "unitree-g1"
+    ],
+    "source": "unitreerobotics",
+    "format": "lerobot",
+    "license": "apache-2.0",
+    "task_slug": "collect-clothes",
+    "compatible_policy_slugs": [],
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Found in Unitree's HF org listing during research. Episode count not recorded at fetch time; user should verify.",
+    "license_short": "commercial-ok"
+  },
+  {
+    "slug": "unitreerobotics-g1-wbt-inspire-put-clothes-into-washing-machine",
+    "name": "G1 WBT Inspire Put Clothes Into Washing Machine",
+    "hf_dataset_id": "unitreerobotics/G1_WBT_Inspire_Put_Clothes_into_Washing_Machine",
+    "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Inspire_Put_Clothes_into_Washing_Machine",
+    "description": "Real Unitree G1 whole-body teleoperated dataset: the humanoid loads clothes into a washing machine using Inspire hands. Laundry-pipeline task, upstream of folding.",
+    "episodes": null,
+    "robots": 1,
+    "robot_names": [
+      "unitree-g1"
+    ],
+    "source": "unitreerobotics",
+    "format": "lerobot",
+    "license": "apache-2.0",
+    "task_slug": "put-clothes-into-washing-machine",
+    "compatible_policy_slugs": [],
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Found in Unitree's HF org listing. Inspire hands variant.",
+    "license_short": "commercial-ok"
+  },
+  {
+    "slug": "unitreerobotics-g1-wbt-dex1-put-clothes-into-washing-machine",
+    "name": "G1 WBT Dex1 Put Clothes Into Washing Machine",
+    "hf_dataset_id": "unitreerobotics/G1_WBT_Dex1_Put_Clothes_into_Washing_Machine",
+    "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Dex1_Put_Clothes_into_Washing_Machine",
+    "description": "Real Unitree G1 whole-body teleoperated dataset: the humanoid loads clothes into a washing machine using Dex1 parallel grippers. Same task as the Inspire variant, different end-effector.",
+    "episodes": null,
+    "robots": 1,
+    "robot_names": [
+      "unitree-g1"
+    ],
+    "source": "unitreerobotics",
+    "format": "lerobot",
+    "license": "apache-2.0",
+    "task_slug": "put-clothes-into-washing-machine",
+    "compatible_policy_slugs": [],
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Found in Unitree's HF org listing. Dex1 hands variant \u2014 same gripper family as the G1_Dex1_Fold_Towel dataset.",
+    "license_short": "commercial-ok"
+  },
+  {
+    "slug": "unitreerobotics-g1-wbt-inspire-put-clothes-into-basket",
+    "name": "G1 WBT Inspire Put Clothes Into Basket",
+    "hf_dataset_id": "unitreerobotics/G1_WBT_Inspire_Put_Clothes_Into_Basket",
+    "hf_url": "https://huggingface.co/datasets/unitreerobotics/G1_WBT_Inspire_Put_Clothes_Into_Basket",
+    "description": "Real Unitree G1 whole-body teleoperated dataset: the humanoid picks clothes and places them into a basket, using Inspire hands. Part of Unitree's laundry-pipeline data collection.",
+    "episodes": null,
+    "robots": 1,
+    "robot_names": [
+      "unitree-g1"
+    ],
+    "source": "unitreerobotics",
+    "format": "lerobot",
+    "license": "apache-2.0",
+    "task_slug": "put-clothes-into-basket",
+    "compatible_policy_slugs": [],
+    "verified_at": "2026-04-17",
+    "provenance_notes": "Found in Unitree's HF org listing. Inspire hands variant.",
+    "license_short": "commercial-ok"
+  }
+]

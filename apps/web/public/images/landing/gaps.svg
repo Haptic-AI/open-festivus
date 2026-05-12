@@ -1,0 +1,15 @@
+<svg width="180" height="100" viewBox="0 0 180 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="180" height="100" fill="#0B1C36"/>
+  <rect x="30" y="22" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="60" y="22" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="90" y="22" width="24" height="18" rx="3" stroke="#C6351B" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="120" y="22" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="30" y="46" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="60" y="46" width="24" height="18" rx="3" stroke="#C6351B" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="90" y="46" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="120" y="46" width="24" height="18" rx="3" stroke="#C6351B" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="30" y="70" width="24" height="18" rx="3" stroke="#C6351B" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="60" y="70" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="90" y="70" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+  <rect x="120" y="70" width="24" height="18" rx="3" fill="#EFECE4" fill-opacity="0.1"/>
+</svg>
